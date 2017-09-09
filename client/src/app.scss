@@ -1,0 +1,28 @@
+
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+@import "node_modules/bootswatch/darkly/variables";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "node_modules/bootswatch/darkly/bootswatch";
+
+@import "../node_modules/react-rangeslider/lib/index.css";
+
+body {
+  background-color: #282828;
+}
+
+
+.macro-op-table {
+
+  tr {
+    border: 1px solid #999;
+    margin: 2px;
+
+    td:first-child {
+      padding-right: 25px;
+    }
+  }
+
+  td {
+    padding: 10px;
+  }
+}
