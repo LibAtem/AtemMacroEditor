@@ -4,57 +4,57 @@
     <Op id="AuxiliaryInput">
       <Field id="auxiliaryIndex" name="AuxiliaryIndex" type="Int" min="0" max="65535" />
       <Field id="input" name="Input" type="Enum">
-        <Value id="0" name="Black" />
-        <Value id="1" name="Input1" />
-        <Value id="2" name="Input2" />
-        <Value id="3" name="Input3" />
-        <Value id="4" name="Input4" />
-        <Value id="5" name="Input5" />
-        <Value id="6" name="Input6" />
-        <Value id="7" name="Input7" />
-        <Value id="8" name="Input8" />
-        <Value id="9" name="Input9" />
-        <Value id="10" name="Input10" />
-        <Value id="11" name="Input11" />
-        <Value id="12" name="Input12" />
-        <Value id="13" name="Input13" />
-        <Value id="14" name="Input14" />
-        <Value id="15" name="Input15" />
-        <Value id="16" name="Input16" />
-        <Value id="17" name="Input17" />
-        <Value id="18" name="Input18" />
-        <Value id="19" name="Input19" />
-        <Value id="20" name="Input20" />
-        <Value id="1000" name="ColorBars" />
-        <Value id="2001" name="Color1" />
-        <Value id="2002" name="Color2" />
-        <Value id="3010" name="MediaPlayer1" />
-        <Value id="3011" name="MediaPlayer1Key" />
-        <Value id="3020" name="MediaPlayer2" />
-        <Value id="3021" name="MediaPlayer2Key" />
-        <Value id="3030" name="MediaPlayer3" />
-        <Value id="3031" name="MediaPlayer3Key" />
-        <Value id="3040" name="MediaPlayer4" />
-        <Value id="3041" name="MediaPlayer4Key" />
-        <Value id="4010" name="Key1Mask" />
-        <Value id="4020" name="Key2Mask" />
-        <Value id="4030" name="Key3Mask" />
-        <Value id="4040" name="Key4Mask" />
-        <Value id="5010" name="DSK1Mask" />
-        <Value id="5020" name="DSK2Mask" />
-        <Value id="6000" name="SuperSource" />
-        <Value id="7001" name="CleanFeed1" />
-        <Value id="7002" name="CleanFeed2" />
-        <Value id="8001" name="Auxilary1" />
-        <Value id="8002" name="Auxilary2" />
-        <Value id="8003" name="Auxilary3" />
-        <Value id="8004" name="Auxilary4" />
-        <Value id="8005" name="Auxilary5" />
-        <Value id="8006" name="Auxilary6" />
-        <Value id="10010" name="ME1Prog" />
-        <Value id="10011" name="ME1Prev" />
-        <Value id="10020" name="ME2Prog" />
-        <Value id="10021" name="ME2Prev" />
+        <Value id="Black" name="Black" />
+        <Value id="Input1" name="Input1" />
+        <Value id="Input2" name="Input2" />
+        <Value id="Input3" name="Input3" />
+        <Value id="Input4" name="Input4" />
+        <Value id="Input5" name="Input5" />
+        <Value id="Input6" name="Input6" />
+        <Value id="Input7" name="Input7" />
+        <Value id="Input8" name="Input8" />
+        <Value id="Input9" name="Input9" />
+        <Value id="Input10" name="Input10" />
+        <Value id="Input11" name="Input11" />
+        <Value id="Input12" name="Input12" />
+        <Value id="Input13" name="Input13" />
+        <Value id="Input14" name="Input14" />
+        <Value id="Input15" name="Input15" />
+        <Value id="Input16" name="Input16" />
+        <Value id="Input17" name="Input17" />
+        <Value id="Input18" name="Input18" />
+        <Value id="Input19" name="Input19" />
+        <Value id="Input20" name="Input20" />
+        <Value id="ColorBars" name="ColorBars" />
+        <Value id="Color1" name="Color1" />
+        <Value id="Color2" name="Color2" />
+        <Value id="MediaPlayer1" name="MediaPlayer1" />
+        <Value id="MediaPlayer1Key" name="MediaPlayer1Key" />
+        <Value id="MediaPlayer2" name="MediaPlayer2" />
+        <Value id="MediaPlayer2Key" name="MediaPlayer2Key" />
+        <Value id="MediaPlayer3" name="MediaPlayer3" />
+        <Value id="MediaPlayer3Key" name="MediaPlayer3Key" />
+        <Value id="MediaPlayer4" name="MediaPlayer4" />
+        <Value id="MediaPlayer4Key" name="MediaPlayer4Key" />
+        <Value id="Key1Mask" name="Key1Mask" />
+        <Value id="Key2Mask" name="Key2Mask" />
+        <Value id="Key3Mask" name="Key3Mask" />
+        <Value id="Key4Mask" name="Key4Mask" />
+        <Value id="DSK1Mask" name="DSK1Mask" />
+        <Value id="DSK2Mask" name="DSK2Mask" />
+        <Value id="SuperSource" name="SuperSource" />
+        <Value id="CleanFeed1" name="CleanFeed1" />
+        <Value id="CleanFeed2" name="CleanFeed2" />
+        <Value id="Auxilary1" name="Auxilary1" />
+        <Value id="Auxilary2" name="Auxilary2" />
+        <Value id="Auxilary3" name="Auxilary3" />
+        <Value id="Auxilary4" name="Auxilary4" />
+        <Value id="Auxilary5" name="Auxilary5" />
+        <Value id="Auxilary6" name="Auxilary6" />
+        <Value id="ME1Prog" name="ME1Prog" />
+        <Value id="ME1Prev" name="ME1Prev" />
+        <Value id="ME2Prog" name="ME2Prog" />
+        <Value id="ME2Prev" name="ME2Prev" />
       </Field>
     </Op>
     <Op id="MacroSleep">
@@ -65,208 +65,208 @@
     </Op>
     <Op id="SuperSourceArtCutInput">
       <Field id="input" name="Input" type="Enum">
-        <Value id="0" name="Black" />
-        <Value id="1" name="Input1" />
-        <Value id="2" name="Input2" />
-        <Value id="3" name="Input3" />
-        <Value id="4" name="Input4" />
-        <Value id="5" name="Input5" />
-        <Value id="6" name="Input6" />
-        <Value id="7" name="Input7" />
-        <Value id="8" name="Input8" />
-        <Value id="9" name="Input9" />
-        <Value id="10" name="Input10" />
-        <Value id="11" name="Input11" />
-        <Value id="12" name="Input12" />
-        <Value id="13" name="Input13" />
-        <Value id="14" name="Input14" />
-        <Value id="15" name="Input15" />
-        <Value id="16" name="Input16" />
-        <Value id="17" name="Input17" />
-        <Value id="18" name="Input18" />
-        <Value id="19" name="Input19" />
-        <Value id="20" name="Input20" />
-        <Value id="1000" name="ColorBars" />
-        <Value id="2001" name="Color1" />
-        <Value id="2002" name="Color2" />
-        <Value id="3010" name="MediaPlayer1" />
-        <Value id="3011" name="MediaPlayer1Key" />
-        <Value id="3020" name="MediaPlayer2" />
-        <Value id="3021" name="MediaPlayer2Key" />
-        <Value id="3030" name="MediaPlayer3" />
-        <Value id="3031" name="MediaPlayer3Key" />
-        <Value id="3040" name="MediaPlayer4" />
-        <Value id="3041" name="MediaPlayer4Key" />
-        <Value id="4010" name="Key1Mask" />
-        <Value id="4020" name="Key2Mask" />
-        <Value id="4030" name="Key3Mask" />
-        <Value id="4040" name="Key4Mask" />
-        <Value id="5010" name="DSK1Mask" />
-        <Value id="5020" name="DSK2Mask" />
-        <Value id="6000" name="SuperSource" />
-        <Value id="7001" name="CleanFeed1" />
-        <Value id="7002" name="CleanFeed2" />
-        <Value id="8001" name="Auxilary1" />
-        <Value id="8002" name="Auxilary2" />
-        <Value id="8003" name="Auxilary3" />
-        <Value id="8004" name="Auxilary4" />
-        <Value id="8005" name="Auxilary5" />
-        <Value id="8006" name="Auxilary6" />
-        <Value id="10010" name="ME1Prog" />
-        <Value id="10011" name="ME1Prev" />
-        <Value id="10020" name="ME2Prog" />
-        <Value id="10021" name="ME2Prev" />
+        <Value id="Black" name="Black" />
+        <Value id="Input1" name="Input1" />
+        <Value id="Input2" name="Input2" />
+        <Value id="Input3" name="Input3" />
+        <Value id="Input4" name="Input4" />
+        <Value id="Input5" name="Input5" />
+        <Value id="Input6" name="Input6" />
+        <Value id="Input7" name="Input7" />
+        <Value id="Input8" name="Input8" />
+        <Value id="Input9" name="Input9" />
+        <Value id="Input10" name="Input10" />
+        <Value id="Input11" name="Input11" />
+        <Value id="Input12" name="Input12" />
+        <Value id="Input13" name="Input13" />
+        <Value id="Input14" name="Input14" />
+        <Value id="Input15" name="Input15" />
+        <Value id="Input16" name="Input16" />
+        <Value id="Input17" name="Input17" />
+        <Value id="Input18" name="Input18" />
+        <Value id="Input19" name="Input19" />
+        <Value id="Input20" name="Input20" />
+        <Value id="ColorBars" name="ColorBars" />
+        <Value id="Color1" name="Color1" />
+        <Value id="Color2" name="Color2" />
+        <Value id="MediaPlayer1" name="MediaPlayer1" />
+        <Value id="MediaPlayer1Key" name="MediaPlayer1Key" />
+        <Value id="MediaPlayer2" name="MediaPlayer2" />
+        <Value id="MediaPlayer2Key" name="MediaPlayer2Key" />
+        <Value id="MediaPlayer3" name="MediaPlayer3" />
+        <Value id="MediaPlayer3Key" name="MediaPlayer3Key" />
+        <Value id="MediaPlayer4" name="MediaPlayer4" />
+        <Value id="MediaPlayer4Key" name="MediaPlayer4Key" />
+        <Value id="Key1Mask" name="Key1Mask" />
+        <Value id="Key2Mask" name="Key2Mask" />
+        <Value id="Key3Mask" name="Key3Mask" />
+        <Value id="Key4Mask" name="Key4Mask" />
+        <Value id="DSK1Mask" name="DSK1Mask" />
+        <Value id="DSK2Mask" name="DSK2Mask" />
+        <Value id="SuperSource" name="SuperSource" />
+        <Value id="CleanFeed1" name="CleanFeed1" />
+        <Value id="CleanFeed2" name="CleanFeed2" />
+        <Value id="Auxilary1" name="Auxilary1" />
+        <Value id="Auxilary2" name="Auxilary2" />
+        <Value id="Auxilary3" name="Auxilary3" />
+        <Value id="Auxilary4" name="Auxilary4" />
+        <Value id="Auxilary5" name="Auxilary5" />
+        <Value id="Auxilary6" name="Auxilary6" />
+        <Value id="ME1Prog" name="ME1Prog" />
+        <Value id="ME1Prev" name="ME1Prev" />
+        <Value id="ME2Prog" name="ME2Prog" />
+        <Value id="ME2Prev" name="ME2Prev" />
       </Field>
     </Op>
     <Op id="SuperSourceArtFillInput">
       <Field id="input" name="Input" type="Enum">
-        <Value id="0" name="Black" />
-        <Value id="1" name="Input1" />
-        <Value id="2" name="Input2" />
-        <Value id="3" name="Input3" />
-        <Value id="4" name="Input4" />
-        <Value id="5" name="Input5" />
-        <Value id="6" name="Input6" />
-        <Value id="7" name="Input7" />
-        <Value id="8" name="Input8" />
-        <Value id="9" name="Input9" />
-        <Value id="10" name="Input10" />
-        <Value id="11" name="Input11" />
-        <Value id="12" name="Input12" />
-        <Value id="13" name="Input13" />
-        <Value id="14" name="Input14" />
-        <Value id="15" name="Input15" />
-        <Value id="16" name="Input16" />
-        <Value id="17" name="Input17" />
-        <Value id="18" name="Input18" />
-        <Value id="19" name="Input19" />
-        <Value id="20" name="Input20" />
-        <Value id="1000" name="ColorBars" />
-        <Value id="2001" name="Color1" />
-        <Value id="2002" name="Color2" />
-        <Value id="3010" name="MediaPlayer1" />
-        <Value id="3011" name="MediaPlayer1Key" />
-        <Value id="3020" name="MediaPlayer2" />
-        <Value id="3021" name="MediaPlayer2Key" />
-        <Value id="3030" name="MediaPlayer3" />
-        <Value id="3031" name="MediaPlayer3Key" />
-        <Value id="3040" name="MediaPlayer4" />
-        <Value id="3041" name="MediaPlayer4Key" />
-        <Value id="4010" name="Key1Mask" />
-        <Value id="4020" name="Key2Mask" />
-        <Value id="4030" name="Key3Mask" />
-        <Value id="4040" name="Key4Mask" />
-        <Value id="5010" name="DSK1Mask" />
-        <Value id="5020" name="DSK2Mask" />
-        <Value id="6000" name="SuperSource" />
-        <Value id="7001" name="CleanFeed1" />
-        <Value id="7002" name="CleanFeed2" />
-        <Value id="8001" name="Auxilary1" />
-        <Value id="8002" name="Auxilary2" />
-        <Value id="8003" name="Auxilary3" />
-        <Value id="8004" name="Auxilary4" />
-        <Value id="8005" name="Auxilary5" />
-        <Value id="8006" name="Auxilary6" />
-        <Value id="10010" name="ME1Prog" />
-        <Value id="10011" name="ME1Prev" />
-        <Value id="10020" name="ME2Prog" />
-        <Value id="10021" name="ME2Prev" />
+        <Value id="Black" name="Black" />
+        <Value id="Input1" name="Input1" />
+        <Value id="Input2" name="Input2" />
+        <Value id="Input3" name="Input3" />
+        <Value id="Input4" name="Input4" />
+        <Value id="Input5" name="Input5" />
+        <Value id="Input6" name="Input6" />
+        <Value id="Input7" name="Input7" />
+        <Value id="Input8" name="Input8" />
+        <Value id="Input9" name="Input9" />
+        <Value id="Input10" name="Input10" />
+        <Value id="Input11" name="Input11" />
+        <Value id="Input12" name="Input12" />
+        <Value id="Input13" name="Input13" />
+        <Value id="Input14" name="Input14" />
+        <Value id="Input15" name="Input15" />
+        <Value id="Input16" name="Input16" />
+        <Value id="Input17" name="Input17" />
+        <Value id="Input18" name="Input18" />
+        <Value id="Input19" name="Input19" />
+        <Value id="Input20" name="Input20" />
+        <Value id="ColorBars" name="ColorBars" />
+        <Value id="Color1" name="Color1" />
+        <Value id="Color2" name="Color2" />
+        <Value id="MediaPlayer1" name="MediaPlayer1" />
+        <Value id="MediaPlayer1Key" name="MediaPlayer1Key" />
+        <Value id="MediaPlayer2" name="MediaPlayer2" />
+        <Value id="MediaPlayer2Key" name="MediaPlayer2Key" />
+        <Value id="MediaPlayer3" name="MediaPlayer3" />
+        <Value id="MediaPlayer3Key" name="MediaPlayer3Key" />
+        <Value id="MediaPlayer4" name="MediaPlayer4" />
+        <Value id="MediaPlayer4Key" name="MediaPlayer4Key" />
+        <Value id="Key1Mask" name="Key1Mask" />
+        <Value id="Key2Mask" name="Key2Mask" />
+        <Value id="Key3Mask" name="Key3Mask" />
+        <Value id="Key4Mask" name="Key4Mask" />
+        <Value id="DSK1Mask" name="DSK1Mask" />
+        <Value id="DSK2Mask" name="DSK2Mask" />
+        <Value id="SuperSource" name="SuperSource" />
+        <Value id="CleanFeed1" name="CleanFeed1" />
+        <Value id="CleanFeed2" name="CleanFeed2" />
+        <Value id="Auxilary1" name="Auxilary1" />
+        <Value id="Auxilary2" name="Auxilary2" />
+        <Value id="Auxilary3" name="Auxilary3" />
+        <Value id="Auxilary4" name="Auxilary4" />
+        <Value id="Auxilary5" name="Auxilary5" />
+        <Value id="Auxilary6" name="Auxilary6" />
+        <Value id="ME1Prog" name="ME1Prog" />
+        <Value id="ME1Prev" name="ME1Prev" />
+        <Value id="ME2Prog" name="ME2Prog" />
+        <Value id="ME2Prev" name="ME2Prev" />
       </Field>
     </Op>
     <Op id="SuperSourceBorderEnable">
       <Field id="enable" name="Enable" type="Bool" />
     </Op>
     <Op id="SuperSourceBoxEnable">
-      <Field id="enable" name="Enable" type="Bool" />
       <Field id="boxIndex" name="SuperSourceBoxIndex" type="Int" min="0" max="255" />
+      <Field id="enable" name="Enable" type="Bool" />
     </Op>
     <Op id="SuperSourceBoxInput">
-      <Field id="input" name="Input" type="Enum">
-        <Value id="0" name="Black" />
-        <Value id="1" name="Input1" />
-        <Value id="2" name="Input2" />
-        <Value id="3" name="Input3" />
-        <Value id="4" name="Input4" />
-        <Value id="5" name="Input5" />
-        <Value id="6" name="Input6" />
-        <Value id="7" name="Input7" />
-        <Value id="8" name="Input8" />
-        <Value id="9" name="Input9" />
-        <Value id="10" name="Input10" />
-        <Value id="11" name="Input11" />
-        <Value id="12" name="Input12" />
-        <Value id="13" name="Input13" />
-        <Value id="14" name="Input14" />
-        <Value id="15" name="Input15" />
-        <Value id="16" name="Input16" />
-        <Value id="17" name="Input17" />
-        <Value id="18" name="Input18" />
-        <Value id="19" name="Input19" />
-        <Value id="20" name="Input20" />
-        <Value id="1000" name="ColorBars" />
-        <Value id="2001" name="Color1" />
-        <Value id="2002" name="Color2" />
-        <Value id="3010" name="MediaPlayer1" />
-        <Value id="3011" name="MediaPlayer1Key" />
-        <Value id="3020" name="MediaPlayer2" />
-        <Value id="3021" name="MediaPlayer2Key" />
-        <Value id="3030" name="MediaPlayer3" />
-        <Value id="3031" name="MediaPlayer3Key" />
-        <Value id="3040" name="MediaPlayer4" />
-        <Value id="3041" name="MediaPlayer4Key" />
-        <Value id="4010" name="Key1Mask" />
-        <Value id="4020" name="Key2Mask" />
-        <Value id="4030" name="Key3Mask" />
-        <Value id="4040" name="Key4Mask" />
-        <Value id="5010" name="DSK1Mask" />
-        <Value id="5020" name="DSK2Mask" />
-        <Value id="6000" name="SuperSource" />
-        <Value id="7001" name="CleanFeed1" />
-        <Value id="7002" name="CleanFeed2" />
-        <Value id="8001" name="Auxilary1" />
-        <Value id="8002" name="Auxilary2" />
-        <Value id="8003" name="Auxilary3" />
-        <Value id="8004" name="Auxilary4" />
-        <Value id="8005" name="Auxilary5" />
-        <Value id="8006" name="Auxilary6" />
-        <Value id="10010" name="ME1Prog" />
-        <Value id="10011" name="ME1Prev" />
-        <Value id="10020" name="ME2Prog" />
-        <Value id="10021" name="ME2Prev" />
-      </Field>
       <Field id="boxIndex" name="SuperSourceBoxIndex" type="Int" min="0" max="255" />
+      <Field id="input" name="Input" type="Enum">
+        <Value id="Black" name="Black" />
+        <Value id="Input1" name="Input1" />
+        <Value id="Input2" name="Input2" />
+        <Value id="Input3" name="Input3" />
+        <Value id="Input4" name="Input4" />
+        <Value id="Input5" name="Input5" />
+        <Value id="Input6" name="Input6" />
+        <Value id="Input7" name="Input7" />
+        <Value id="Input8" name="Input8" />
+        <Value id="Input9" name="Input9" />
+        <Value id="Input10" name="Input10" />
+        <Value id="Input11" name="Input11" />
+        <Value id="Input12" name="Input12" />
+        <Value id="Input13" name="Input13" />
+        <Value id="Input14" name="Input14" />
+        <Value id="Input15" name="Input15" />
+        <Value id="Input16" name="Input16" />
+        <Value id="Input17" name="Input17" />
+        <Value id="Input18" name="Input18" />
+        <Value id="Input19" name="Input19" />
+        <Value id="Input20" name="Input20" />
+        <Value id="ColorBars" name="ColorBars" />
+        <Value id="Color1" name="Color1" />
+        <Value id="Color2" name="Color2" />
+        <Value id="MediaPlayer1" name="MediaPlayer1" />
+        <Value id="MediaPlayer1Key" name="MediaPlayer1Key" />
+        <Value id="MediaPlayer2" name="MediaPlayer2" />
+        <Value id="MediaPlayer2Key" name="MediaPlayer2Key" />
+        <Value id="MediaPlayer3" name="MediaPlayer3" />
+        <Value id="MediaPlayer3Key" name="MediaPlayer3Key" />
+        <Value id="MediaPlayer4" name="MediaPlayer4" />
+        <Value id="MediaPlayer4Key" name="MediaPlayer4Key" />
+        <Value id="Key1Mask" name="Key1Mask" />
+        <Value id="Key2Mask" name="Key2Mask" />
+        <Value id="Key3Mask" name="Key3Mask" />
+        <Value id="Key4Mask" name="Key4Mask" />
+        <Value id="DSK1Mask" name="DSK1Mask" />
+        <Value id="DSK2Mask" name="DSK2Mask" />
+        <Value id="SuperSource" name="SuperSource" />
+        <Value id="CleanFeed1" name="CleanFeed1" />
+        <Value id="CleanFeed2" name="CleanFeed2" />
+        <Value id="Auxilary1" name="Auxilary1" />
+        <Value id="Auxilary2" name="Auxilary2" />
+        <Value id="Auxilary3" name="Auxilary3" />
+        <Value id="Auxilary4" name="Auxilary4" />
+        <Value id="Auxilary5" name="Auxilary5" />
+        <Value id="Auxilary6" name="Auxilary6" />
+        <Value id="ME1Prog" name="ME1Prog" />
+        <Value id="ME1Prev" name="ME1Prev" />
+        <Value id="ME2Prog" name="ME2Prog" />
+        <Value id="ME2Prev" name="ME2Prev" />
+      </Field>
     </Op>
     <Op id="SuperSourceBoxMaskBottom">
-      <Field id="bottom" name="Bottom" type="Int" min="0" max="65535" />
       <Field id="boxIndex" name="SuperSourceBoxIndex" type="Int" min="0" max="255" />
+      <Field id="bottom" name="Bottom" type="Int" min="0" max="65535" />
     </Op>
     <Op id="SuperSourceBoxMaskEnable">
-      <Field id="enable" name="Enable" type="Bool" />
       <Field id="boxIndex" name="SuperSourceBoxIndex" type="Int" min="0" max="255" />
+      <Field id="enable" name="Enable" type="Bool" />
     </Op>
     <Op id="SuperSourceBoxMaskLeft">
-      <Field id="left" name="Left" type="Int" min="0" max="65535" />
       <Field id="boxIndex" name="SuperSourceBoxIndex" type="Int" min="0" max="255" />
+      <Field id="left" name="Left" type="Int" min="0" max="65535" />
     </Op>
     <Op id="SuperSourceBoxMaskRight">
-      <Field id="right" name="Right" type="Int" min="0" max="65535" />
       <Field id="boxIndex" name="SuperSourceBoxIndex" type="Int" min="0" max="255" />
+      <Field id="right" name="Right" type="Int" min="0" max="65535" />
     </Op>
     <Op id="SuperSourceBoxMaskTop">
-      <Field id="top" name="Top" type="Int" min="0" max="65535" />
       <Field id="boxIndex" name="SuperSourceBoxIndex" type="Int" min="0" max="255" />
+      <Field id="top" name="Top" type="Int" min="0" max="65535" />
     </Op>
     <Op id="SuperSourceBoxSize">
-      <Field id="size" name="Size" type="Int" min="0" max="65535" />
       <Field id="boxIndex" name="SuperSourceBoxIndex" type="Int" min="0" max="255" />
+      <Field id="size" name="Size" type="Int" min="0" max="65535" />
     </Op>
     <Op id="SuperSourceBoxXPosition">
-      <Field id="xPosition" name="PositionX" type="Double" min="-4800" max="4800" scale="100" />
       <Field id="boxIndex" name="SuperSourceBoxIndex" type="Int" min="0" max="255" />
+      <Field id="xPosition" name="PositionX" type="Double" min="-4800" max="4800" scale="100" />
     </Op>
     <Op id="SuperSourceBoxYPosition">
-      <Field id="yPosition" name="PositionY" type="Double" min="-4800" max="4800" scale="100" />
       <Field id="boxIndex" name="SuperSourceBoxIndex" type="Int" min="0" max="255" />
+      <Field id="yPosition" name="PositionY" type="Double" min="-4800" max="4800" scale="100" />
     </Op>
     <Op id="AutoTransition">
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
@@ -287,484 +287,484 @@
       </Field>
     </Op>
     <Op id="PreviewInput">
-      <Field id="input" name="Input" type="Enum">
-        <Value id="0" name="Black" />
-        <Value id="1" name="Input1" />
-        <Value id="2" name="Input2" />
-        <Value id="3" name="Input3" />
-        <Value id="4" name="Input4" />
-        <Value id="5" name="Input5" />
-        <Value id="6" name="Input6" />
-        <Value id="7" name="Input7" />
-        <Value id="8" name="Input8" />
-        <Value id="9" name="Input9" />
-        <Value id="10" name="Input10" />
-        <Value id="11" name="Input11" />
-        <Value id="12" name="Input12" />
-        <Value id="13" name="Input13" />
-        <Value id="14" name="Input14" />
-        <Value id="15" name="Input15" />
-        <Value id="16" name="Input16" />
-        <Value id="17" name="Input17" />
-        <Value id="18" name="Input18" />
-        <Value id="19" name="Input19" />
-        <Value id="20" name="Input20" />
-        <Value id="1000" name="ColorBars" />
-        <Value id="2001" name="Color1" />
-        <Value id="2002" name="Color2" />
-        <Value id="3010" name="MediaPlayer1" />
-        <Value id="3011" name="MediaPlayer1Key" />
-        <Value id="3020" name="MediaPlayer2" />
-        <Value id="3021" name="MediaPlayer2Key" />
-        <Value id="3030" name="MediaPlayer3" />
-        <Value id="3031" name="MediaPlayer3Key" />
-        <Value id="3040" name="MediaPlayer4" />
-        <Value id="3041" name="MediaPlayer4Key" />
-        <Value id="4010" name="Key1Mask" />
-        <Value id="4020" name="Key2Mask" />
-        <Value id="4030" name="Key3Mask" />
-        <Value id="4040" name="Key4Mask" />
-        <Value id="5010" name="DSK1Mask" />
-        <Value id="5020" name="DSK2Mask" />
-        <Value id="6000" name="SuperSource" />
-        <Value id="7001" name="CleanFeed1" />
-        <Value id="7002" name="CleanFeed2" />
-        <Value id="8001" name="Auxilary1" />
-        <Value id="8002" name="Auxilary2" />
-        <Value id="8003" name="Auxilary3" />
-        <Value id="8004" name="Auxilary4" />
-        <Value id="8005" name="Auxilary5" />
-        <Value id="8006" name="Auxilary6" />
-        <Value id="10010" name="ME1Prog" />
-        <Value id="10011" name="ME1Prev" />
-        <Value id="10020" name="ME2Prog" />
-        <Value id="10021" name="ME2Prev" />
-      </Field>
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
+      </Field>
+      <Field id="input" name="Input" type="Enum">
+        <Value id="Black" name="Black" />
+        <Value id="Input1" name="Input1" />
+        <Value id="Input2" name="Input2" />
+        <Value id="Input3" name="Input3" />
+        <Value id="Input4" name="Input4" />
+        <Value id="Input5" name="Input5" />
+        <Value id="Input6" name="Input6" />
+        <Value id="Input7" name="Input7" />
+        <Value id="Input8" name="Input8" />
+        <Value id="Input9" name="Input9" />
+        <Value id="Input10" name="Input10" />
+        <Value id="Input11" name="Input11" />
+        <Value id="Input12" name="Input12" />
+        <Value id="Input13" name="Input13" />
+        <Value id="Input14" name="Input14" />
+        <Value id="Input15" name="Input15" />
+        <Value id="Input16" name="Input16" />
+        <Value id="Input17" name="Input17" />
+        <Value id="Input18" name="Input18" />
+        <Value id="Input19" name="Input19" />
+        <Value id="Input20" name="Input20" />
+        <Value id="ColorBars" name="ColorBars" />
+        <Value id="Color1" name="Color1" />
+        <Value id="Color2" name="Color2" />
+        <Value id="MediaPlayer1" name="MediaPlayer1" />
+        <Value id="MediaPlayer1Key" name="MediaPlayer1Key" />
+        <Value id="MediaPlayer2" name="MediaPlayer2" />
+        <Value id="MediaPlayer2Key" name="MediaPlayer2Key" />
+        <Value id="MediaPlayer3" name="MediaPlayer3" />
+        <Value id="MediaPlayer3Key" name="MediaPlayer3Key" />
+        <Value id="MediaPlayer4" name="MediaPlayer4" />
+        <Value id="MediaPlayer4Key" name="MediaPlayer4Key" />
+        <Value id="Key1Mask" name="Key1Mask" />
+        <Value id="Key2Mask" name="Key2Mask" />
+        <Value id="Key3Mask" name="Key3Mask" />
+        <Value id="Key4Mask" name="Key4Mask" />
+        <Value id="DSK1Mask" name="DSK1Mask" />
+        <Value id="DSK2Mask" name="DSK2Mask" />
+        <Value id="SuperSource" name="SuperSource" />
+        <Value id="CleanFeed1" name="CleanFeed1" />
+        <Value id="CleanFeed2" name="CleanFeed2" />
+        <Value id="Auxilary1" name="Auxilary1" />
+        <Value id="Auxilary2" name="Auxilary2" />
+        <Value id="Auxilary3" name="Auxilary3" />
+        <Value id="Auxilary4" name="Auxilary4" />
+        <Value id="Auxilary5" name="Auxilary5" />
+        <Value id="Auxilary6" name="Auxilary6" />
+        <Value id="ME1Prog" name="ME1Prog" />
+        <Value id="ME1Prev" name="ME1Prev" />
+        <Value id="ME2Prog" name="ME2Prog" />
+        <Value id="ME2Prev" name="ME2Prev" />
       </Field>
     </Op>
     <Op id="ProgramInput">
-      <Field id="input" name="Input" type="Enum">
-        <Value id="0" name="Black" />
-        <Value id="1" name="Input1" />
-        <Value id="2" name="Input2" />
-        <Value id="3" name="Input3" />
-        <Value id="4" name="Input4" />
-        <Value id="5" name="Input5" />
-        <Value id="6" name="Input6" />
-        <Value id="7" name="Input7" />
-        <Value id="8" name="Input8" />
-        <Value id="9" name="Input9" />
-        <Value id="10" name="Input10" />
-        <Value id="11" name="Input11" />
-        <Value id="12" name="Input12" />
-        <Value id="13" name="Input13" />
-        <Value id="14" name="Input14" />
-        <Value id="15" name="Input15" />
-        <Value id="16" name="Input16" />
-        <Value id="17" name="Input17" />
-        <Value id="18" name="Input18" />
-        <Value id="19" name="Input19" />
-        <Value id="20" name="Input20" />
-        <Value id="1000" name="ColorBars" />
-        <Value id="2001" name="Color1" />
-        <Value id="2002" name="Color2" />
-        <Value id="3010" name="MediaPlayer1" />
-        <Value id="3011" name="MediaPlayer1Key" />
-        <Value id="3020" name="MediaPlayer2" />
-        <Value id="3021" name="MediaPlayer2Key" />
-        <Value id="3030" name="MediaPlayer3" />
-        <Value id="3031" name="MediaPlayer3Key" />
-        <Value id="3040" name="MediaPlayer4" />
-        <Value id="3041" name="MediaPlayer4Key" />
-        <Value id="4010" name="Key1Mask" />
-        <Value id="4020" name="Key2Mask" />
-        <Value id="4030" name="Key3Mask" />
-        <Value id="4040" name="Key4Mask" />
-        <Value id="5010" name="DSK1Mask" />
-        <Value id="5020" name="DSK2Mask" />
-        <Value id="6000" name="SuperSource" />
-        <Value id="7001" name="CleanFeed1" />
-        <Value id="7002" name="CleanFeed2" />
-        <Value id="8001" name="Auxilary1" />
-        <Value id="8002" name="Auxilary2" />
-        <Value id="8003" name="Auxilary3" />
-        <Value id="8004" name="Auxilary4" />
-        <Value id="8005" name="Auxilary5" />
-        <Value id="8006" name="Auxilary6" />
-        <Value id="10010" name="ME1Prog" />
-        <Value id="10011" name="ME1Prev" />
-        <Value id="10020" name="ME2Prog" />
-        <Value id="10021" name="ME2Prev" />
-      </Field>
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
+      </Field>
+      <Field id="input" name="Input" type="Enum">
+        <Value id="Black" name="Black" />
+        <Value id="Input1" name="Input1" />
+        <Value id="Input2" name="Input2" />
+        <Value id="Input3" name="Input3" />
+        <Value id="Input4" name="Input4" />
+        <Value id="Input5" name="Input5" />
+        <Value id="Input6" name="Input6" />
+        <Value id="Input7" name="Input7" />
+        <Value id="Input8" name="Input8" />
+        <Value id="Input9" name="Input9" />
+        <Value id="Input10" name="Input10" />
+        <Value id="Input11" name="Input11" />
+        <Value id="Input12" name="Input12" />
+        <Value id="Input13" name="Input13" />
+        <Value id="Input14" name="Input14" />
+        <Value id="Input15" name="Input15" />
+        <Value id="Input16" name="Input16" />
+        <Value id="Input17" name="Input17" />
+        <Value id="Input18" name="Input18" />
+        <Value id="Input19" name="Input19" />
+        <Value id="Input20" name="Input20" />
+        <Value id="ColorBars" name="ColorBars" />
+        <Value id="Color1" name="Color1" />
+        <Value id="Color2" name="Color2" />
+        <Value id="MediaPlayer1" name="MediaPlayer1" />
+        <Value id="MediaPlayer1Key" name="MediaPlayer1Key" />
+        <Value id="MediaPlayer2" name="MediaPlayer2" />
+        <Value id="MediaPlayer2Key" name="MediaPlayer2Key" />
+        <Value id="MediaPlayer3" name="MediaPlayer3" />
+        <Value id="MediaPlayer3Key" name="MediaPlayer3Key" />
+        <Value id="MediaPlayer4" name="MediaPlayer4" />
+        <Value id="MediaPlayer4Key" name="MediaPlayer4Key" />
+        <Value id="Key1Mask" name="Key1Mask" />
+        <Value id="Key2Mask" name="Key2Mask" />
+        <Value id="Key3Mask" name="Key3Mask" />
+        <Value id="Key4Mask" name="Key4Mask" />
+        <Value id="DSK1Mask" name="DSK1Mask" />
+        <Value id="DSK2Mask" name="DSK2Mask" />
+        <Value id="SuperSource" name="SuperSource" />
+        <Value id="CleanFeed1" name="CleanFeed1" />
+        <Value id="CleanFeed2" name="CleanFeed2" />
+        <Value id="Auxilary1" name="Auxilary1" />
+        <Value id="Auxilary2" name="Auxilary2" />
+        <Value id="Auxilary3" name="Auxilary3" />
+        <Value id="Auxilary4" name="Auxilary4" />
+        <Value id="Auxilary5" name="Auxilary5" />
+        <Value id="Auxilary6" name="Auxilary6" />
+        <Value id="ME1Prog" name="ME1Prog" />
+        <Value id="ME1Prev" name="ME1Prev" />
+        <Value id="ME2Prog" name="ME2Prog" />
+        <Value id="ME2Prev" name="ME2Prev" />
       </Field>
     </Op>
     <Op id="TransitionDipRate">
-      <Field id="rate" name="Rate" type="Int" min="0" max="250" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="rate" name="Rate" type="Int" min="0" max="250" />
     </Op>
     <Op id="TransitionDVERate">
-      <Field id="rate" name="Rate" type="Int" min="0" max="250" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="rate" name="Rate" type="Int" min="0" max="250" />
     </Op>
     <Op id="TransitionMixRate">
-      <Field id="rate" name="Rate" type="Int" min="0" max="250" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="rate" name="Rate" type="Int" min="0" max="250" />
     </Op>
     <Op id="TransitionSource">
-      <Field id="source" name="TransitionSource" type="Enum">
-        <Value id="0" name="None" />
-        <Value id="1" name="Background" />
-        <Value id="2" name="Key1" />
-        <Value id="4" name="Key2" />
-        <Value id="8" name="Key3" />
-        <Value id="16" name="Key4" />
-      </Field>
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
+      </Field>
+      <Field id="source" name="TransitionSource" type="Flags">
+        <Value id="None" name="None" />
+        <Value id="Background" name="Background" />
+        <Value id="Key1" name="Key1" />
+        <Value id="Key2" name="Key2" />
+        <Value id="Key3" name="Key3" />
+        <Value id="Key4" name="Key4" />
       </Field>
     </Op>
     <Op id="TransitionStingerMixRate">
-      <Field id="rate" name="Rate" type="Int" min="0" max="250" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="rate" name="Rate" type="Int" min="0" max="250" />
     </Op>
     <Op id="TransitionStingerRate">
-      <Field id="rate" name="Rate" type="Int" min="0" max="250" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="rate" name="Rate" type="Int" min="0" max="250" />
     </Op>
     <Op id="TransitionStyle">
-      <Field id="style" name="TransitionStyle" type="Enum">
-        <Value id="0" name="Mix" />
-        <Value id="1" name="Dip" />
-        <Value id="2" name="Wipe" />
-        <Value id="3" name="DVE" />
-        <Value id="4" name="Stinger" />
-      </Field>
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
+      </Field>
+      <Field id="style" name="TransitionStyle" type="Enum">
+        <Value id="Mix" name="Mix" />
+        <Value id="Dip" name="Dip" />
+        <Value id="Wipe" name="Wipe" />
+        <Value id="DVE" name="DVE" />
+        <Value id="Stinger" name="Stinger" />
       </Field>
     </Op>
     <Op id="TransitionWipeRate">
-      <Field id="rate" name="Rate" type="Int" min="0" max="250" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="rate" name="Rate" type="Int" min="0" max="250" />
     </Op>
     <Op id="DVEAndFlyKeyRotation">
-      <Field id="rotation" name="Rotation" type="Double" min="-1000" max="1000" scale="1000" />
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="rotation" name="Rotation" type="Double" min="-1000" max="1000" scale="1000" />
     </Op>
     <Op id="DVEAndFlyKeyXPosition">
-      <Field id="xPosition" name="PositionX" type="Double" min="-1000" max="1000" scale="1000" />
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="xPosition" name="PositionX" type="Double" min="-1000" max="1000" scale="1000" />
     </Op>
     <Op id="DVEAndFlyKeyXSize">
-      <Field id="xSize" name="SizeX" type="Double" min="-100" max="100" scale="1000" />
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="xSize" name="SizeX" type="Double" min="-100" max="100" scale="1000" />
     </Op>
     <Op id="DVEAndFlyKeyYPosition">
-      <Field id="yPosition" name="PositionY" type="Double" min="-1000" max="1000" scale="1000" />
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="yPosition" name="PositionY" type="Double" min="-1000" max="1000" scale="1000" />
     </Op>
     <Op id="DVEAndFlyKeyYSize">
-      <Field id="ySize" name="SizeY" type="Double" min="-100" max="100" scale="1000" />
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="ySize" name="SizeY" type="Double" min="-100" max="100" scale="1000" />
     </Op>
     <Op id="DVEKeyBorderEnable">
-      <Field id="enable" name="Enable" type="Bool" />
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="enable" name="Enable" type="Bool" />
     </Op>
     <Op id="DVEKeyMaskBottom">
-      <Field id="bottom" name="Bottom" type="Double" min="-9000" max="9000" scale="1000" />
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="bottom" name="Bottom" type="Double" min="-9000" max="9000" scale="1000" />
     </Op>
     <Op id="DVEKeyMaskEnable">
-      <Field id="enable" name="Enable" type="Bool" />
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="enable" name="Enable" type="Bool" />
     </Op>
     <Op id="DVEKeyMaskLeft">
-      <Field id="left" name="Left" type="Double" min="-16000" max="16000" scale="1000" />
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="left" name="Left" type="Double" min="-16000" max="16000" scale="1000" />
     </Op>
     <Op id="DVEKeyMaskRight">
-      <Field id="right" name="Right" type="Double" min="-16000" max="16000" scale="1000" />
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="right" name="Right" type="Double" min="-16000" max="16000" scale="1000" />
     </Op>
     <Op id="DVEKeyMaskTop">
-      <Field id="top" name="Top" type="Double" min="-9000" max="9000" scale="1000" />
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="top" name="Top" type="Double" min="-9000" max="9000" scale="1000" />
     </Op>
     <Op id="DVEKeyShadowEnable">
-      <Field id="enable" name="Enable" type="Bool" />
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="enable" name="Enable" type="Bool" />
     </Op>
     <Op id="KeyCutInput">
-      <Field id="input" name="Input" type="Enum">
-        <Value id="0" name="Black" />
-        <Value id="1" name="Input1" />
-        <Value id="2" name="Input2" />
-        <Value id="3" name="Input3" />
-        <Value id="4" name="Input4" />
-        <Value id="5" name="Input5" />
-        <Value id="6" name="Input6" />
-        <Value id="7" name="Input7" />
-        <Value id="8" name="Input8" />
-        <Value id="9" name="Input9" />
-        <Value id="10" name="Input10" />
-        <Value id="11" name="Input11" />
-        <Value id="12" name="Input12" />
-        <Value id="13" name="Input13" />
-        <Value id="14" name="Input14" />
-        <Value id="15" name="Input15" />
-        <Value id="16" name="Input16" />
-        <Value id="17" name="Input17" />
-        <Value id="18" name="Input18" />
-        <Value id="19" name="Input19" />
-        <Value id="20" name="Input20" />
-        <Value id="1000" name="ColorBars" />
-        <Value id="2001" name="Color1" />
-        <Value id="2002" name="Color2" />
-        <Value id="3010" name="MediaPlayer1" />
-        <Value id="3011" name="MediaPlayer1Key" />
-        <Value id="3020" name="MediaPlayer2" />
-        <Value id="3021" name="MediaPlayer2Key" />
-        <Value id="3030" name="MediaPlayer3" />
-        <Value id="3031" name="MediaPlayer3Key" />
-        <Value id="3040" name="MediaPlayer4" />
-        <Value id="3041" name="MediaPlayer4Key" />
-        <Value id="4010" name="Key1Mask" />
-        <Value id="4020" name="Key2Mask" />
-        <Value id="4030" name="Key3Mask" />
-        <Value id="4040" name="Key4Mask" />
-        <Value id="5010" name="DSK1Mask" />
-        <Value id="5020" name="DSK2Mask" />
-        <Value id="6000" name="SuperSource" />
-        <Value id="7001" name="CleanFeed1" />
-        <Value id="7002" name="CleanFeed2" />
-        <Value id="8001" name="Auxilary1" />
-        <Value id="8002" name="Auxilary2" />
-        <Value id="8003" name="Auxilary3" />
-        <Value id="8004" name="Auxilary4" />
-        <Value id="8005" name="Auxilary5" />
-        <Value id="8006" name="Auxilary6" />
-        <Value id="10010" name="ME1Prog" />
-        <Value id="10011" name="ME1Prev" />
-        <Value id="10020" name="ME2Prog" />
-        <Value id="10021" name="ME2Prev" />
-      </Field>
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
+      </Field>
+      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="input" name="Input" type="Enum">
+        <Value id="Black" name="Black" />
+        <Value id="Input1" name="Input1" />
+        <Value id="Input2" name="Input2" />
+        <Value id="Input3" name="Input3" />
+        <Value id="Input4" name="Input4" />
+        <Value id="Input5" name="Input5" />
+        <Value id="Input6" name="Input6" />
+        <Value id="Input7" name="Input7" />
+        <Value id="Input8" name="Input8" />
+        <Value id="Input9" name="Input9" />
+        <Value id="Input10" name="Input10" />
+        <Value id="Input11" name="Input11" />
+        <Value id="Input12" name="Input12" />
+        <Value id="Input13" name="Input13" />
+        <Value id="Input14" name="Input14" />
+        <Value id="Input15" name="Input15" />
+        <Value id="Input16" name="Input16" />
+        <Value id="Input17" name="Input17" />
+        <Value id="Input18" name="Input18" />
+        <Value id="Input19" name="Input19" />
+        <Value id="Input20" name="Input20" />
+        <Value id="ColorBars" name="ColorBars" />
+        <Value id="Color1" name="Color1" />
+        <Value id="Color2" name="Color2" />
+        <Value id="MediaPlayer1" name="MediaPlayer1" />
+        <Value id="MediaPlayer1Key" name="MediaPlayer1Key" />
+        <Value id="MediaPlayer2" name="MediaPlayer2" />
+        <Value id="MediaPlayer2Key" name="MediaPlayer2Key" />
+        <Value id="MediaPlayer3" name="MediaPlayer3" />
+        <Value id="MediaPlayer3Key" name="MediaPlayer3Key" />
+        <Value id="MediaPlayer4" name="MediaPlayer4" />
+        <Value id="MediaPlayer4Key" name="MediaPlayer4Key" />
+        <Value id="Key1Mask" name="Key1Mask" />
+        <Value id="Key2Mask" name="Key2Mask" />
+        <Value id="Key3Mask" name="Key3Mask" />
+        <Value id="Key4Mask" name="Key4Mask" />
+        <Value id="DSK1Mask" name="DSK1Mask" />
+        <Value id="DSK2Mask" name="DSK2Mask" />
+        <Value id="SuperSource" name="SuperSource" />
+        <Value id="CleanFeed1" name="CleanFeed1" />
+        <Value id="CleanFeed2" name="CleanFeed2" />
+        <Value id="Auxilary1" name="Auxilary1" />
+        <Value id="Auxilary2" name="Auxilary2" />
+        <Value id="Auxilary3" name="Auxilary3" />
+        <Value id="Auxilary4" name="Auxilary4" />
+        <Value id="Auxilary5" name="Auxilary5" />
+        <Value id="Auxilary6" name="Auxilary6" />
+        <Value id="ME1Prog" name="ME1Prog" />
+        <Value id="ME1Prev" name="ME1Prev" />
+        <Value id="ME2Prog" name="ME2Prog" />
+        <Value id="ME2Prev" name="ME2Prev" />
       </Field>
     </Op>
     <Op id="KeyFillInput">
-      <Field id="input" name="Input" type="Enum">
-        <Value id="0" name="Black" />
-        <Value id="1" name="Input1" />
-        <Value id="2" name="Input2" />
-        <Value id="3" name="Input3" />
-        <Value id="4" name="Input4" />
-        <Value id="5" name="Input5" />
-        <Value id="6" name="Input6" />
-        <Value id="7" name="Input7" />
-        <Value id="8" name="Input8" />
-        <Value id="9" name="Input9" />
-        <Value id="10" name="Input10" />
-        <Value id="11" name="Input11" />
-        <Value id="12" name="Input12" />
-        <Value id="13" name="Input13" />
-        <Value id="14" name="Input14" />
-        <Value id="15" name="Input15" />
-        <Value id="16" name="Input16" />
-        <Value id="17" name="Input17" />
-        <Value id="18" name="Input18" />
-        <Value id="19" name="Input19" />
-        <Value id="20" name="Input20" />
-        <Value id="1000" name="ColorBars" />
-        <Value id="2001" name="Color1" />
-        <Value id="2002" name="Color2" />
-        <Value id="3010" name="MediaPlayer1" />
-        <Value id="3011" name="MediaPlayer1Key" />
-        <Value id="3020" name="MediaPlayer2" />
-        <Value id="3021" name="MediaPlayer2Key" />
-        <Value id="3030" name="MediaPlayer3" />
-        <Value id="3031" name="MediaPlayer3Key" />
-        <Value id="3040" name="MediaPlayer4" />
-        <Value id="3041" name="MediaPlayer4Key" />
-        <Value id="4010" name="Key1Mask" />
-        <Value id="4020" name="Key2Mask" />
-        <Value id="4030" name="Key3Mask" />
-        <Value id="4040" name="Key4Mask" />
-        <Value id="5010" name="DSK1Mask" />
-        <Value id="5020" name="DSK2Mask" />
-        <Value id="6000" name="SuperSource" />
-        <Value id="7001" name="CleanFeed1" />
-        <Value id="7002" name="CleanFeed2" />
-        <Value id="8001" name="Auxilary1" />
-        <Value id="8002" name="Auxilary2" />
-        <Value id="8003" name="Auxilary3" />
-        <Value id="8004" name="Auxilary4" />
-        <Value id="8005" name="Auxilary5" />
-        <Value id="8006" name="Auxilary6" />
-        <Value id="10010" name="ME1Prog" />
-        <Value id="10011" name="ME1Prev" />
-        <Value id="10020" name="ME2Prog" />
-        <Value id="10021" name="ME2Prev" />
-      </Field>
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
+      </Field>
+      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="input" name="Input" type="Enum">
+        <Value id="Black" name="Black" />
+        <Value id="Input1" name="Input1" />
+        <Value id="Input2" name="Input2" />
+        <Value id="Input3" name="Input3" />
+        <Value id="Input4" name="Input4" />
+        <Value id="Input5" name="Input5" />
+        <Value id="Input6" name="Input6" />
+        <Value id="Input7" name="Input7" />
+        <Value id="Input8" name="Input8" />
+        <Value id="Input9" name="Input9" />
+        <Value id="Input10" name="Input10" />
+        <Value id="Input11" name="Input11" />
+        <Value id="Input12" name="Input12" />
+        <Value id="Input13" name="Input13" />
+        <Value id="Input14" name="Input14" />
+        <Value id="Input15" name="Input15" />
+        <Value id="Input16" name="Input16" />
+        <Value id="Input17" name="Input17" />
+        <Value id="Input18" name="Input18" />
+        <Value id="Input19" name="Input19" />
+        <Value id="Input20" name="Input20" />
+        <Value id="ColorBars" name="ColorBars" />
+        <Value id="Color1" name="Color1" />
+        <Value id="Color2" name="Color2" />
+        <Value id="MediaPlayer1" name="MediaPlayer1" />
+        <Value id="MediaPlayer1Key" name="MediaPlayer1Key" />
+        <Value id="MediaPlayer2" name="MediaPlayer2" />
+        <Value id="MediaPlayer2Key" name="MediaPlayer2Key" />
+        <Value id="MediaPlayer3" name="MediaPlayer3" />
+        <Value id="MediaPlayer3Key" name="MediaPlayer3Key" />
+        <Value id="MediaPlayer4" name="MediaPlayer4" />
+        <Value id="MediaPlayer4Key" name="MediaPlayer4Key" />
+        <Value id="Key1Mask" name="Key1Mask" />
+        <Value id="Key2Mask" name="Key2Mask" />
+        <Value id="Key3Mask" name="Key3Mask" />
+        <Value id="Key4Mask" name="Key4Mask" />
+        <Value id="DSK1Mask" name="DSK1Mask" />
+        <Value id="DSK2Mask" name="DSK2Mask" />
+        <Value id="SuperSource" name="SuperSource" />
+        <Value id="CleanFeed1" name="CleanFeed1" />
+        <Value id="CleanFeed2" name="CleanFeed2" />
+        <Value id="Auxilary1" name="Auxilary1" />
+        <Value id="Auxilary2" name="Auxilary2" />
+        <Value id="Auxilary3" name="Auxilary3" />
+        <Value id="Auxilary4" name="Auxilary4" />
+        <Value id="Auxilary5" name="Auxilary5" />
+        <Value id="Auxilary6" name="Auxilary6" />
+        <Value id="ME1Prog" name="ME1Prog" />
+        <Value id="ME1Prev" name="ME1Prev" />
+        <Value id="ME2Prog" name="ME2Prog" />
+        <Value id="ME2Prev" name="ME2Prev" />
       </Field>
     </Op>
     <Op id="KeyFlyEnable">
-      <Field id="enable" name="Enable" type="Bool" />
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="enable" name="Enable" type="Bool" />
     </Op>
     <Op id="KeyMaskBottom">
-      <Field id="bottom" name="Bottom" type="Double" min="-9000" max="9000" scale="1000" />
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="bottom" name="Bottom" type="Double" min="-9000" max="9000" scale="1000" />
     </Op>
     <Op id="KeyMaskEnable">
-      <Field id="enable" name="Enable" type="Bool" />
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="enable" name="Enable" type="Bool" />
     </Op>
     <Op id="KeyMaskLeft">
-      <Field id="left" name="Left" type="Double" min="-16000" max="16000" scale="1000" />
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="left" name="Left" type="Double" min="-16000" max="16000" scale="1000" />
     </Op>
     <Op id="KeyMaskRight">
-      <Field id="right" name="Right" type="Double" min="-16000" max="16000" scale="1000" />
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="right" name="Right" type="Double" min="-16000" max="16000" scale="1000" />
     </Op>
     <Op id="KeyMaskTop">
-      <Field id="top" name="Top" type="Double" min="-9000" max="9000" scale="1000" />
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="top" name="Top" type="Double" min="-9000" max="9000" scale="1000" />
     </Op>
     <Op id="KeyOnAir">
-      <Field id="onAir" name="OnAir" type="Bool" />
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="onAir" name="OnAir" type="Bool" />
     </Op>
     <Op id="KeyType">
-      <Field id="type" name="KeyType" type="Enum">
-        <Value id="0" name="Luma" />
-        <Value id="1" name="Chroma" />
-        <Value id="2" name="Pattern" />
-        <Value id="3" name="DVE" />
-      </Field>
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
+      </Field>
+      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="type" name="KeyType" type="Enum">
+        <Value id="Luma" name="Luma" />
+        <Value id="Chroma" name="Chroma" />
+        <Value id="Pattern" name="Pattern" />
+        <Value id="DVE" name="DVE" />
       </Field>
     </Op>
     <Op id="LumaKeyPreMultiply">
-      <Field id="preMultiply" name="PreMultiply" type="Bool" />
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
       <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="preMultiply" name="PreMultiply" type="Bool" />
     </Op>
     <Op id="MediaPlayerGoToBeginning">
       <Field id="mediaPlayer" name="MediaPlayerIndex" type="Enum">
@@ -775,13 +775,13 @@
       </Field>
     </Op>
     <Op id="MediaPlayerLoop">
-      <Field id="loop" name="Loop" type="Bool" />
       <Field id="mediaPlayer" name="MediaPlayerIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
         <Value id="2" name="Three" />
         <Value id="3" name="Four" />
       </Field>
+      <Field id="loop" name="Loop" type="Bool" />
     </Op>
     <Op id="MediaPlayerPlay">
       <Field id="mediaPlayer" name="MediaPlayerIndex" type="Enum">
@@ -792,13 +792,13 @@
       </Field>
     </Op>
     <Op id="MediaPlayerSourceClipIndex">
-      <Field id="index" name="Index" type="Int" min="0" max="255" />
       <Field id="mediaPlayer" name="MediaPlayerIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
         <Value id="2" name="Three" />
         <Value id="3" name="Four" />
       </Field>
+      <Field id="index" name="Index" type="Int" min="0" max="255" />
     </Op>
     <Op id="MediaPlayerSourceClip">
       <Field id="mediaPlayer" name="MediaPlayerIndex" type="Enum">
@@ -809,13 +809,13 @@
       </Field>
     </Op>
     <Op id="MediaPlayerSourceStillIndex">
-      <Field id="index" name="Index" type="Int" min="0" max="255" />
       <Field id="mediaPlayer" name="MediaPlayerIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
         <Value id="2" name="Three" />
         <Value id="3" name="Four" />
       </Field>
+      <Field id="index" name="Index" type="Int" min="0" max="255" />
     </Op>
     <Op id="MediaPlayerSourceStill">
       <Field id="mediaPlayer" name="MediaPlayerIndex" type="Enum">
@@ -829,102 +829,102 @@
       <Field id="hyperDeckIndex" name="HyperDeckIndex" type="Int" min="0" max="255" />
     </Op>
     <Op id="HyperDeckSetLoop">
-      <Field id="loopEnabled" name="HyperDeckLoopEnabled" type="Bool" />
       <Field id="hyperDeckIndex" name="HyperDeckIndex" type="Int" min="0" max="255" />
+      <Field id="loopEnabled" name="HyperDeckLoopEnabled" type="Bool" />
     </Op>
     <Op id="HyperDeckSetSingleClip">
-      <Field id="singleClipEnabled" name="HyperDeckSingleClipEnabled" type="Bool" />
       <Field id="hyperDeckIndex" name="HyperDeckIndex" type="Int" min="0" max="255" />
+      <Field id="singleClipEnabled" name="HyperDeckSingleClipEnabled" type="Bool" />
     </Op>
     <Op id="HyperDeckSetSourceClipIndex">
-      <Field id="clipIndex" name="HyperDeckClipIndex" type="Int" min="0" max="65535" />
       <Field id="hyperDeckIndex" name="HyperDeckIndex" type="Int" min="0" max="255" />
+      <Field id="clipIndex" name="HyperDeckClipIndex" type="Int" min="0" max="65535" />
     </Op>
     <Op id="HyperDeckSetSpeed">
-      <Field id="speedPercent" name="HyperDeckSpeedPercent" type="Int" min="0" max="100" />
       <Field id="hyperDeckIndex" name="HyperDeckIndex" type="Int" min="0" max="255" />
+      <Field id="speedPercent" name="HyperDeckSpeedPercent" type="Int" min="0" max="100" />
     </Op>
     <Op id="HyperDeckStop">
       <Field id="hyperDeckIndex" name="HyperDeckIndex" type="Int" min="0" max="255" />
     </Op>
     <Op id="DownstreamKeyMaskBottom">
-      <Field id="bottom" name="Bottom" type="Double" min="-9000" max="9000" scale="1000" />
       <Field id="keyIndex" name="KeyIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="bottom" name="Bottom" type="Double" min="-9000" max="9000" scale="1000" />
     </Op>
     <Op id="DownstreamKeyMaskEnable">
-      <Field id="enable" name="Enable" type="Bool" />
       <Field id="keyIndex" name="KeyIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="enable" name="Enable" type="Bool" />
     </Op>
     <Op id="DownstreamKeyMaskLeft">
-      <Field id="left" name="Left" type="Double" min="-16000" max="16000" scale="1000" />
       <Field id="keyIndex" name="KeyIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="left" name="Left" type="Double" min="-16000" max="16000" scale="1000" />
     </Op>
     <Op id="DownstreamKeyMaskRight">
-      <Field id="right" name="Right" type="Double" min="-16000" max="16000" scale="1000" />
       <Field id="keyIndex" name="KeyIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="right" name="Right" type="Double" min="-16000" max="16000" scale="1000" />
     </Op>
     <Op id="DownstreamKeyMaskTop">
-      <Field id="top" name="Top" type="Double" min="-9000" max="9000" scale="1000" />
       <Field id="keyIndex" name="KeyIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="top" name="Top" type="Double" min="-9000" max="9000" scale="1000" />
     </Op>
     <Op id="DownstreamKeyOnAir">
-      <Field id="onAir" name="OnAir" type="Bool" />
       <Field id="keyIndex" name="KeyIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="onAir" name="OnAir" type="Bool" />
     </Op>
     <Op id="DownstreamKeyPreMultiply">
-      <Field id="preMultiply" name="PreMultiply" type="Bool" />
       <Field id="keyIndex" name="KeyIndex" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
+      <Field id="preMultiply" name="PreMultiply" type="Bool" />
     </Op>
     <Op id="AudioMixerInputGain">
       <Field id="input" name="Input" type="Enum">
-        <Value id="1" name="Input1" />
-        <Value id="2" name="Input2" />
-        <Value id="3" name="Input3" />
-        <Value id="4" name="Input4" />
-        <Value id="5" name="Input5" />
-        <Value id="6" name="Input6" />
-        <Value id="7" name="Input7" />
-        <Value id="8" name="Input8" />
-        <Value id="9" name="Input9" />
-        <Value id="10" name="Input10" />
-        <Value id="11" name="Input11" />
-        <Value id="12" name="Input12" />
-        <Value id="13" name="Input13" />
-        <Value id="14" name="Input14" />
-        <Value id="15" name="Input15" />
-        <Value id="16" name="Input16" />
-        <Value id="17" name="Input17" />
-        <Value id="18" name="Input18" />
-        <Value id="19" name="Input19" />
-        <Value id="20" name="Input20" />
-        <Value id="1001" name="XLR" />
-        <Value id="1101" name="AESEBU" />
-        <Value id="1201" name="RCA" />
-        <Value id="2001" name="MP1" />
-        <Value id="2002" name="MP2" />
-        <Value id="2003" name="MP3" />
-        <Value id="2004" name="MP4" />
+        <Value id="Input1" name="Input1" />
+        <Value id="Input2" name="Input2" />
+        <Value id="Input3" name="Input3" />
+        <Value id="Input4" name="Input4" />
+        <Value id="Input5" name="Input5" />
+        <Value id="Input6" name="Input6" />
+        <Value id="Input7" name="Input7" />
+        <Value id="Input8" name="Input8" />
+        <Value id="Input9" name="Input9" />
+        <Value id="Input10" name="Input10" />
+        <Value id="Input11" name="Input11" />
+        <Value id="Input12" name="Input12" />
+        <Value id="Input13" name="Input13" />
+        <Value id="Input14" name="Input14" />
+        <Value id="Input15" name="Input15" />
+        <Value id="Input16" name="Input16" />
+        <Value id="Input17" name="Input17" />
+        <Value id="Input18" name="Input18" />
+        <Value id="Input19" name="Input19" />
+        <Value id="Input20" name="Input20" />
+        <Value id="XLR" name="XLR" />
+        <Value id="AESEBU" name="AESEBU" />
+        <Value id="RCA" name="RCA" />
+        <Value id="MP1" name="MP1" />
+        <Value id="MP2" name="MP2" />
+        <Value id="MP3" name="MP3" />
+        <Value id="MP4" name="MP4" />
       </Field>
       <Field id="gain" name="Gain" type="Int" min="0" max="65535" />
     </Op>

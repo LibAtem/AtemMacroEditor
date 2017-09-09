@@ -32,7 +32,10 @@ namespace AtemMacroEditor.Generator
                 var xmlOp = new XmlOperation() {Id = op.Key.ToString()};
                 res.Operations.Add(xmlOp);
                 
-                IEnumerable<PropertyInfo> props = op.Value.GetProperties(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic).Where(prop => prop.GetCustomAttribute<NoSerializeAttribute>() == null);
+                IEnumerable<PropertyInfo> props = op.Value.GetProperties(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
+                    .Where(prop => prop.GetCustomAttribute<NoSerializeAttribute>() == null)
+                    .OrderBy(prop => prop.GetCustomAttribute<SerializeAttribute>()?.StartByte ?? 999);
+
                 foreach (PropertyInfo prop in props)
                 {
                     var fieldAttr = prop.GetCustomAttribute<MacroFieldAttribute>();
@@ -52,15 +55,19 @@ namespace AtemMacroEditor.Generator
                     }
                     else if (prop.GetCustomAttribute<Enum8Attribute>() != null || prop.GetCustomAttribute<Enum16Attribute>() != null || prop.GetCustomAttribute<Enum32Attribute>() != null)
                     {
-                        xmlField.Type = FieldType.Enum;
-                        var vals = Enum.GetValues(prop.PropertyType);
-
-                        foreach (object val in vals)
+                        xmlField.Type = prop.PropertyType.GetCustomAttribute<FlagsAttribute>() != null ? FieldType.Flags : FieldType.Enum;
+                        
+                        foreach (object val in Enum.GetValues(prop.PropertyType))
                         {
+                            string id = val.ToString();
+                            var xmlAttr = prop.PropertyType.GetMember(val.ToString())[0].GetCustomAttribute<XmlEnumAttribute>();
+                            if (!fieldAttr.EnumAsNames && xmlAttr != null)
+                                id = xmlAttr.Name;
+
                             // TODO check value is available for device profile/usage location
                             xmlField.Values.Add(new XmlFieldValue()
                             {
-                                Id = ((int)val).ToString(),
+                                Id = id,
                                 Name = val.ToString(),
                             });
                         }

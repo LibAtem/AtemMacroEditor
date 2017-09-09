@@ -32,6 +32,7 @@ namespace AtemMacroEditor.Generator
     public enum FieldType
     {
         Enum,
+        Flags,
         Int,
         Double,
         Bool,
