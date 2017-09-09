@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Xml.Serialization;
+using LibAtem.Commands;
 
 namespace AtemMacroEditor.Generator
 {
@@ -61,6 +62,7 @@ namespace AtemMacroEditor.Generator
                     {
                         Id = fieldAttr.Id,
                         Name = fieldAttr.Name,
+                        IsId = prop.GetCustomAttribute<CommandIdAttribute>() != null
                     };
                     xmlOp.Fields.Add(xmlField);
 

@@ -51,6 +51,13 @@ namespace AtemMacroEditor.Generator
         [XmlAttribute("name")]
         public string Name { get; set; }
 
+        [XmlAttribute("isId")]
+        public bool IsId { get; set; }
+        public bool ShouldSerializeIsId()
+        {
+            return IsId;
+        }
+
         [XmlAttribute("type")]
         public FieldType Type { get; set; }
 

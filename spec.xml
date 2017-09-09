@@ -2,7 +2,7 @@
 <MacroOperations>
   <Operations>
     <Op id="AuxiliaryInput">
-      <Field id="auxiliaryIndex" name="AuxiliaryIndex" type="Int" min="0" max="65535" />
+      <Field id="auxiliaryIndex" name="AuxiliaryIndex" isId="true" type="Int" min="0" max="65535" />
       <Field id="input" name="Input" type="Enum">
         <Value id="Black" name="Black" />
         <Value id="Camera1" name="Camera1" />
@@ -132,11 +132,11 @@
       <Field id="enable" name="Enable" type="Bool" />
     </Op>
     <Op id="SuperSourceBoxEnable">
-      <Field id="boxIndex" name="SuperSourceBoxIndex" type="Int" min="0" max="255" />
+      <Field id="boxIndex" name="SuperSourceBoxIndex" isId="true" type="Int" min="0" max="255" />
       <Field id="enable" name="Enable" type="Bool" />
     </Op>
     <Op id="SuperSourceBoxInput">
-      <Field id="boxIndex" name="SuperSourceBoxIndex" type="Int" min="0" max="255" />
+      <Field id="boxIndex" name="SuperSourceBoxIndex" isId="true" type="Int" min="0" max="255" />
       <Field id="input" name="Input" type="Enum">
         <Value id="Black" name="Black" />
         <Value id="Camera1" name="Camera1" />
@@ -177,57 +177,57 @@
       </Field>
     </Op>
     <Op id="SuperSourceBoxMaskBottom">
-      <Field id="boxIndex" name="SuperSourceBoxIndex" type="Int" min="0" max="255" />
+      <Field id="boxIndex" name="SuperSourceBoxIndex" isId="true" type="Int" min="0" max="255" />
       <Field id="bottom" name="Bottom" type="Int" min="0" max="65535" />
     </Op>
     <Op id="SuperSourceBoxMaskEnable">
-      <Field id="boxIndex" name="SuperSourceBoxIndex" type="Int" min="0" max="255" />
+      <Field id="boxIndex" name="SuperSourceBoxIndex" isId="true" type="Int" min="0" max="255" />
       <Field id="enable" name="Enable" type="Bool" />
     </Op>
     <Op id="SuperSourceBoxMaskLeft">
-      <Field id="boxIndex" name="SuperSourceBoxIndex" type="Int" min="0" max="255" />
+      <Field id="boxIndex" name="SuperSourceBoxIndex" isId="true" type="Int" min="0" max="255" />
       <Field id="left" name="Left" type="Int" min="0" max="65535" />
     </Op>
     <Op id="SuperSourceBoxMaskRight">
-      <Field id="boxIndex" name="SuperSourceBoxIndex" type="Int" min="0" max="255" />
+      <Field id="boxIndex" name="SuperSourceBoxIndex" isId="true" type="Int" min="0" max="255" />
       <Field id="right" name="Right" type="Int" min="0" max="65535" />
     </Op>
     <Op id="SuperSourceBoxMaskTop">
-      <Field id="boxIndex" name="SuperSourceBoxIndex" type="Int" min="0" max="255" />
+      <Field id="boxIndex" name="SuperSourceBoxIndex" isId="true" type="Int" min="0" max="255" />
       <Field id="top" name="Top" type="Int" min="0" max="65535" />
     </Op>
     <Op id="SuperSourceBoxSize">
-      <Field id="boxIndex" name="SuperSourceBoxIndex" type="Int" min="0" max="255" />
+      <Field id="boxIndex" name="SuperSourceBoxIndex" isId="true" type="Int" min="0" max="255" />
       <Field id="size" name="Size" type="Int" min="0" max="65535" />
     </Op>
     <Op id="SuperSourceBoxXPosition">
-      <Field id="boxIndex" name="SuperSourceBoxIndex" type="Int" min="0" max="255" />
+      <Field id="boxIndex" name="SuperSourceBoxIndex" isId="true" type="Int" min="0" max="255" />
       <Field id="xPosition" name="PositionX" type="Double" min="-4800" max="4800" scale="100" />
     </Op>
     <Op id="SuperSourceBoxYPosition">
-      <Field id="boxIndex" name="SuperSourceBoxIndex" type="Int" min="0" max="255" />
+      <Field id="boxIndex" name="SuperSourceBoxIndex" isId="true" type="Int" min="0" max="255" />
       <Field id="yPosition" name="PositionY" type="Double" min="-4800" max="4800" scale="100" />
     </Op>
     <Op id="AutoTransition">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
     </Op>
     <Op id="CutTransition">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
     </Op>
     <Op id="FadeToBlackAuto">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
     </Op>
     <Op id="PreviewInput">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
@@ -271,7 +271,7 @@
       </Field>
     </Op>
     <Op id="ProgramInput">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
@@ -315,28 +315,28 @@
       </Field>
     </Op>
     <Op id="TransitionDipRate">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
       <Field id="rate" name="Rate" type="Int" min="0" max="250" />
     </Op>
     <Op id="TransitionDVERate">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
       <Field id="rate" name="Rate" type="Int" min="0" max="250" />
     </Op>
     <Op id="TransitionMixRate">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
       <Field id="rate" name="Rate" type="Int" min="0" max="250" />
     </Op>
     <Op id="TransitionSource">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
@@ -350,21 +350,21 @@
       </Field>
     </Op>
     <Op id="TransitionStingerMixRate">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
       <Field id="rate" name="Rate" type="Int" min="0" max="250" />
     </Op>
     <Op id="TransitionStingerRate">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
       <Field id="rate" name="Rate" type="Int" min="0" max="250" />
     </Op>
     <Op id="TransitionStyle">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
@@ -377,114 +377,114 @@
       </Field>
     </Op>
     <Op id="TransitionWipeRate">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
       <Field id="rate" name="Rate" type="Int" min="0" max="250" />
     </Op>
     <Op id="DVEAndFlyKeyRotation">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Int" min="0" max="65535" />
       <Field id="rotation" name="Rotation" type="Double" min="-1000" max="1000" scale="1000" />
     </Op>
     <Op id="DVEAndFlyKeyXPosition">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Int" min="0" max="65535" />
       <Field id="xPosition" name="PositionX" type="Double" min="-1000" max="1000" scale="1000" />
     </Op>
     <Op id="DVEAndFlyKeyXSize">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Int" min="0" max="65535" />
       <Field id="xSize" name="SizeX" type="Double" min="-100" max="100" scale="1000" />
     </Op>
     <Op id="DVEAndFlyKeyYPosition">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Int" min="0" max="65535" />
       <Field id="yPosition" name="PositionY" type="Double" min="-1000" max="1000" scale="1000" />
     </Op>
     <Op id="DVEAndFlyKeyYSize">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Int" min="0" max="65535" />
       <Field id="ySize" name="SizeY" type="Double" min="-100" max="100" scale="1000" />
     </Op>
     <Op id="DVEKeyBorderEnable">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Int" min="0" max="65535" />
       <Field id="enable" name="Enable" type="Bool" />
     </Op>
     <Op id="DVEKeyMaskBottom">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Int" min="0" max="65535" />
       <Field id="bottom" name="Bottom" type="Double" min="-9000" max="9000" scale="1000" />
     </Op>
     <Op id="DVEKeyMaskEnable">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Int" min="0" max="65535" />
       <Field id="enable" name="Enable" type="Bool" />
     </Op>
     <Op id="DVEKeyMaskLeft">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Int" min="0" max="65535" />
       <Field id="left" name="Left" type="Double" min="-16000" max="16000" scale="1000" />
     </Op>
     <Op id="DVEKeyMaskRight">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Int" min="0" max="65535" />
       <Field id="right" name="Right" type="Double" min="-16000" max="16000" scale="1000" />
     </Op>
     <Op id="DVEKeyMaskTop">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Int" min="0" max="65535" />
       <Field id="top" name="Top" type="Double" min="-9000" max="9000" scale="1000" />
     </Op>
     <Op id="DVEKeyShadowEnable">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Int" min="0" max="65535" />
       <Field id="enable" name="Enable" type="Bool" />
     </Op>
     <Op id="KeyCutInput">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Int" min="0" max="65535" />
       <Field id="input" name="Input" type="Enum">
         <Value id="Black" name="Black" />
         <Value id="Camera1" name="Camera1" />
@@ -525,11 +525,11 @@
       </Field>
     </Op>
     <Op id="KeyFillInput">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Int" min="0" max="65535" />
       <Field id="input" name="Input" type="Enum">
         <Value id="Black" name="Black" />
         <Value id="Camera1" name="Camera1" />
@@ -570,67 +570,67 @@
       </Field>
     </Op>
     <Op id="KeyFlyEnable">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Int" min="0" max="65535" />
       <Field id="enable" name="Enable" type="Bool" />
     </Op>
     <Op id="KeyMaskBottom">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Int" min="0" max="65535" />
       <Field id="bottom" name="Bottom" type="Double" min="-9000" max="9000" scale="1000" />
     </Op>
     <Op id="KeyMaskEnable">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Int" min="0" max="65535" />
       <Field id="enable" name="Enable" type="Bool" />
     </Op>
     <Op id="KeyMaskLeft">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Int" min="0" max="65535" />
       <Field id="left" name="Left" type="Double" min="-16000" max="16000" scale="1000" />
     </Op>
     <Op id="KeyMaskRight">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Int" min="0" max="65535" />
       <Field id="right" name="Right" type="Double" min="-16000" max="16000" scale="1000" />
     </Op>
     <Op id="KeyMaskTop">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Int" min="0" max="65535" />
       <Field id="top" name="Top" type="Double" min="-9000" max="9000" scale="1000" />
     </Op>
     <Op id="KeyOnAir">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Int" min="0" max="65535" />
       <Field id="onAir" name="OnAir" type="Bool" />
     </Op>
     <Op id="KeyType">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Int" min="0" max="65535" />
       <Field id="type" name="KeyType" type="Enum">
         <Value id="Luma" name="Luma" />
         <Value id="Chroma" name="Chroma" />
@@ -639,15 +639,15 @@
       </Field>
     </Op>
     <Op id="LumaKeyPreMultiply">
-      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" type="Enum">
+      <Field id="mixEffectBlockIndex" name="MixEffectBlockIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
-      <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Int" min="0" max="65535" />
       <Field id="preMultiply" name="PreMultiply" type="Bool" />
     </Op>
     <Op id="MediaPlayerGoToBeginning">
-      <Field id="mediaPlayer" name="MediaPlayerIndex" type="Enum">
+      <Field id="mediaPlayer" name="MediaPlayerIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
         <Value id="2" name="Three" />
@@ -655,7 +655,7 @@
       </Field>
     </Op>
     <Op id="MediaPlayerLoop">
-      <Field id="mediaPlayer" name="MediaPlayerIndex" type="Enum">
+      <Field id="mediaPlayer" name="MediaPlayerIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
         <Value id="2" name="Three" />
@@ -664,7 +664,7 @@
       <Field id="loop" name="Loop" type="Bool" />
     </Op>
     <Op id="MediaPlayerPlay">
-      <Field id="mediaPlayer" name="MediaPlayerIndex" type="Enum">
+      <Field id="mediaPlayer" name="MediaPlayerIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
         <Value id="2" name="Three" />
@@ -672,7 +672,7 @@
       </Field>
     </Op>
     <Op id="MediaPlayerSourceClipIndex">
-      <Field id="mediaPlayer" name="MediaPlayerIndex" type="Enum">
+      <Field id="mediaPlayer" name="MediaPlayerIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
         <Value id="2" name="Three" />
@@ -681,7 +681,7 @@
       <Field id="index" name="Index" type="Int" min="0" max="255" />
     </Op>
     <Op id="MediaPlayerSourceClip">
-      <Field id="mediaPlayer" name="MediaPlayerIndex" type="Enum">
+      <Field id="mediaPlayer" name="MediaPlayerIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
         <Value id="2" name="Three" />
@@ -689,7 +689,7 @@
       </Field>
     </Op>
     <Op id="MediaPlayerSourceStillIndex">
-      <Field id="mediaPlayer" name="MediaPlayerIndex" type="Enum">
+      <Field id="mediaPlayer" name="MediaPlayerIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
         <Value id="2" name="Three" />
@@ -698,7 +698,7 @@
       <Field id="index" name="Index" type="Int" min="0" max="255" />
     </Op>
     <Op id="MediaPlayerSourceStill">
-      <Field id="mediaPlayer" name="MediaPlayerIndex" type="Enum">
+      <Field id="mediaPlayer" name="MediaPlayerIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
         <Value id="2" name="Three" />
@@ -706,78 +706,78 @@
       </Field>
     </Op>
     <Op id="HyperDeckPlay">
-      <Field id="hyperDeckIndex" name="HyperDeckIndex" type="Int" min="0" max="255" />
+      <Field id="hyperDeckIndex" name="HyperDeckIndex" isId="true" type="Int" min="0" max="255" />
     </Op>
     <Op id="HyperDeckSetLoop">
-      <Field id="hyperDeckIndex" name="HyperDeckIndex" type="Int" min="0" max="255" />
+      <Field id="hyperDeckIndex" name="HyperDeckIndex" isId="true" type="Int" min="0" max="255" />
       <Field id="loopEnabled" name="HyperDeckLoopEnabled" type="Bool" />
     </Op>
     <Op id="HyperDeckSetSingleClip">
-      <Field id="hyperDeckIndex" name="HyperDeckIndex" type="Int" min="0" max="255" />
+      <Field id="hyperDeckIndex" name="HyperDeckIndex" isId="true" type="Int" min="0" max="255" />
       <Field id="singleClipEnabled" name="HyperDeckSingleClipEnabled" type="Bool" />
     </Op>
     <Op id="HyperDeckSetSourceClipIndex">
-      <Field id="hyperDeckIndex" name="HyperDeckIndex" type="Int" min="0" max="255" />
+      <Field id="hyperDeckIndex" name="HyperDeckIndex" isId="true" type="Int" min="0" max="255" />
       <Field id="clipIndex" name="HyperDeckClipIndex" type="Int" min="0" max="65535" />
     </Op>
     <Op id="HyperDeckSetSpeed">
-      <Field id="hyperDeckIndex" name="HyperDeckIndex" type="Int" min="0" max="255" />
+      <Field id="hyperDeckIndex" name="HyperDeckIndex" isId="true" type="Int" min="0" max="255" />
       <Field id="speedPercent" name="HyperDeckSpeedPercent" type="Int" min="0" max="100" />
     </Op>
     <Op id="HyperDeckStop">
-      <Field id="hyperDeckIndex" name="HyperDeckIndex" type="Int" min="0" max="255" />
+      <Field id="hyperDeckIndex" name="HyperDeckIndex" isId="true" type="Int" min="0" max="255" />
     </Op>
     <Op id="DownstreamKeyMaskBottom">
-      <Field id="keyIndex" name="KeyIndex" type="Enum">
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
       <Field id="bottom" name="Bottom" type="Double" min="-9000" max="9000" scale="1000" />
     </Op>
     <Op id="DownstreamKeyMaskEnable">
-      <Field id="keyIndex" name="KeyIndex" type="Enum">
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
       <Field id="enable" name="Enable" type="Bool" />
     </Op>
     <Op id="DownstreamKeyMaskLeft">
-      <Field id="keyIndex" name="KeyIndex" type="Enum">
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
       <Field id="left" name="Left" type="Double" min="-16000" max="16000" scale="1000" />
     </Op>
     <Op id="DownstreamKeyMaskRight">
-      <Field id="keyIndex" name="KeyIndex" type="Enum">
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
       <Field id="right" name="Right" type="Double" min="-16000" max="16000" scale="1000" />
     </Op>
     <Op id="DownstreamKeyMaskTop">
-      <Field id="keyIndex" name="KeyIndex" type="Enum">
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
       <Field id="top" name="Top" type="Double" min="-9000" max="9000" scale="1000" />
     </Op>
     <Op id="DownstreamKeyOnAir">
-      <Field id="keyIndex" name="KeyIndex" type="Enum">
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
       <Field id="onAir" name="OnAir" type="Bool" />
     </Op>
     <Op id="DownstreamKeyPreMultiply">
-      <Field id="keyIndex" name="KeyIndex" type="Enum">
+      <Field id="keyIndex" name="KeyIndex" isId="true" type="Enum">
         <Value id="0" name="One" />
         <Value id="1" name="Two" />
       </Field>
       <Field id="preMultiply" name="PreMultiply" type="Bool" />
     </Op>
     <Op id="AudioMixerInputGain">
-      <Field id="input" name="Input" type="Enum">
+      <Field id="input" name="Input" isId="true" type="Enum">
         <Value id="Black" name="Black" />
         <Value id="Camera1" name="Camera1" />
         <Value id="Camera2" name="Camera2" />
