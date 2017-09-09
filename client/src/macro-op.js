@@ -7,7 +7,7 @@ import {
   Link
 } from 'react-router-dom'
 
-import Lang from './lang';
+import { Lang, IdFields } from './lang';
 
 const cardSource = {
   beginDrag(props) {
@@ -65,19 +65,12 @@ const cardTarget = {
   },
 };
 
-const validIdFields = [
-  "mixEffectBlockIndex",
-  "keyIndex",
-  "mediaPlayer",
-  "boxIndex",
-];
-
 export function MacroOpNames(data, targetLength){
   const parts = [ data.id ];
-  for (let f of validIdFields){
+  for (let f of Object.keys(IdFields)){
     const val = data[f];
     if (val !== undefined && val !== null)
-      parts.push(Lang.formatString(Lang.ids[f], parseInt(val)+1));
+      parts.push(IdFields[f](data.id, val));
   }
 
   if (targetLength === undefined)

@@ -42,7 +42,7 @@ class BasePage extends React.Component {
   render(){
     return (
       <div>
-      <Navbar inverse collapseOnSelect>
+      <Navbar inverse collapseOnSelect fixedTop>
         <Navbar.Header>
           <Navbar.Brand>
             <a href="#">Atem Macro Editor</a>
@@ -56,7 +56,7 @@ class BasePage extends React.Component {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      <div className="container">
+      <div className="container mainElm">
         <div className="row">
           <div className="col-xs-12">
             <BasicExample />

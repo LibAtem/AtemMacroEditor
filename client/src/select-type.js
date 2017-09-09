@@ -12,7 +12,7 @@ import {
 import Slider from 'react-rangeslider';
 import Switch from 'react-bootstrap-switch';
 
-import Lang from './lang';
+import { Lang } from './lang';
 import { GetAllTypes } from './spec';
 
 export class SelectMacroType extends React.Component {

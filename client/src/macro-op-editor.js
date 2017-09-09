@@ -12,7 +12,7 @@ import {
 import Slider from 'react-rangeslider';
 import Switch from 'react-bootstrap-switch';
 
-import Lang from './lang';
+import { Lang } from './lang';
 import { FindFieldSpec } from './spec';
 
 export class MacroOpEditor extends React.Component {
