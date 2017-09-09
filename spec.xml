@@ -5,26 +5,26 @@
       <Field id="auxiliaryIndex" name="AuxiliaryIndex" type="Int" min="0" max="65535" />
       <Field id="input" name="Input" type="Enum">
         <Value id="Black" name="Black" />
-        <Value id="Input1" name="Input1" />
-        <Value id="Input2" name="Input2" />
-        <Value id="Input3" name="Input3" />
-        <Value id="Input4" name="Input4" />
-        <Value id="Input5" name="Input5" />
-        <Value id="Input6" name="Input6" />
-        <Value id="Input7" name="Input7" />
-        <Value id="Input8" name="Input8" />
-        <Value id="Input9" name="Input9" />
-        <Value id="Input10" name="Input10" />
-        <Value id="Input11" name="Input11" />
-        <Value id="Input12" name="Input12" />
-        <Value id="Input13" name="Input13" />
-        <Value id="Input14" name="Input14" />
-        <Value id="Input15" name="Input15" />
-        <Value id="Input16" name="Input16" />
-        <Value id="Input17" name="Input17" />
-        <Value id="Input18" name="Input18" />
-        <Value id="Input19" name="Input19" />
-        <Value id="Input20" name="Input20" />
+        <Value id="Camera1" name="Camera1" />
+        <Value id="Camera2" name="Camera2" />
+        <Value id="Camera3" name="Camera3" />
+        <Value id="Camera4" name="Camera4" />
+        <Value id="Camera5" name="Camera5" />
+        <Value id="Camera6" name="Camera6" />
+        <Value id="Camera7" name="Camera7" />
+        <Value id="Camera8" name="Camera8" />
+        <Value id="Camera9" name="Camera9" />
+        <Value id="Camera10" name="Camera10" />
+        <Value id="Camera11" name="Camera11" />
+        <Value id="Camera12" name="Camera12" />
+        <Value id="Camera13" name="Camera13" />
+        <Value id="Camera14" name="Camera14" />
+        <Value id="Camera15" name="Camera15" />
+        <Value id="Camera16" name="Camera16" />
+        <Value id="Camera17" name="Camera17" />
+        <Value id="Camera18" name="Camera18" />
+        <Value id="Camera19" name="Camera19" />
+        <Value id="Camera20" name="Camera20" />
         <Value id="ColorBars" name="ColorBars" />
         <Value id="Color1" name="Color1" />
         <Value id="Color2" name="Color2" />
@@ -36,25 +36,10 @@
         <Value id="MediaPlayer3Key" name="MediaPlayer3Key" />
         <Value id="MediaPlayer4" name="MediaPlayer4" />
         <Value id="MediaPlayer4Key" name="MediaPlayer4Key" />
-        <Value id="Key1Mask" name="Key1Mask" />
-        <Value id="Key2Mask" name="Key2Mask" />
-        <Value id="Key3Mask" name="Key3Mask" />
-        <Value id="Key4Mask" name="Key4Mask" />
-        <Value id="DSK1Mask" name="DSK1Mask" />
-        <Value id="DSK2Mask" name="DSK2Mask" />
         <Value id="SuperSource" name="SuperSource" />
-        <Value id="CleanFeed1" name="CleanFeed1" />
-        <Value id="CleanFeed2" name="CleanFeed2" />
-        <Value id="Auxilary1" name="Auxilary1" />
-        <Value id="Auxilary2" name="Auxilary2" />
-        <Value id="Auxilary3" name="Auxilary3" />
-        <Value id="Auxilary4" name="Auxilary4" />
-        <Value id="Auxilary5" name="Auxilary5" />
-        <Value id="Auxilary6" name="Auxilary6" />
-        <Value id="ME1Prog" name="ME1Prog" />
-        <Value id="ME1Prev" name="ME1Prev" />
-        <Value id="ME2Prog" name="ME2Prog" />
-        <Value id="ME2Prev" name="ME2Prev" />
+        <Value id="ME1Program" name="ME1Program" />
+        <Value id="ME2Program" name="ME2Program" />
+        <Value id="ExternalXLR" name="ExternalXLR" />
       </Field>
     </Op>
     <Op id="MacroSleep">
@@ -66,26 +51,26 @@
     <Op id="SuperSourceArtCutInput">
       <Field id="input" name="Input" type="Enum">
         <Value id="Black" name="Black" />
-        <Value id="Input1" name="Input1" />
-        <Value id="Input2" name="Input2" />
-        <Value id="Input3" name="Input3" />
-        <Value id="Input4" name="Input4" />
-        <Value id="Input5" name="Input5" />
-        <Value id="Input6" name="Input6" />
-        <Value id="Input7" name="Input7" />
-        <Value id="Input8" name="Input8" />
-        <Value id="Input9" name="Input9" />
-        <Value id="Input10" name="Input10" />
-        <Value id="Input11" name="Input11" />
-        <Value id="Input12" name="Input12" />
-        <Value id="Input13" name="Input13" />
-        <Value id="Input14" name="Input14" />
-        <Value id="Input15" name="Input15" />
-        <Value id="Input16" name="Input16" />
-        <Value id="Input17" name="Input17" />
-        <Value id="Input18" name="Input18" />
-        <Value id="Input19" name="Input19" />
-        <Value id="Input20" name="Input20" />
+        <Value id="Camera1" name="Camera1" />
+        <Value id="Camera2" name="Camera2" />
+        <Value id="Camera3" name="Camera3" />
+        <Value id="Camera4" name="Camera4" />
+        <Value id="Camera5" name="Camera5" />
+        <Value id="Camera6" name="Camera6" />
+        <Value id="Camera7" name="Camera7" />
+        <Value id="Camera8" name="Camera8" />
+        <Value id="Camera9" name="Camera9" />
+        <Value id="Camera10" name="Camera10" />
+        <Value id="Camera11" name="Camera11" />
+        <Value id="Camera12" name="Camera12" />
+        <Value id="Camera13" name="Camera13" />
+        <Value id="Camera14" name="Camera14" />
+        <Value id="Camera15" name="Camera15" />
+        <Value id="Camera16" name="Camera16" />
+        <Value id="Camera17" name="Camera17" />
+        <Value id="Camera18" name="Camera18" />
+        <Value id="Camera19" name="Camera19" />
+        <Value id="Camera20" name="Camera20" />
         <Value id="ColorBars" name="ColorBars" />
         <Value id="Color1" name="Color1" />
         <Value id="Color2" name="Color2" />
@@ -97,50 +82,35 @@
         <Value id="MediaPlayer3Key" name="MediaPlayer3Key" />
         <Value id="MediaPlayer4" name="MediaPlayer4" />
         <Value id="MediaPlayer4Key" name="MediaPlayer4Key" />
-        <Value id="Key1Mask" name="Key1Mask" />
-        <Value id="Key2Mask" name="Key2Mask" />
-        <Value id="Key3Mask" name="Key3Mask" />
-        <Value id="Key4Mask" name="Key4Mask" />
-        <Value id="DSK1Mask" name="DSK1Mask" />
-        <Value id="DSK2Mask" name="DSK2Mask" />
         <Value id="SuperSource" name="SuperSource" />
-        <Value id="CleanFeed1" name="CleanFeed1" />
-        <Value id="CleanFeed2" name="CleanFeed2" />
-        <Value id="Auxilary1" name="Auxilary1" />
-        <Value id="Auxilary2" name="Auxilary2" />
-        <Value id="Auxilary3" name="Auxilary3" />
-        <Value id="Auxilary4" name="Auxilary4" />
-        <Value id="Auxilary5" name="Auxilary5" />
-        <Value id="Auxilary6" name="Auxilary6" />
-        <Value id="ME1Prog" name="ME1Prog" />
-        <Value id="ME1Prev" name="ME1Prev" />
-        <Value id="ME2Prog" name="ME2Prog" />
-        <Value id="ME2Prev" name="ME2Prev" />
+        <Value id="ME1Program" name="ME1Program" />
+        <Value id="ME2Program" name="ME2Program" />
+        <Value id="ExternalXLR" name="ExternalXLR" />
       </Field>
     </Op>
     <Op id="SuperSourceArtFillInput">
       <Field id="input" name="Input" type="Enum">
         <Value id="Black" name="Black" />
-        <Value id="Input1" name="Input1" />
-        <Value id="Input2" name="Input2" />
-        <Value id="Input3" name="Input3" />
-        <Value id="Input4" name="Input4" />
-        <Value id="Input5" name="Input5" />
-        <Value id="Input6" name="Input6" />
-        <Value id="Input7" name="Input7" />
-        <Value id="Input8" name="Input8" />
-        <Value id="Input9" name="Input9" />
-        <Value id="Input10" name="Input10" />
-        <Value id="Input11" name="Input11" />
-        <Value id="Input12" name="Input12" />
-        <Value id="Input13" name="Input13" />
-        <Value id="Input14" name="Input14" />
-        <Value id="Input15" name="Input15" />
-        <Value id="Input16" name="Input16" />
-        <Value id="Input17" name="Input17" />
-        <Value id="Input18" name="Input18" />
-        <Value id="Input19" name="Input19" />
-        <Value id="Input20" name="Input20" />
+        <Value id="Camera1" name="Camera1" />
+        <Value id="Camera2" name="Camera2" />
+        <Value id="Camera3" name="Camera3" />
+        <Value id="Camera4" name="Camera4" />
+        <Value id="Camera5" name="Camera5" />
+        <Value id="Camera6" name="Camera6" />
+        <Value id="Camera7" name="Camera7" />
+        <Value id="Camera8" name="Camera8" />
+        <Value id="Camera9" name="Camera9" />
+        <Value id="Camera10" name="Camera10" />
+        <Value id="Camera11" name="Camera11" />
+        <Value id="Camera12" name="Camera12" />
+        <Value id="Camera13" name="Camera13" />
+        <Value id="Camera14" name="Camera14" />
+        <Value id="Camera15" name="Camera15" />
+        <Value id="Camera16" name="Camera16" />
+        <Value id="Camera17" name="Camera17" />
+        <Value id="Camera18" name="Camera18" />
+        <Value id="Camera19" name="Camera19" />
+        <Value id="Camera20" name="Camera20" />
         <Value id="ColorBars" name="ColorBars" />
         <Value id="Color1" name="Color1" />
         <Value id="Color2" name="Color2" />
@@ -152,25 +122,10 @@
         <Value id="MediaPlayer3Key" name="MediaPlayer3Key" />
         <Value id="MediaPlayer4" name="MediaPlayer4" />
         <Value id="MediaPlayer4Key" name="MediaPlayer4Key" />
-        <Value id="Key1Mask" name="Key1Mask" />
-        <Value id="Key2Mask" name="Key2Mask" />
-        <Value id="Key3Mask" name="Key3Mask" />
-        <Value id="Key4Mask" name="Key4Mask" />
-        <Value id="DSK1Mask" name="DSK1Mask" />
-        <Value id="DSK2Mask" name="DSK2Mask" />
         <Value id="SuperSource" name="SuperSource" />
-        <Value id="CleanFeed1" name="CleanFeed1" />
-        <Value id="CleanFeed2" name="CleanFeed2" />
-        <Value id="Auxilary1" name="Auxilary1" />
-        <Value id="Auxilary2" name="Auxilary2" />
-        <Value id="Auxilary3" name="Auxilary3" />
-        <Value id="Auxilary4" name="Auxilary4" />
-        <Value id="Auxilary5" name="Auxilary5" />
-        <Value id="Auxilary6" name="Auxilary6" />
-        <Value id="ME1Prog" name="ME1Prog" />
-        <Value id="ME1Prev" name="ME1Prev" />
-        <Value id="ME2Prog" name="ME2Prog" />
-        <Value id="ME2Prev" name="ME2Prev" />
+        <Value id="ME1Program" name="ME1Program" />
+        <Value id="ME2Program" name="ME2Program" />
+        <Value id="ExternalXLR" name="ExternalXLR" />
       </Field>
     </Op>
     <Op id="SuperSourceBorderEnable">
@@ -184,26 +139,26 @@
       <Field id="boxIndex" name="SuperSourceBoxIndex" type="Int" min="0" max="255" />
       <Field id="input" name="Input" type="Enum">
         <Value id="Black" name="Black" />
-        <Value id="Input1" name="Input1" />
-        <Value id="Input2" name="Input2" />
-        <Value id="Input3" name="Input3" />
-        <Value id="Input4" name="Input4" />
-        <Value id="Input5" name="Input5" />
-        <Value id="Input6" name="Input6" />
-        <Value id="Input7" name="Input7" />
-        <Value id="Input8" name="Input8" />
-        <Value id="Input9" name="Input9" />
-        <Value id="Input10" name="Input10" />
-        <Value id="Input11" name="Input11" />
-        <Value id="Input12" name="Input12" />
-        <Value id="Input13" name="Input13" />
-        <Value id="Input14" name="Input14" />
-        <Value id="Input15" name="Input15" />
-        <Value id="Input16" name="Input16" />
-        <Value id="Input17" name="Input17" />
-        <Value id="Input18" name="Input18" />
-        <Value id="Input19" name="Input19" />
-        <Value id="Input20" name="Input20" />
+        <Value id="Camera1" name="Camera1" />
+        <Value id="Camera2" name="Camera2" />
+        <Value id="Camera3" name="Camera3" />
+        <Value id="Camera4" name="Camera4" />
+        <Value id="Camera5" name="Camera5" />
+        <Value id="Camera6" name="Camera6" />
+        <Value id="Camera7" name="Camera7" />
+        <Value id="Camera8" name="Camera8" />
+        <Value id="Camera9" name="Camera9" />
+        <Value id="Camera10" name="Camera10" />
+        <Value id="Camera11" name="Camera11" />
+        <Value id="Camera12" name="Camera12" />
+        <Value id="Camera13" name="Camera13" />
+        <Value id="Camera14" name="Camera14" />
+        <Value id="Camera15" name="Camera15" />
+        <Value id="Camera16" name="Camera16" />
+        <Value id="Camera17" name="Camera17" />
+        <Value id="Camera18" name="Camera18" />
+        <Value id="Camera19" name="Camera19" />
+        <Value id="Camera20" name="Camera20" />
         <Value id="ColorBars" name="ColorBars" />
         <Value id="Color1" name="Color1" />
         <Value id="Color2" name="Color2" />
@@ -215,25 +170,10 @@
         <Value id="MediaPlayer3Key" name="MediaPlayer3Key" />
         <Value id="MediaPlayer4" name="MediaPlayer4" />
         <Value id="MediaPlayer4Key" name="MediaPlayer4Key" />
-        <Value id="Key1Mask" name="Key1Mask" />
-        <Value id="Key2Mask" name="Key2Mask" />
-        <Value id="Key3Mask" name="Key3Mask" />
-        <Value id="Key4Mask" name="Key4Mask" />
-        <Value id="DSK1Mask" name="DSK1Mask" />
-        <Value id="DSK2Mask" name="DSK2Mask" />
         <Value id="SuperSource" name="SuperSource" />
-        <Value id="CleanFeed1" name="CleanFeed1" />
-        <Value id="CleanFeed2" name="CleanFeed2" />
-        <Value id="Auxilary1" name="Auxilary1" />
-        <Value id="Auxilary2" name="Auxilary2" />
-        <Value id="Auxilary3" name="Auxilary3" />
-        <Value id="Auxilary4" name="Auxilary4" />
-        <Value id="Auxilary5" name="Auxilary5" />
-        <Value id="Auxilary6" name="Auxilary6" />
-        <Value id="ME1Prog" name="ME1Prog" />
-        <Value id="ME1Prev" name="ME1Prev" />
-        <Value id="ME2Prog" name="ME2Prog" />
-        <Value id="ME2Prev" name="ME2Prev" />
+        <Value id="ME1Program" name="ME1Program" />
+        <Value id="ME2Program" name="ME2Program" />
+        <Value id="ExternalXLR" name="ExternalXLR" />
       </Field>
     </Op>
     <Op id="SuperSourceBoxMaskBottom">
@@ -293,26 +233,26 @@
       </Field>
       <Field id="input" name="Input" type="Enum">
         <Value id="Black" name="Black" />
-        <Value id="Input1" name="Input1" />
-        <Value id="Input2" name="Input2" />
-        <Value id="Input3" name="Input3" />
-        <Value id="Input4" name="Input4" />
-        <Value id="Input5" name="Input5" />
-        <Value id="Input6" name="Input6" />
-        <Value id="Input7" name="Input7" />
-        <Value id="Input8" name="Input8" />
-        <Value id="Input9" name="Input9" />
-        <Value id="Input10" name="Input10" />
-        <Value id="Input11" name="Input11" />
-        <Value id="Input12" name="Input12" />
-        <Value id="Input13" name="Input13" />
-        <Value id="Input14" name="Input14" />
-        <Value id="Input15" name="Input15" />
-        <Value id="Input16" name="Input16" />
-        <Value id="Input17" name="Input17" />
-        <Value id="Input18" name="Input18" />
-        <Value id="Input19" name="Input19" />
-        <Value id="Input20" name="Input20" />
+        <Value id="Camera1" name="Camera1" />
+        <Value id="Camera2" name="Camera2" />
+        <Value id="Camera3" name="Camera3" />
+        <Value id="Camera4" name="Camera4" />
+        <Value id="Camera5" name="Camera5" />
+        <Value id="Camera6" name="Camera6" />
+        <Value id="Camera7" name="Camera7" />
+        <Value id="Camera8" name="Camera8" />
+        <Value id="Camera9" name="Camera9" />
+        <Value id="Camera10" name="Camera10" />
+        <Value id="Camera11" name="Camera11" />
+        <Value id="Camera12" name="Camera12" />
+        <Value id="Camera13" name="Camera13" />
+        <Value id="Camera14" name="Camera14" />
+        <Value id="Camera15" name="Camera15" />
+        <Value id="Camera16" name="Camera16" />
+        <Value id="Camera17" name="Camera17" />
+        <Value id="Camera18" name="Camera18" />
+        <Value id="Camera19" name="Camera19" />
+        <Value id="Camera20" name="Camera20" />
         <Value id="ColorBars" name="ColorBars" />
         <Value id="Color1" name="Color1" />
         <Value id="Color2" name="Color2" />
@@ -324,25 +264,10 @@
         <Value id="MediaPlayer3Key" name="MediaPlayer3Key" />
         <Value id="MediaPlayer4" name="MediaPlayer4" />
         <Value id="MediaPlayer4Key" name="MediaPlayer4Key" />
-        <Value id="Key1Mask" name="Key1Mask" />
-        <Value id="Key2Mask" name="Key2Mask" />
-        <Value id="Key3Mask" name="Key3Mask" />
-        <Value id="Key4Mask" name="Key4Mask" />
-        <Value id="DSK1Mask" name="DSK1Mask" />
-        <Value id="DSK2Mask" name="DSK2Mask" />
         <Value id="SuperSource" name="SuperSource" />
-        <Value id="CleanFeed1" name="CleanFeed1" />
-        <Value id="CleanFeed2" name="CleanFeed2" />
-        <Value id="Auxilary1" name="Auxilary1" />
-        <Value id="Auxilary2" name="Auxilary2" />
-        <Value id="Auxilary3" name="Auxilary3" />
-        <Value id="Auxilary4" name="Auxilary4" />
-        <Value id="Auxilary5" name="Auxilary5" />
-        <Value id="Auxilary6" name="Auxilary6" />
-        <Value id="ME1Prog" name="ME1Prog" />
-        <Value id="ME1Prev" name="ME1Prev" />
-        <Value id="ME2Prog" name="ME2Prog" />
-        <Value id="ME2Prev" name="ME2Prev" />
+        <Value id="ME1Program" name="ME1Program" />
+        <Value id="ME2Program" name="ME2Program" />
+        <Value id="ExternalXLR" name="ExternalXLR" />
       </Field>
     </Op>
     <Op id="ProgramInput">
@@ -352,26 +277,26 @@
       </Field>
       <Field id="input" name="Input" type="Enum">
         <Value id="Black" name="Black" />
-        <Value id="Input1" name="Input1" />
-        <Value id="Input2" name="Input2" />
-        <Value id="Input3" name="Input3" />
-        <Value id="Input4" name="Input4" />
-        <Value id="Input5" name="Input5" />
-        <Value id="Input6" name="Input6" />
-        <Value id="Input7" name="Input7" />
-        <Value id="Input8" name="Input8" />
-        <Value id="Input9" name="Input9" />
-        <Value id="Input10" name="Input10" />
-        <Value id="Input11" name="Input11" />
-        <Value id="Input12" name="Input12" />
-        <Value id="Input13" name="Input13" />
-        <Value id="Input14" name="Input14" />
-        <Value id="Input15" name="Input15" />
-        <Value id="Input16" name="Input16" />
-        <Value id="Input17" name="Input17" />
-        <Value id="Input18" name="Input18" />
-        <Value id="Input19" name="Input19" />
-        <Value id="Input20" name="Input20" />
+        <Value id="Camera1" name="Camera1" />
+        <Value id="Camera2" name="Camera2" />
+        <Value id="Camera3" name="Camera3" />
+        <Value id="Camera4" name="Camera4" />
+        <Value id="Camera5" name="Camera5" />
+        <Value id="Camera6" name="Camera6" />
+        <Value id="Camera7" name="Camera7" />
+        <Value id="Camera8" name="Camera8" />
+        <Value id="Camera9" name="Camera9" />
+        <Value id="Camera10" name="Camera10" />
+        <Value id="Camera11" name="Camera11" />
+        <Value id="Camera12" name="Camera12" />
+        <Value id="Camera13" name="Camera13" />
+        <Value id="Camera14" name="Camera14" />
+        <Value id="Camera15" name="Camera15" />
+        <Value id="Camera16" name="Camera16" />
+        <Value id="Camera17" name="Camera17" />
+        <Value id="Camera18" name="Camera18" />
+        <Value id="Camera19" name="Camera19" />
+        <Value id="Camera20" name="Camera20" />
         <Value id="ColorBars" name="ColorBars" />
         <Value id="Color1" name="Color1" />
         <Value id="Color2" name="Color2" />
@@ -383,25 +308,10 @@
         <Value id="MediaPlayer3Key" name="MediaPlayer3Key" />
         <Value id="MediaPlayer4" name="MediaPlayer4" />
         <Value id="MediaPlayer4Key" name="MediaPlayer4Key" />
-        <Value id="Key1Mask" name="Key1Mask" />
-        <Value id="Key2Mask" name="Key2Mask" />
-        <Value id="Key3Mask" name="Key3Mask" />
-        <Value id="Key4Mask" name="Key4Mask" />
-        <Value id="DSK1Mask" name="DSK1Mask" />
-        <Value id="DSK2Mask" name="DSK2Mask" />
         <Value id="SuperSource" name="SuperSource" />
-        <Value id="CleanFeed1" name="CleanFeed1" />
-        <Value id="CleanFeed2" name="CleanFeed2" />
-        <Value id="Auxilary1" name="Auxilary1" />
-        <Value id="Auxilary2" name="Auxilary2" />
-        <Value id="Auxilary3" name="Auxilary3" />
-        <Value id="Auxilary4" name="Auxilary4" />
-        <Value id="Auxilary5" name="Auxilary5" />
-        <Value id="Auxilary6" name="Auxilary6" />
-        <Value id="ME1Prog" name="ME1Prog" />
-        <Value id="ME1Prev" name="ME1Prev" />
-        <Value id="ME2Prog" name="ME2Prog" />
-        <Value id="ME2Prev" name="ME2Prev" />
+        <Value id="ME1Program" name="ME1Program" />
+        <Value id="ME2Program" name="ME2Program" />
+        <Value id="ExternalXLR" name="ExternalXLR" />
       </Field>
     </Op>
     <Op id="TransitionDipRate">
@@ -577,26 +487,26 @@
       <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
       <Field id="input" name="Input" type="Enum">
         <Value id="Black" name="Black" />
-        <Value id="Input1" name="Input1" />
-        <Value id="Input2" name="Input2" />
-        <Value id="Input3" name="Input3" />
-        <Value id="Input4" name="Input4" />
-        <Value id="Input5" name="Input5" />
-        <Value id="Input6" name="Input6" />
-        <Value id="Input7" name="Input7" />
-        <Value id="Input8" name="Input8" />
-        <Value id="Input9" name="Input9" />
-        <Value id="Input10" name="Input10" />
-        <Value id="Input11" name="Input11" />
-        <Value id="Input12" name="Input12" />
-        <Value id="Input13" name="Input13" />
-        <Value id="Input14" name="Input14" />
-        <Value id="Input15" name="Input15" />
-        <Value id="Input16" name="Input16" />
-        <Value id="Input17" name="Input17" />
-        <Value id="Input18" name="Input18" />
-        <Value id="Input19" name="Input19" />
-        <Value id="Input20" name="Input20" />
+        <Value id="Camera1" name="Camera1" />
+        <Value id="Camera2" name="Camera2" />
+        <Value id="Camera3" name="Camera3" />
+        <Value id="Camera4" name="Camera4" />
+        <Value id="Camera5" name="Camera5" />
+        <Value id="Camera6" name="Camera6" />
+        <Value id="Camera7" name="Camera7" />
+        <Value id="Camera8" name="Camera8" />
+        <Value id="Camera9" name="Camera9" />
+        <Value id="Camera10" name="Camera10" />
+        <Value id="Camera11" name="Camera11" />
+        <Value id="Camera12" name="Camera12" />
+        <Value id="Camera13" name="Camera13" />
+        <Value id="Camera14" name="Camera14" />
+        <Value id="Camera15" name="Camera15" />
+        <Value id="Camera16" name="Camera16" />
+        <Value id="Camera17" name="Camera17" />
+        <Value id="Camera18" name="Camera18" />
+        <Value id="Camera19" name="Camera19" />
+        <Value id="Camera20" name="Camera20" />
         <Value id="ColorBars" name="ColorBars" />
         <Value id="Color1" name="Color1" />
         <Value id="Color2" name="Color2" />
@@ -608,25 +518,10 @@
         <Value id="MediaPlayer3Key" name="MediaPlayer3Key" />
         <Value id="MediaPlayer4" name="MediaPlayer4" />
         <Value id="MediaPlayer4Key" name="MediaPlayer4Key" />
-        <Value id="Key1Mask" name="Key1Mask" />
-        <Value id="Key2Mask" name="Key2Mask" />
-        <Value id="Key3Mask" name="Key3Mask" />
-        <Value id="Key4Mask" name="Key4Mask" />
-        <Value id="DSK1Mask" name="DSK1Mask" />
-        <Value id="DSK2Mask" name="DSK2Mask" />
         <Value id="SuperSource" name="SuperSource" />
-        <Value id="CleanFeed1" name="CleanFeed1" />
-        <Value id="CleanFeed2" name="CleanFeed2" />
-        <Value id="Auxilary1" name="Auxilary1" />
-        <Value id="Auxilary2" name="Auxilary2" />
-        <Value id="Auxilary3" name="Auxilary3" />
-        <Value id="Auxilary4" name="Auxilary4" />
-        <Value id="Auxilary5" name="Auxilary5" />
-        <Value id="Auxilary6" name="Auxilary6" />
-        <Value id="ME1Prog" name="ME1Prog" />
-        <Value id="ME1Prev" name="ME1Prev" />
-        <Value id="ME2Prog" name="ME2Prog" />
-        <Value id="ME2Prev" name="ME2Prev" />
+        <Value id="ME1Program" name="ME1Program" />
+        <Value id="ME2Program" name="ME2Program" />
+        <Value id="ExternalXLR" name="ExternalXLR" />
       </Field>
     </Op>
     <Op id="KeyFillInput">
@@ -637,26 +532,26 @@
       <Field id="keyIndex" name="KeyIndex" type="Int" min="0" max="65535" />
       <Field id="input" name="Input" type="Enum">
         <Value id="Black" name="Black" />
-        <Value id="Input1" name="Input1" />
-        <Value id="Input2" name="Input2" />
-        <Value id="Input3" name="Input3" />
-        <Value id="Input4" name="Input4" />
-        <Value id="Input5" name="Input5" />
-        <Value id="Input6" name="Input6" />
-        <Value id="Input7" name="Input7" />
-        <Value id="Input8" name="Input8" />
-        <Value id="Input9" name="Input9" />
-        <Value id="Input10" name="Input10" />
-        <Value id="Input11" name="Input11" />
-        <Value id="Input12" name="Input12" />
-        <Value id="Input13" name="Input13" />
-        <Value id="Input14" name="Input14" />
-        <Value id="Input15" name="Input15" />
-        <Value id="Input16" name="Input16" />
-        <Value id="Input17" name="Input17" />
-        <Value id="Input18" name="Input18" />
-        <Value id="Input19" name="Input19" />
-        <Value id="Input20" name="Input20" />
+        <Value id="Camera1" name="Camera1" />
+        <Value id="Camera2" name="Camera2" />
+        <Value id="Camera3" name="Camera3" />
+        <Value id="Camera4" name="Camera4" />
+        <Value id="Camera5" name="Camera5" />
+        <Value id="Camera6" name="Camera6" />
+        <Value id="Camera7" name="Camera7" />
+        <Value id="Camera8" name="Camera8" />
+        <Value id="Camera9" name="Camera9" />
+        <Value id="Camera10" name="Camera10" />
+        <Value id="Camera11" name="Camera11" />
+        <Value id="Camera12" name="Camera12" />
+        <Value id="Camera13" name="Camera13" />
+        <Value id="Camera14" name="Camera14" />
+        <Value id="Camera15" name="Camera15" />
+        <Value id="Camera16" name="Camera16" />
+        <Value id="Camera17" name="Camera17" />
+        <Value id="Camera18" name="Camera18" />
+        <Value id="Camera19" name="Camera19" />
+        <Value id="Camera20" name="Camera20" />
         <Value id="ColorBars" name="ColorBars" />
         <Value id="Color1" name="Color1" />
         <Value id="Color2" name="Color2" />
@@ -668,25 +563,10 @@
         <Value id="MediaPlayer3Key" name="MediaPlayer3Key" />
         <Value id="MediaPlayer4" name="MediaPlayer4" />
         <Value id="MediaPlayer4Key" name="MediaPlayer4Key" />
-        <Value id="Key1Mask" name="Key1Mask" />
-        <Value id="Key2Mask" name="Key2Mask" />
-        <Value id="Key3Mask" name="Key3Mask" />
-        <Value id="Key4Mask" name="Key4Mask" />
-        <Value id="DSK1Mask" name="DSK1Mask" />
-        <Value id="DSK2Mask" name="DSK2Mask" />
         <Value id="SuperSource" name="SuperSource" />
-        <Value id="CleanFeed1" name="CleanFeed1" />
-        <Value id="CleanFeed2" name="CleanFeed2" />
-        <Value id="Auxilary1" name="Auxilary1" />
-        <Value id="Auxilary2" name="Auxilary2" />
-        <Value id="Auxilary3" name="Auxilary3" />
-        <Value id="Auxilary4" name="Auxilary4" />
-        <Value id="Auxilary5" name="Auxilary5" />
-        <Value id="Auxilary6" name="Auxilary6" />
-        <Value id="ME1Prog" name="ME1Prog" />
-        <Value id="ME1Prev" name="ME1Prev" />
-        <Value id="ME2Prog" name="ME2Prog" />
-        <Value id="ME2Prev" name="ME2Prev" />
+        <Value id="ME1Program" name="ME1Program" />
+        <Value id="ME2Program" name="ME2Program" />
+        <Value id="ExternalXLR" name="ExternalXLR" />
       </Field>
     </Op>
     <Op id="KeyFlyEnable">
@@ -898,33 +778,42 @@
     </Op>
     <Op id="AudioMixerInputGain">
       <Field id="input" name="Input" type="Enum">
-        <Value id="Input1" name="Input1" />
-        <Value id="Input2" name="Input2" />
-        <Value id="Input3" name="Input3" />
-        <Value id="Input4" name="Input4" />
-        <Value id="Input5" name="Input5" />
-        <Value id="Input6" name="Input6" />
-        <Value id="Input7" name="Input7" />
-        <Value id="Input8" name="Input8" />
-        <Value id="Input9" name="Input9" />
-        <Value id="Input10" name="Input10" />
-        <Value id="Input11" name="Input11" />
-        <Value id="Input12" name="Input12" />
-        <Value id="Input13" name="Input13" />
-        <Value id="Input14" name="Input14" />
-        <Value id="Input15" name="Input15" />
-        <Value id="Input16" name="Input16" />
-        <Value id="Input17" name="Input17" />
-        <Value id="Input18" name="Input18" />
-        <Value id="Input19" name="Input19" />
-        <Value id="Input20" name="Input20" />
-        <Value id="XLR" name="XLR" />
-        <Value id="AESEBU" name="AESEBU" />
-        <Value id="RCA" name="RCA" />
-        <Value id="MP1" name="MP1" />
-        <Value id="MP2" name="MP2" />
-        <Value id="MP3" name="MP3" />
-        <Value id="MP4" name="MP4" />
+        <Value id="Black" name="Black" />
+        <Value id="Camera1" name="Camera1" />
+        <Value id="Camera2" name="Camera2" />
+        <Value id="Camera3" name="Camera3" />
+        <Value id="Camera4" name="Camera4" />
+        <Value id="Camera5" name="Camera5" />
+        <Value id="Camera6" name="Camera6" />
+        <Value id="Camera7" name="Camera7" />
+        <Value id="Camera8" name="Camera8" />
+        <Value id="Camera9" name="Camera9" />
+        <Value id="Camera10" name="Camera10" />
+        <Value id="Camera11" name="Camera11" />
+        <Value id="Camera12" name="Camera12" />
+        <Value id="Camera13" name="Camera13" />
+        <Value id="Camera14" name="Camera14" />
+        <Value id="Camera15" name="Camera15" />
+        <Value id="Camera16" name="Camera16" />
+        <Value id="Camera17" name="Camera17" />
+        <Value id="Camera18" name="Camera18" />
+        <Value id="Camera19" name="Camera19" />
+        <Value id="Camera20" name="Camera20" />
+        <Value id="ColorBars" name="ColorBars" />
+        <Value id="Color1" name="Color1" />
+        <Value id="Color2" name="Color2" />
+        <Value id="MediaPlayer1" name="MediaPlayer1" />
+        <Value id="MediaPlayer1Key" name="MediaPlayer1Key" />
+        <Value id="MediaPlayer2" name="MediaPlayer2" />
+        <Value id="MediaPlayer2Key" name="MediaPlayer2Key" />
+        <Value id="MediaPlayer3" name="MediaPlayer3" />
+        <Value id="MediaPlayer3Key" name="MediaPlayer3Key" />
+        <Value id="MediaPlayer4" name="MediaPlayer4" />
+        <Value id="MediaPlayer4Key" name="MediaPlayer4Key" />
+        <Value id="SuperSource" name="SuperSource" />
+        <Value id="ME1Program" name="ME1Program" />
+        <Value id="ME2Program" name="ME2Program" />
+        <Value id="ExternalXLR" name="ExternalXLR" />
       </Field>
       <Field id="gain" name="Gain" type="Int" min="0" max="65535" />
     </Op>

@@ -1,5 +1,7 @@
 ﻿using LibAtem.MacroOperations;
 using LibAtem.Serialization;
+using LibAtem.XmlState;
+using LibAtem.XmlState.MacroSpec;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -21,6 +23,19 @@ namespace AtemMacroEditor.Generator
             serializer.Serialize(fs, profile, ns);
             fs.Flush();
             fs.Dispose();
+        }
+
+        public static Type GetType(string typeName)
+        {
+            var type = Type.GetType(typeName);
+            if (type != null) return type;
+            foreach (var a in AppDomain.CurrentDomain.GetAssemblies())
+            {
+                type = a.GetType(typeName);
+                if (type != null)
+                    return type;
+            }
+            return null;
         }
 
         private static XmlSpec CompileData()
@@ -56,12 +71,18 @@ namespace AtemMacroEditor.Generator
                     else if (prop.GetCustomAttribute<Enum8Attribute>() != null || prop.GetCustomAttribute<Enum16Attribute>() != null || prop.GetCustomAttribute<Enum32Attribute>() != null)
                     {
                         xmlField.Type = prop.PropertyType.GetCustomAttribute<FlagsAttribute>() != null ? FieldType.Flags : FieldType.Enum;
-                        
-                        foreach (object val in Enum.GetValues(prop.PropertyType))
+
+                        string mappedTypeName = TypeMappings.MapType(prop.PropertyType.FullName);
+                        Type mappedType = prop.PropertyType;
+                        if (mappedTypeName != mappedType.FullName && mappedTypeName.IndexOf("System.") != 0)
+                            mappedType = GetType(mappedTypeName);
+
+
+                        foreach (object val in Enum.GetValues(mappedType))
                         {
                             string id = val.ToString();
-                            var xmlAttr = prop.PropertyType.GetMember(val.ToString())[0].GetCustomAttribute<XmlEnumAttribute>();
-                            if (!fieldAttr.EnumAsNames && xmlAttr != null)
+                            var xmlAttr = mappedType.GetMember(val.ToString())[0].GetCustomAttribute<XmlEnumAttribute>();
+                            if (xmlAttr != null)
                                 id = xmlAttr.Name;
 
                             // TODO check value is available for device profile/usage location
@@ -144,6 +165,9 @@ namespace AtemMacroEditor.Generator
         static void Main(string[] args)
         {
             var spec = CompileData();
+
+            // Force the assembly to be loaded
+            LibAtem.XmlState.MacroInput.Camera1.ToVideoSource();
 
             SaveState("../spec.xml", spec);
 
