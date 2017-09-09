@@ -10,28 +10,10 @@ import {
   Button,
 } from 'react-bootstrap'
 import Slider from 'react-rangeslider';
+import Switch from 'react-bootstrap-switch';
 
 import Lang from './lang';
-import Spec from './assets/spec.xml';
-
-function findFieldSpec(id, key){
-  const ops = Spec.MacroOperations.Operations[0].Op;
-
-  for (let op of ops){
-    if (op.$.id != id)
-      continue;
-
-    for (let field of op.Field){
-      if (field.$.id == key)
-        return field;
-    }
-
-    return null;
-  }
-
-  return null;
-}
-
+import { FindFieldSpec } from './spec';
 
 export class MacroOpEditor extends React.Component {
   constructor(props){
@@ -70,13 +52,15 @@ export class MacroOpEditor extends React.Component {
   }
 
   renderControl(key) {
-    const spec = findFieldSpec(this.state.data.id, key)
+    const spec = FindFieldSpec(this.state.data.id, key)
     if (spec === null)
       return <FormControl.Static>Failed to find spec!</FormControl.Static>
 
     switch (spec.$.type){
       case "Enum":
         return this.renderEnumControl(key, spec);
+      case "Bool":
+        return this.renderBoolControl(key, spec);
       case "Int":
       case "Double":
         return this.renderSliderControl(key, spec);
@@ -90,7 +74,7 @@ export class MacroOpEditor extends React.Component {
     const change = e => {
       const updDat = { data: {} };
       updDat.data[key] = { $set: e.target.value };
-      this.setState(update(this.state, updDat))
+      this.setState(update(this.state, updDat));
     };
 
     return (
@@ -100,6 +84,16 @@ export class MacroOpEditor extends React.Component {
         }
       </FormControl>
     );
+  }
+
+  renderBoolControl(key, spec){
+    const change = (e, v) => {
+      const updDat = { data: {} };
+      updDat.data[key] = { $set: v ? "true" : "false" };
+      this.setState(update(this.state, updDat));
+    };
+
+    return <Switch value={this.state.data[key]=="true"} onChange={change} />
   }
 
   renderSliderControl(key, spec){
@@ -132,7 +126,7 @@ export class MacroOpEditor extends React.Component {
 
       const updDat = { data: {} };
       updDat.data[key] = { $set: val };
-      this.setState(update(this.state, updDat))
+      this.setState(update(this.state, updDat));
     };
 
     return [

@@ -6,6 +6,8 @@
 
 @import "../node_modules/react-rangeslider/lib/index.css";
 
+@import "./styles/switch";
+
 body {
   background-color: #282828;
 }
@@ -16,6 +18,10 @@ body {
   tr {
     border: 1px solid #999;
     margin: 2px;
+
+    td.borderLeft {
+      border-left: 1px solid #999;
+    }
 
     td:first-child {
       padding-right: 25px;

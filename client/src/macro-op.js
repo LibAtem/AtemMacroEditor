@@ -69,7 +69,6 @@ const validIdFields = [
   "mixEffectBlockIndex",
   "keyIndex",
   "mediaPlayer",
-  "index",
   "boxIndex",
 ];
 
@@ -113,20 +112,29 @@ export class MacroOp extends React.Component {
     return this.props.showEdit()
   }
 
+  showInsert(e){
+    e.preventDefault();
+
+    this.props.showInsert();
+  }
+
+  doDel(e){
+    e.preventDefault();
+
+    this.props.doDel();
+  }
+
   render(){
-    const { isDragging, connectDragSource, connectDropTarget } = this.props;
-    const opacity = isDragging ? 0 : 1;
+    const { connectDragSource, connectDropTarget } = this.props;
 
     const nameParts = MacroOpNames(this.props.data, this.props.cols);
 
     return connectDragSource(connectDropTarget(
       <tr>
-        {nameParts.map((n, i) => {
-          if (i == 0)
-            return <td key={0}><a href="#" onClick={e => this.showEdit(e)}>{ n }</a></td>;
-
-          return <td key={i}>{ n }</td>;
-        })}
+        { nameParts.map((n, i) => <td key={i}>{ n }</td>) }
+        <td className="borderLeft"><a href="#" onClick={e => this.showEdit(e)}>Edit</a></td>
+        <td><a href="#" onClick={e => this.showInsert(e)}>Insert</a></td>
+        <td><a href="#" onClick={e => this.doDel(e)}>Del</a></td>
       </tr>
     ));
   }
