@@ -39,7 +39,7 @@ namespace AtemMacroEditor.Generator
             return null;
         }
 
-        private static XmlSpec CompileData()
+        public static XmlSpec CompileData()
         {
             var res = new XmlSpec();
 
@@ -169,7 +169,7 @@ namespace AtemMacroEditor.Generator
             var spec = CompileData();
 
             // Force the assembly to be loaded
-            LibAtem.XmlState.MacroInput.Camera1.ToVideoSource();
+            MacroInput.Camera1.ToVideoSource();
 
             SaveState("../spec.xml", spec);
 
