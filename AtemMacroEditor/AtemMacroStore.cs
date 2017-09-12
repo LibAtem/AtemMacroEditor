@@ -1,10 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 using LibAtem.Commands;
 using LibAtem.Commands.Macro;
+using LibAtem.MacroOperations;
 using LibAtem.Net;
+using LibAtem.Net.DataTransfer;
 using LibAtem.XmlState;
 
 namespace AtemMacroEditor
@@ -13,11 +17,13 @@ namespace AtemMacroEditor
     {
         private readonly AtemClient _client;
         private readonly Dictionary<uint, MacroEntry> _macros;
+        private readonly object _dataTransferLock;
 
         public AtemMacroStore(string address)
         {
             _macros = new Dictionary<uint, MacroEntry>();
             _client = new AtemClient(address);
+            _dataTransferLock = new object();
 
             _client.OnReceive += OnCommand;
         }
@@ -42,7 +48,6 @@ namespace AtemMacroEditor
                     entry = _macros[cmd.Index] = new MacroEntry();
 
                 entry.Properties = cmd;
-                    ;
             }
 
             // TODO emit change
@@ -59,12 +64,46 @@ namespace AtemMacroEditor
             }
         }
 
-        public Task<Macro> GetMacro(uint id)
+        public Macro GetMacro(uint id)
         {
-            // TODO - load off atem
-            return null;
+            lock (_dataTransferLock)
+            {
+                IReadOnlyList<MacroOpBase> result = null;
+                var evt = new AutoResetEvent(false);
+
+                var job = new DownloadMacroJob(id, ops =>
+                {
+                    result = ops;
+                    evt.Set();
+                }, TimeSpan.FromMilliseconds(5000));
+
+                _client.DataTransfer.QueueJob(job);
+
+                bool res = evt.WaitOne(TimeSpan.FromMilliseconds(5000));
+                if (!res)
+                    throw new Exception("Timed out");
+
+                if (result == null)
+                    return null;
+
+                IReadOnlyList<MacroOpBase> resOps = result;
+                lock (_macros)
+                {
+                    var props = _macros.Select(m => m.Value.Properties).FirstOrDefault(m => m.Index == id);
+                    if (props == null)
+                        return null;
+
+                    return new Macro(id)
+                    {
+                        Name = props.Name,
+                        Description = props.Description,
+                        Operations = resOps.Select(o => o.ToMacroOperation()).ToList()
+                    };
+                }
+            }
         }
     }
+
 
 
     [XmlRoot("Macros")]

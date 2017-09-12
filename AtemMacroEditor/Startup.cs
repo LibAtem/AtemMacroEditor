@@ -19,6 +19,7 @@ namespace AtemMacroEditor
             services.AddSingleton(new AtemMacroStore("127.0.0.1"));
 
             services.AddMvc()
+                // TODO dont include namespace in serialize
                 .AddXmlSerializerFormatters();
         }
 

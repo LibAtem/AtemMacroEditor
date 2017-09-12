@@ -1,5 +1,9 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Net;
+using System.Net.Http;
+using System.Threading.Tasks;
 using LibAtem.XmlState;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AtemMacroEditor.Controllers
@@ -21,7 +25,21 @@ namespace AtemMacroEditor.Controllers
 
         // GET api/macros/5
         [HttpGet("{id}")]
-        public Task<Macro> Get(uint id) => _store.GetMacro(id);
+        public IActionResult Get(uint id)
+        {
+            try
+            {
+                Macro macro = _store.GetMacro(id);
+                if (macro == null)
+                    return NotFound();
+
+                return Ok(macro);
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
 
         //
         //        // POST api/values
