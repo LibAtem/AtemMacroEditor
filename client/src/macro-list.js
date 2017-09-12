@@ -26,7 +26,7 @@ export class MacroListPage extends React.Component {
   componentDidMount(){
     console.log("Loading macros");
 
-    fetch('/assets/sample.xml').then(function(response) {
+    fetch('/api/macros').then(function(response) {
       if(response.ok) {
         return response.text();
       }
@@ -47,13 +47,17 @@ export class MacroListPage extends React.Component {
     if (this.state.loading)
       return <div>Loading...</div>;
 
-    const rows = this.state.macros.MacroPool.Macro.map(m => <li key={m.$.index}><Link to={`/macro/${m.$.index}`}>{ m.$.name } ({ m.$.index })</Link></li>);
+    const rows = this.state.macros.Macros.Macros[0].MacroProperties.filter(m => m.$.used == "true").map(m => <li key={m.$.id}><Link to={`/macro/${m.$.id}`}>{ m.$.name } ({ m.$.id })</Link></li>);
 
     return (
       <div>
         <h3>Macros:</h3>
         <ul>
-        { rows }
+        { 
+          rows.length == 0
+          ? "No macros exist!"
+          : rows 
+        }
         </ul>
       </div>
     );

@@ -43,8 +43,8 @@ module.exports = {
     historyApiFallback: true,
     port: 3000,
     proxy: {
-      "/api": "http://localhost:5000",
-      "/ws": { target: "ws://localhost:5000", ws: true }
+      "/api": "http://localhost:6490",
+      "/ws": { target: "ws://localhost:6490", ws: true }
     },
   },
 

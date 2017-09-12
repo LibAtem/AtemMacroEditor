@@ -1,4 +1,19 @@
-import Spec from './assets/spec.xml';
+import XMLParser from 'xml2js';
+
+let Spec = null;
+
+fetch('/api/spec').then(function(response) {
+  if(response.ok) {
+    return response.text();
+  }
+  throw new Error('Network response was not ok.');
+}).then(xmlText => {
+  // console.log(res)
+  XMLParser.parseString(xmlText, (err, res) => {
+    Spec = res;
+    console.log("Loaded spec:", res);
+  });
+});
 
 export function FindFieldSpec(id, key){
   const op = FindOpSpec(id)

@@ -34,7 +34,7 @@ export class MacroPage extends React.Component {
     const id = this.props.match.params.id;
     console.log("Loading macro " + id);
 
-    fetch('/assets/sample.xml').then(function(response) {
+    fetch('/api/macros/' + id).then(function(response) {
       if(response.ok) {
         return response.text();
       }
@@ -42,21 +42,14 @@ export class MacroPage extends React.Component {
     }).then(xmlText => {
       // console.log(res)
       XMLParser.parseString(xmlText, (err, res) => {
-        // console.log(res)
+        console.log(res)
 
-        for(let mac of res.MacroPool.Macro){
-          // console.log(mac)
-          if (mac.$.index == id){
-            console.log(mac);
+        this.setState({
+          macro: res,
+          loading: false,
+          hasChanged: false,
+        })
 
-            this.setState({
-              macro: mac,
-              loading: false,
-              hasChanged: false,
-            })
-            return;
-          }
-        }
       });
     });
   }
@@ -146,7 +139,7 @@ export class MacroPage extends React.Component {
             op[field.$.id] = "false";
             break;
           case "Enum":
-            op[field.$.id] = field.$.asName ? field.Value[0].$.name : field.Value[0].$.id;
+            op[field.$.id] = field.Value[0].$.id;
             break;
           case "Int":
           case "Double":
@@ -185,8 +178,8 @@ export class MacroPage extends React.Component {
     if (this.state.loading)
       return <div>Loading...</div>;
 
-    const maxCols = Math.max(...this.state.macro.Op.map(m => MacroOpNames(m.$).length));
-    const rows = this.state.macro.Op.map((m, i) => <MacroOp key={i} index={i} moveCard={this.moveCard} data={m.$} cols={maxCols} 
+    const maxCols = Math.max(...this.state.macro.Macro.Op.map(m => MacroOpNames(m.$).length));
+    const rows = this.state.macro.Macro.Op.map((m, i) => <MacroOp key={i} index={i} moveCard={this.moveCard} data={m.$} cols={maxCols} 
       showEdit={() => this.editOperation(i, m.$)} doDel={() => this.deleteOperation(i)} showInsert={() => this.addOperation(i)} />);
 
     return (

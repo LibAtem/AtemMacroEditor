@@ -151,6 +151,26 @@ export class MacroOpEditor extends React.Component {
     const { data, showModal } = this.state;
 
     const ids = Object.keys(data).filter(i => i != "id");
+    ids.sort((a, b) => {
+      const a2 = FindFieldSpec(this.state.data.id, a);
+      const b2 = FindFieldSpec(this.state.data.id, b);
+
+      if (a2.$.isId == b2.$.isId){
+        if (a < b)
+          return -1;
+        if (b < a)
+          return 1;
+        return 0;
+      }
+
+      if (a2.$.isId == "true")
+        return -1;
+      if (b2.$.isId == "true")
+        return 1;
+
+      // shouldnt ever get here
+      return 0;
+    });
 
     return (
       <Modal show={showModal} onHide={() => this.close()}>
