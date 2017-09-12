@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <UserSecretsId>aspnet-AtemMacroEditor-F45AB61A-3615-49DD-926E-9905488716D0</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0-preview2-final" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0-preview2-final" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\AtemEmulator\LibAtem.XmlState\LibAtem.XmlState.MacroSpec\LibAtem.XmlState.MacroSpec.csproj" />
+    <ProjectReference Include="..\..\AtemEmulator\LibAtem.XmlState\LibAtem.XmlState\LibAtem.XmlState.csproj" />
+    <ProjectReference Include="..\..\AtemEmulator\LibAtem\LibAtem\LibAtem.csproj" />
+  </ItemGroup>
+
+</Project>
