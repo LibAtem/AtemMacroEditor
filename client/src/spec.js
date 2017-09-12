@@ -45,5 +45,7 @@ export function GetAllTypes(){
     res.push(op.$.id);
   }
 
+  res.sort();
+
   return res;
 }
