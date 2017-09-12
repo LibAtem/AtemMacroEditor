@@ -18,9 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\AtemEmulator\LibAtem.XmlState\LibAtem.XmlState.MacroSpec\LibAtem.XmlState.MacroSpec.csproj" />
     <ProjectReference Include="..\..\AtemEmulator\LibAtem.XmlState\LibAtem.XmlState\LibAtem.XmlState.csproj" />
     <ProjectReference Include="..\..\AtemEmulator\LibAtem\LibAtem\LibAtem.csproj" />
-    <ProjectReference Include="..\AtemMacroEditor.Generator\AtemMacroEditor.Generator.csproj" />
   </ItemGroup>
 
 </Project>

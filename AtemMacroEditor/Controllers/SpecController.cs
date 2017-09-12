@@ -1,5 +1,5 @@
 ﻿using System;
-using AtemMacroEditor.Generator;
+using AtemMacroEditor.Results;
 using LibAtem.Common;
 using LibAtem.XmlState;
 using Microsoft.AspNetCore.Mvc;
@@ -10,7 +10,7 @@ namespace AtemMacroEditor.Controllers
     [Produces("application/xml")]
     public class SpecController : Controller
     {
-        private static readonly Lazy<XmlSpec> cachedSpec;
+        private static readonly Lazy<MacroSpec> cachedSpec;
 
         static SpecController()
         {
@@ -19,11 +19,11 @@ namespace AtemMacroEditor.Controllers
             VideoSource.Input1.ToMacroInput();
 
             // TODO - refactor CompileData into this package
-            cachedSpec = new Lazy<XmlSpec>(Generator.Program.CompileData);
+            cachedSpec = new Lazy<MacroSpec>(SpecGenerator.CompileData);
         }
 
         // GET api/values
         [HttpGet]
-        public XmlSpec Get() => cachedSpec.Value;
+        public MacroSpec Get() => cachedSpec.Value;
     }
 }

@@ -1,25 +1,25 @@
-﻿using LibAtem.MacroOperations;
-using LibAtem.Serialization;
-using LibAtem.XmlState;
-using LibAtem.XmlState.MacroSpec;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Xml.Serialization;
+using AtemMacroEditor.Results;
 using LibAtem.Commands;
+using LibAtem.MacroOperations;
+using LibAtem.Serialization;
+using LibAtem.XmlState.MacroSpec;
 
-namespace AtemMacroEditor.Generator
+namespace AtemMacroEditor.Controllers
 {
-    public class Program
+    public class SpecGenerator
     {
-        public static void SaveState(string path, XmlSpec profile)
+        public static void SaveState(string path, MacroSpec profile)
         {
             var ns = new XmlSerializerNamespaces();
             ns.Add("", "");
 
-            XmlSerializer serializer = new XmlSerializer(typeof(XmlSpec));
+            XmlSerializer serializer = new XmlSerializer(typeof(MacroSpec));
             FileStream fs = new FileStream(path, FileMode.Create);
             serializer.Serialize(fs, profile, ns);
             fs.Flush();
@@ -39,13 +39,13 @@ namespace AtemMacroEditor.Generator
             return null;
         }
 
-        public static XmlSpec CompileData()
+        public static MacroSpec CompileData()
         {
-            var res = new XmlSpec();
+            var res = new MacroSpec();
 
             foreach (var op in MacroOpManager.FindAll())
             {
-                var xmlOp = new XmlOperation() {Id = op.Key.ToString()};
+                var xmlOp = new MacroOperationSpec() {Id = op.Key.ToString()};
                 res.Operations.Add(xmlOp);
                 
                 IEnumerable<PropertyInfo> props = op.Value.GetProperties(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
@@ -58,7 +58,7 @@ namespace AtemMacroEditor.Generator
                     if (fieldAttr == null)
                         continue;
 
-                    var xmlField = new XmlField()
+                    var xmlField = new MacroFieldSpec()
                     {
                         Id = fieldAttr.Id,
                         Name = fieldAttr.Name,
@@ -68,11 +68,11 @@ namespace AtemMacroEditor.Generator
 
                     if (prop.GetCustomAttribute<BoolAttribute>() != null)
                     {
-                        xmlField.Type = FieldType.Bool;
+                        xmlField.Type = MacroFieldType.Bool;
                     }
                     else if (prop.GetCustomAttribute<Enum8Attribute>() != null || prop.GetCustomAttribute<Enum16Attribute>() != null || prop.GetCustomAttribute<Enum32Attribute>() != null)
                     {
-                        xmlField.Type = prop.PropertyType.GetCustomAttribute<FlagsAttribute>() != null ? FieldType.Flags : FieldType.Enum;
+                        xmlField.Type = prop.PropertyType.GetCustomAttribute<FlagsAttribute>() != null ? MacroFieldType.Flags : MacroFieldType.Enum;
 
                         string mappedTypeName = TypeMappings.MapType(prop.PropertyType.FullName);
                         Type mappedType = prop.PropertyType;
@@ -88,7 +88,7 @@ namespace AtemMacroEditor.Generator
                                 id = xmlAttr.Name;
 
                             // TODO check value is available for device profile/usage location
-                            xmlField.Values.Add(new XmlFieldValue()
+                            xmlField.Values.Add(new MacroFieldValueSpec()
                             {
                                 Id = id,
                                 Name = val.ToString(),
@@ -100,18 +100,17 @@ namespace AtemMacroEditor.Generator
                         SetNumericProps(xmlField, prop);
                     }
                 }
-
             }
 
             return res;
         }
 
-        private static void SetNumericProps(XmlField field, PropertyInfo prop)
+        private static void SetNumericProps(MacroFieldSpec field, PropertyInfo prop)
         {
             var uint16range = prop.GetCustomAttribute<UInt16RangeAttribute>();
             if (uint16range != null)
             {
-                field.Type = FieldType.Int;
+                field.Type = MacroFieldType.Int;
                 field.Min = uint16range.Min;
                 field.Max = uint16range.Max;
                 return;
@@ -119,7 +118,7 @@ namespace AtemMacroEditor.Generator
             var uint8range = prop.GetCustomAttribute<UInt8RangeAttribute>();
             if (uint8range != null)
             {
-                field.Type = FieldType.Int;
+                field.Type = MacroFieldType.Int;
                 field.Min = uint8range.Min;
                 field.Max = uint8range.Max;
                 return;
@@ -128,7 +127,7 @@ namespace AtemMacroEditor.Generator
             var int16d = prop.GetCustomAttribute<Int16DAttribute>();
             if (int16d != null)
             {
-                field.Type = FieldType.Double;
+                field.Type = MacroFieldType.Double;
                 field.Min = int16d.ScaledMin;
                 field.Max = int16d.ScaledMax;
                 field.Scale = int16d.Scale;
@@ -137,7 +136,7 @@ namespace AtemMacroEditor.Generator
             var int32d = prop.GetCustomAttribute<Int32DAttribute>();
             if (int32d != null)
             {
-                field.Type = FieldType.Double;
+                field.Type = MacroFieldType.Double;
                 field.Min = int32d.ScaledMin;
                 field.Max = int32d.ScaledMax;
                 field.Scale = int32d.Scale;
@@ -147,7 +146,7 @@ namespace AtemMacroEditor.Generator
             var uint16 = prop.GetCustomAttribute<UInt16Attribute>();
             if (uint16 != null)
             {
-                field.Type = FieldType.Int;
+                field.Type = MacroFieldType.Int;
                 field.Min = 0;
                 field.Max = (int)Math.Pow(2, 16) - 1;
                 return;
@@ -155,25 +154,13 @@ namespace AtemMacroEditor.Generator
             var uint8 = prop.GetCustomAttribute<UInt8Attribute>();
             if (uint8 != null)
             {
-                field.Type = FieldType.Int;
+                field.Type = MacroFieldType.Int;
                 field.Min = 0;
                 field.Max = (int)Math.Pow(2, 8) - 1;
                 return;
             }
 
             throw new Exception(string.Format("Unknown field type: {0}.{1}", field.Name, prop.Name));
-        }
-
-        static void Main(string[] args)
-        {
-            var spec = CompileData();
-
-            // Force the assembly to be loaded
-            MacroInput.Camera1.ToVideoSource();
-
-            SaveState("../spec.xml", spec);
-
-            Console.WriteLine("Hello World!");
         }
     }
 }

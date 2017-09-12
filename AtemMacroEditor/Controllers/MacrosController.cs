@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Net;
-using System.Net.Http;
-using System.Threading.Tasks;
+using AtemMacroEditor.Results;
 using LibAtem.XmlState;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

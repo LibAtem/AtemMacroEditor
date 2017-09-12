@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
+using AtemMacroEditor.Results;
 using LibAtem.Commands;
 using LibAtem.Commands.Macro;
 using LibAtem.MacroOperations;
@@ -16,12 +15,12 @@ namespace AtemMacroEditor
     public class AtemMacroStore
     {
         private readonly AtemClient _client;
-        private readonly Dictionary<uint, MacroEntry> _macros;
+        private readonly Dictionary<uint, MacroPropertiesGetCommand> _macros;
         private readonly object _dataTransferLock;
 
         public AtemMacroStore(string address)
         {
-            _macros = new Dictionary<uint, MacroEntry>();
+            _macros = new Dictionary<uint, MacroPropertiesGetCommand>();
             _client = new AtemClient(address);
             _dataTransferLock = new object();
 
@@ -41,13 +40,9 @@ namespace AtemMacroEditor
 
         private void UpdateMacroProps(MacroPropertiesGetCommand cmd)
         {
-            MacroEntry entry;
             lock (_macros)
             {
-                if (!_macros.TryGetValue(cmd.Index, out entry))
-                    entry = _macros[cmd.Index] = new MacroEntry();
-
-                entry.Properties = cmd;
+                _macros[cmd.Index] = cmd;
             }
 
             // TODO emit change
@@ -59,7 +54,7 @@ namespace AtemMacroEditor
             {
                 return new MacroPropertiesList()
                 {
-                    Macros = _macros.Select(kv => kv.Value.Properties).Select(cmd => new MacroProperties {Index = cmd.Index, IsUsed = cmd.IsUsed, Name = cmd.Name, Description = cmd.Description}).ToList()
+                    Macros = _macros.Select(kv => kv.Value).Select(cmd => new MacroProperties {Index = cmd.Index, IsUsed = cmd.IsUsed, Name = cmd.Name, Description = cmd.Description}).ToList()
                 };
             }
         }
@@ -89,7 +84,7 @@ namespace AtemMacroEditor
                 IReadOnlyList<MacroOpBase> resOps = result;
                 lock (_macros)
                 {
-                    var props = _macros.Select(m => m.Value.Properties).FirstOrDefault(m => m.Index == id);
+                    var props = _macros.Select(m => m.Value).FirstOrDefault(m => m.Index == id);
                     if (props == null)
                         return null;
 
@@ -102,47 +97,5 @@ namespace AtemMacroEditor
                 }
             }
         }
-    }
-
-
-
-    [XmlRoot("Macros")]
-    public class MacroPropertiesList
-    {
-        public MacroPropertiesList()
-        {
-            Macros = new List<MacroProperties>();
-        }
-
-        public List<MacroProperties> Macros { get; set; }
-    }
-
-    public class MacroProperties
-    {
-        [XmlAttribute("id")]
-        public uint Index { get; set; }
-        [XmlAttribute("used")]
-        public bool IsUsed { get; set; }
-
-        [XmlAttribute("name")]
-        public string Name { get; set; }
-        public bool ShouldSerializeName()
-        {
-            return IsUsed;
-        }
-
-        [XmlAttribute("description")]
-        public string Description { get; set; }
-        public bool ShouldSerializeDescription()
-        {
-            return IsUsed;
-        }
-    }
-
-    internal class MacroEntry
-    {
-        public MacroPropertiesGetCommand Properties { get; set; }
-
-        // TODO - commands
     }
 }

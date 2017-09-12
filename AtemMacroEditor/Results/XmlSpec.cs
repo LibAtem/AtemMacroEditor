@@ -1,35 +1,35 @@
 ﻿using System.Collections.Generic;
 using System.Xml.Serialization;
 
-namespace AtemMacroEditor.Generator
+namespace AtemMacroEditor.Results
 {
     [XmlRoot("MacroOperations", IsNullable = false)]
-    public class XmlSpec
+    public class MacroSpec
     {
-        public XmlSpec()
+        public MacroSpec()
         {
-            Operations = new List<XmlOperation>();
+            Operations = new List<MacroOperationSpec>();
         }
 
         [XmlArrayItem("Op")]
-        public List<XmlOperation> Operations { get; set; }
+        public List<MacroOperationSpec> Operations { get; set; }
     }
 
-    public class XmlOperation
+    public class MacroOperationSpec
     {
-        public XmlOperation()
+        public MacroOperationSpec()
         {
-            Fields = new List<XmlField>();
+            Fields = new List<MacroFieldSpec>();
         }
 
         [XmlAttribute("id")]
         public string Id { get; set; }
 
         [XmlElement("Field")]
-        public List<XmlField> Fields { get; set; }
+        public List<MacroFieldSpec> Fields { get; set; }
     }
 
-    public enum FieldType
+    public enum MacroFieldType
     {
         Enum,
         Flags,
@@ -38,11 +38,11 @@ namespace AtemMacroEditor.Generator
         Bool,
     }
 
-    public class XmlField
+    public class MacroFieldSpec
     {
-        public XmlField()
+        public MacroFieldSpec()
         {
-            Values = new List<XmlFieldValue>();
+            Values = new List<MacroFieldValueSpec>();
         }
 
         [XmlAttribute("id")]
@@ -59,34 +59,34 @@ namespace AtemMacroEditor.Generator
         }
 
         [XmlAttribute("type")]
-        public FieldType Type { get; set; }
+        public MacroFieldType Type { get; set; }
 
         [XmlAttribute("min")]
         public int Min { get; set; }
         public bool ShouldSerializeMin()
         {
-            return Type == FieldType.Int || Type == FieldType.Double;
+            return Type == MacroFieldType.Int || Type == MacroFieldType.Double;
         }
 
         [XmlAttribute("max")]
         public int Max { get; set; }
         public bool ShouldSerializeMax()
         {
-            return Type == FieldType.Int || Type == FieldType.Double;
+            return Type == MacroFieldType.Int || Type == MacroFieldType.Double;
         }
 
         [XmlAttribute("scale")]
         public double Scale { get; set; }
         public bool ShouldSerializeScale()
         {
-            return Type == FieldType.Double;
+            return Type == MacroFieldType.Double;
         }
 
         [XmlElement("Value")]
-        public List<XmlFieldValue> Values { get; set; }
+        public List<MacroFieldValueSpec> Values { get; set; }
     }
 
-    public class XmlFieldValue
+    public class MacroFieldValueSpec
     {
         [XmlAttribute("id")]
         public string Id { get; set; }
