@@ -55,7 +55,7 @@ export class MacroPage extends React.Component {
   }
 
   moveCard(dragIndex, hoverIndex) {
-    const { Op } = this.state.macro;
+    const { Op } = this.state.macro.Macro;
     const dragCard = Op[dragIndex];
 
     this.setState(update(this.state, {
@@ -63,11 +63,13 @@ export class MacroPage extends React.Component {
         $set: true
       },
       macro: {
-        Op: {
-          $splice: [
-            [dragIndex, 1],
-            [hoverIndex, 0, dragCard],
-          ],
+        Macro: {
+          Op: {
+            $splice: [
+              [dragIndex, 1],
+              [hoverIndex, 0, dragCard],
+            ],
+          },
         },
       },
     }));
@@ -77,17 +79,19 @@ export class MacroPage extends React.Component {
     console.log("Edit Op #" + i + " (" + op.id + ")");
 
     this.Editor.open(op).then(res => {
-      console.log(res, this.state.macro.Op[i]);
+      console.log(res, this.state.macro.Macro.Op[i]);
 
       this.setState(update(this.state, {
         hasChanged: {
           $set: true
         },
         macro: {
-          Op: {
-            $splice: [
-              [i, 1, { "$": res }]
-            ]
+          Macro: {
+            Op: {
+              $splice: [
+                [i, 1, { "$": res }]
+              ]
+            }
           }
         }
       }));
@@ -103,10 +107,12 @@ export class MacroPage extends React.Component {
           $set: true
         },
         macro: {
-          Op: {
-            $splice: [
-              [i, 1]
-            ]
+          Macro: {
+            Op: {
+              $splice: [
+                [i, 1]
+              ]
+            }
           }
         }
       }));
@@ -114,7 +120,7 @@ export class MacroPage extends React.Component {
 
   addOperation(i){
     if (i === undefined || i === null)
-      i = this.state.macro.Op.length;
+      i = this.state.macro.Macro.Op.length;
 
     // TODO show dialog and stuff.
     this.Selector.open().then(res => {
@@ -158,10 +164,12 @@ export class MacroPage extends React.Component {
             $set: true
           },
           macro: {
-            Op: {
-              $splice: [
-                [i, 0, { "$": res2 }]
-              ]
+            Macro: {
+              Op: {
+                $splice: [
+                  [i, 0, { "$": res2 }]
+                ]
+              }
             }
           }
         }));

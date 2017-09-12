@@ -13,7 +13,7 @@ import Slider from 'react-rangeslider';
 import Switch from 'react-bootstrap-switch';
 
 import { Lang } from './lang';
-import { FindFieldSpec } from './spec';
+import { FindOpSpec } from './spec';
 
 export class MacroOpEditor extends React.Component {
   constructor(props){
@@ -51,34 +51,35 @@ export class MacroOpEditor extends React.Component {
     });
   }
 
-  renderControl(key) {
-    const spec = FindFieldSpec(this.state.data.id, key)
+  renderControl(spec) {
     if (spec === null)
       return <FormControl.Static>Failed to find spec!</FormControl.Static>
 
     switch (spec.$.type){
       case "Enum":
-        return this.renderEnumControl(key, spec);
+        return this.renderEnumControl(spec);
       case "Bool":
-        return this.renderBoolControl(key, spec);
+        return this.renderBoolControl(spec);
+      case "Flags":
+        return this.renderFlagsControl(spec);
       case "Int":
       case "Double":
-        return this.renderSliderControl(key, spec);
+        return this.renderSliderControl(spec);
 
       default:
         return <FormControl.Static>Unknown field type: {spec.$.type}</FormControl.Static>;
     }
   }
 
-  renderEnumControl(key, spec){
+  renderEnumControl(spec){
     const change = e => {
       const updDat = { data: {} };
-      updDat.data[key] = { $set: e.target.value };
+      updDat.data[spec.$.id] = { $set: e.target.value };
       this.setState(update(this.state, updDat));
     };
 
     return (
-      <FormControl componentClass="select" placeholder={spec.$.name} value={this.state.data[key]} onChange={change}>
+      <FormControl componentClass="select" placeholder={spec.$.name} value={this.state.data[spec.$.id]} onChange={change}>
         {
           spec.Value.map((v, i) => <option key={i} value={v.$.id}>{ v.$.name }</option>)
         }
@@ -86,20 +87,58 @@ export class MacroOpEditor extends React.Component {
     );
   }
 
-  renderBoolControl(key, spec){
+  renderBoolControl(spec){
     const change = (e, v) => {
       const updDat = { data: {} };
-      updDat.data[key] = { $set: v ? "true" : "false" };
+      updDat.data[spec.$.id] = { $set: v ? "true" : "false" };
       this.setState(update(this.state, updDat));
     };
 
-    return <Switch value={this.state.data[key]=="true"} onChange={change} />
+    return <Switch value={this.state.data[spec.$.id]=="true"} onChange={change} />
   }
 
-  renderSliderControl(key, spec){
+  renderFlagsControl(spec){
+    const change = (e, v) => {
+      let ids = this.state.data[spec.$.id].split(",").map(v => v.trim());
+      const i = ids.indexOf(e.props.id);
+      if (i >= 0)
+        ids.splice(i, 1);
+
+      if (v)
+        ids.push(e.props.id);
+
+      // Add / remove 'None' value
+      if (ids.length == 0)
+        ids.push("None");
+      if (ids.length > 1){
+        const nonInd = ids.indexOf("None");
+        if (nonInd >= 0)
+          ids.splice(nonInd, 1);
+      }
+
+      const updDat = { data: {} };
+      updDat.data[spec.$.id] = { $set: ids.join(", ") };
+      this.setState(update(this.state, updDat));
+    };
+
+    const ids = this.state.data[spec.$.id].split(",").map(v => v.trim());
+    return spec.Value.filter(v => v.$.id != 0 && v.$.id != "None").map(v => {
+      return (
+        <p key={v.$.id}>
+          <span>{ v.$.name }: </span>
+          <Switch value={ids.indexOf(v.$.id) >= 0} onChange={change} id={v.$.id} />
+        </p>
+      );
+    });
+
+    return <Switch value={this.state.data[spec.$.id]=="true"} onChange={change} id={spec.$.id} />
+  }
+
+
+  renderSliderControl(spec){
     let min = parseInt(spec.$.min);
     let max = parseInt(spec.$.max);
-    let value = parseInt(this.state.data[key]);
+    let value = parseInt(this.state.data[spec.$.id]);
     const scale = parseInt(spec.$.scale);
     let step = 1;
 
@@ -125,7 +164,7 @@ export class MacroOpEditor extends React.Component {
         val *= scale;
 
       const updDat = { data: {} };
-      updDat.data[key] = { $set: val };
+      updDat.data[spec.$.id] = { $set: val };
       this.setState(update(this.state, updDat));
     };
 
@@ -150,27 +189,9 @@ export class MacroOpEditor extends React.Component {
   render() {
     const { data, showModal } = this.state;
 
-    const ids = Object.keys(data).filter(i => i != "id");
-    ids.sort((a, b) => {
-      const a2 = FindFieldSpec(this.state.data.id, a);
-      const b2 = FindFieldSpec(this.state.data.id, b);
-
-      if (a2.$.isId == b2.$.isId){
-        if (a < b)
-          return -1;
-        if (b < a)
-          return 1;
-        return 0;
-      }
-
-      if (a2.$.isId == "true")
-        return -1;
-      if (b2.$.isId == "true")
-        return 1;
-
-      // shouldnt ever get here
-      return 0;
-    });
+    const spec = FindOpSpec(this.state.data.id);
+    if (spec == null)
+      return <div></div>;
 
     return (
       <Modal show={showModal} onHide={() => this.close()}>
@@ -180,11 +201,11 @@ export class MacroOpEditor extends React.Component {
         <Modal.Body>
           <Form horizontal>
             { 
-              ids.map(k => {
+              spec.Field.map(k => {
                 return (
-                  <FormGroup key={k} controlId="formHorizontalEmail">
+                  <FormGroup key={k.$.id} controlId="formHorizontalEmail">
                     <Col componentClass={ControlLabel} sm={4}>
-                      { k }
+                      { k.$.id }
                     </Col>
                     <Col sm={8}>
                       { this.renderControl(k) }
