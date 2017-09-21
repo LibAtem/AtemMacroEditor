@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using AtemMacroEditor.Results;
+using log4net;
 using LibAtem.Commands;
 using LibAtem.Commands.Macro;
 using LibAtem.MacroOperations;
@@ -14,6 +15,8 @@ namespace AtemMacroEditor
 {
     public class AtemMacroStore
     {
+        private static readonly ILog Log = LogManager.GetLogger(typeof(AtemClient));
+
         private readonly AtemClient _client;
         private readonly Dictionary<uint, MacroPropertiesGetCommand> _macros;
         private readonly object _dataTransferLock;
@@ -21,20 +24,22 @@ namespace AtemMacroEditor
         public AtemMacroStore(string address)
         {
             _macros = new Dictionary<uint, MacroPropertiesGetCommand>();
-            _client = new AtemClient(address);
+            _client = new AtemClient(address, false);
             _dataTransferLock = new object();
 
             _client.OnReceive += OnCommand;
+            _client.Connect();
         }
 
         private void OnCommand(object sender, IReadOnlyList<ICommand> commands)
         {
             foreach (ICommand cmd in commands)
             {
+                Log.DebugFormat("Got command: {0}", cmd.GetType().FullName);
+
                 if (cmd is MacroPropertiesGetCommand)
                     UpdateMacroProps(cmd as MacroPropertiesGetCommand);
-
-
+                
             }
         }
 
