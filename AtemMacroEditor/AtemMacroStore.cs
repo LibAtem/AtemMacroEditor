@@ -102,5 +102,32 @@ namespace AtemMacroEditor
                 }
             }
         }
+
+        public bool UpdateMacro(uint id, Macro macro)
+        {
+            macro.Index = id;
+
+            lock (_dataTransferLock)
+            {
+                bool? result = null;
+                var evt = new AutoResetEvent(false);
+
+                List<MacroOpBase> ops = macro.Operations.Select(o => o.ToMacroOp()).OfType<MacroOpBase>().ToList();
+
+                var job = new UploadMacroJob(id, ops, ok =>
+                {
+                    result = ok;
+                    evt.Set();
+                }, TimeSpan.FromMilliseconds(5000));
+
+                _client.DataTransfer.QueueJob(job);
+
+                bool res = evt.WaitOne(TimeSpan.FromMilliseconds(5000));
+                if (!res)
+                    throw new Exception("Timed out");
+                
+                return result.GetValueOrDefault(false);
+            }
+        }
     }
 }

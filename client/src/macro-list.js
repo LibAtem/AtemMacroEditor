@@ -7,12 +7,6 @@ import {
   Link
 } from 'react-router-dom'
 
-// var XMLParser = require('react-xml-parser');
-// var xml = new XMLParser().parseFromString(xmlText);    // Assume xmlText contains the example XML
-// console.log(xml);
-// console.log(xml.getElementsByTagName('Name'));
-
-
 export class MacroListPage extends React.Component {
   constructor(props){
     super(props);
@@ -47,6 +41,7 @@ export class MacroListPage extends React.Component {
     if (this.state.loading)
       return <div>Loading...</div>;
 
+    // TODO this.state.macros.Macros.Macros can be undefined
     const rows = this.state.macros.Macros.Macros[0].MacroProperties.filter(m => m.$.used == "true").map(m => <li key={m.$.id}><Link to={`/macro/${m.$.id}`}>{ m.$.name } ({ m.$.id })</Link></li>);
 
     return (

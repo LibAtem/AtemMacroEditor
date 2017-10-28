@@ -39,20 +39,24 @@ namespace AtemMacroEditor.Controllers
             }
         }
 
-        //
-        //        // POST api/values
-        //        [HttpPost]
-        //        public void Post([FromBody]string value)
-        //        {
-        //        }
-        //
-        //        // PUT api/values/5
-        //        [HttpPut("{id}")]
-        //        public void Put(int id, [FromBody]string value)
-        //        {
-        //        }
-        //
-        //        // DELETE api/values/5
+        // POST api/macros/5
+        [HttpPost("{id}")]
+        public IActionResult Post(uint id, [FromBody]Macro macro)
+        {
+            try
+            {
+                if (_store.UpdateMacro(id, macro))
+                    return Ok();
+
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        //        // DELETE api/macros/5
         //        [HttpDelete("{id}")]
         //        public void Delete(int id)
         //        {

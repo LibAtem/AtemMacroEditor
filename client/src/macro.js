@@ -179,7 +179,27 @@ export class MacroPage extends React.Component {
   }
 
   saveMacro(){
-    // TODO
+    const id = this.props.match.params.id;
+    console.log("Saving macro " + id);
+
+    var builder = new XMLParser.Builder();
+    const data = builder.buildObject(this.state.macro);
+
+    fetch('/api/macros/' + id, {
+      method: "POST",
+      body: data,
+      headers: {
+        'Content-Type': 'application/xml'
+      },
+    }).then(function(response) {
+      if(response.ok) {
+        return response.text();
+      }
+      throw new Error('Network response was not ok.');
+    }).then(xmlText => {
+      console.log(res)
+      
+    });
   }
 
   render(){
