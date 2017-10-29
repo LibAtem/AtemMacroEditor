@@ -5,9 +5,11 @@ import ReactDOM from 'react-dom';
 
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route, Redirect,
+  Link,
+  withRouter
 } from 'react-router-dom'
+import { LinkContainer } from 'react-router-bootstrap';
 
 import {
   Nav, Navbar, NavItem, NavDropdown, 
@@ -16,6 +18,7 @@ import {
 
 import { MacroListPage } from './macro-list';
 import { MacroPage } from './macro';
+import { PiPlayerPage } from './player/pi';
 
 // gonna be removed in production
 if (__DEV__) {
@@ -23,52 +26,51 @@ if (__DEV__) {
 }
 
 
-const BasicExample = () => (
-  <Router>
-    <div>
-      <ul>
-        <li><Link to="/">Macro List</Link></li>
-      </ul>
-
-      <hr/>
-
-      <Route exact path="/" component={MacroListPage}/>
-      <Route path="/macro/:id" component={MacroPage}/>
-    </div>
-  </Router>
-)
-
-class BasePage extends React.Component {
+class Layout extends React.Component {
   render(){
     return (
       <div>
-      <Navbar inverse collapseOnSelect fixedTop>
-        <Navbar.Header>
-          <Navbar.Brand>
-            <a href="#">Atem Macro Editor</a>
-          </Navbar.Brand>
-          <Navbar.Toggle />
-        </Navbar.Header>
-        <Navbar.Collapse>
-          <Nav>
-          </Nav>
-          <Nav pullRight>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-      <div className="container mainElm">
-        <div className="row">
-          <div className="col-xs-12">
-            <BasicExample />
-          </div>
-        </div>
+        <Navbar inverse collapseOnSelect fixedTop>
+          <Navbar.Header>
+            <Navbar.Brand>
+              <a href="#">Atem Macro Editor</a>
+            </Navbar.Brand>
+            <Navbar.Toggle />
+          </Navbar.Header>
+          <Navbar.Collapse>
+            <Nav pullRight>
+            <Nav>
+              <LinkContainer eventKey={1} to="/editor">
+                <NavItem>Editor</NavItem>
+              </LinkContainer>
+              <LinkContainer eventKey={2} to="/player-pi">
+                <NavItem>Pi Player</NavItem>
+              </LinkContainer>
+            </Nav>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+
+        <Route exact path="/editor" component={MacroListPage}/>
+        <Route path="/macro/:id" component={MacroPage}/>
+        <Route path="/player-pi" component={PiPlayerPage}/>
+        
       </div>
-      </div>
+    );// <Redirect from='/' to='/editor' exact />
+  }
+}
+
+class MyRouter extends React.Component {
+  render(){
+    return (
+      <Router>
+        <Route path='/' component={Layout} />
+      </Router>
     );
   }
 }
 
 ReactDOM.render(
-  <BasePage />,
+  <MyRouter />,
   document.getElementById('root')
 );

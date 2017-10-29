@@ -26,9 +26,7 @@ export class MacroListPage extends React.Component {
       }
       throw new Error('Network response was not ok.');
     }).then(xmlText => {
-      // console.log(res)
       XMLParser.parseString(xmlText, (err, res) => {
-        console.log(res)
         this.setState({
           macros: res,
           loading: false,
@@ -45,15 +43,19 @@ export class MacroListPage extends React.Component {
     const rows = this.state.macros.Macros.Macros[0].MacroProperties.filter(m => m.$.used == "true").map(m => <li key={m.$.id}><Link to={`/macro/${m.$.id}`}>{ m.$.name } ({ m.$.id })</Link></li>);
 
     return (
-      <div>
-        <h3>Macros:</h3>
-        <ul>
-        { 
-          rows.length == 0
-          ? "No macros exist!"
-          : rows 
-        }
-        </ul>
+      <div className="container mainElm">
+        <div className="row">
+          <div className="col-xs-12">
+            <h3>Macros:</h3>
+            <ul>
+            { 
+              rows.length == 0
+              ? "No macros exist!"
+              : rows 
+            }
+            </ul>
+          </div>
+        </div>
       </div>
     );
   }

@@ -211,23 +211,27 @@ export class MacroPage extends React.Component {
       showEdit={() => this.editOperation(i, m.$)} doDel={() => this.deleteOperation(i)} showInsert={() => this.addOperation(i)} />);
 
     return (
-      <div>
-        <MacroOpEditor ref={e => this.Editor = e} />
-        <SelectMacroType ref={e => this.Selector = e} />
+      <div className="container mainElm">
+        <div className="row">
+          <div className="col-xs-12">
+            <MacroOpEditor ref={e => this.Editor = e} />
+            <SelectMacroType ref={e => this.Selector = e} />
 
-        <h3>
-          Edit Macro: 
-          { this.state.hasChanged ? <Button bsStyle="primary" onClick={() => this.saveMacro()}>Save</Button> : "" }          
-        </h3>
-        <table className="macro-op-table">
-          <tbody>
-            { rows }
-          </tbody>
-        </table>
-        <p>
-          <Button bsStyle="success" onClick={() => this.addOperation()}>Add</Button>
-          { this.state.hasChanged ? <Button bsStyle="primary" onClick={() => this.saveMacro()}>Save</Button> : "" }          
-        </p>
+            <h3>
+              Edit Macro: 
+              { this.state.hasChanged ? <Button bsStyle="primary" onClick={() => this.saveMacro()}>Save</Button> : "" }          
+            </h3>
+            <table className="macro-op-table">
+              <tbody>
+                { rows }
+              </tbody>
+            </table>
+            <p>
+              <Button bsStyle="success" onClick={() => this.addOperation()}>Add</Button>
+              { this.state.hasChanged ? <Button bsStyle="primary" onClick={() => this.saveMacro()}>Save</Button> : "" }          
+            </p>
+          </div>
+        </div>
       </div>
     );
   }

@@ -10,6 +10,7 @@ using LibAtem.MacroOperations;
 using LibAtem.Net;
 using LibAtem.Net.DataTransfer;
 using LibAtem.XmlState;
+using Newtonsoft.Json;
 
 namespace AtemMacroEditor
 {
@@ -20,6 +21,7 @@ namespace AtemMacroEditor
         private readonly AtemClient _client;
         private readonly Dictionary<uint, MacroPropertiesGetCommand> _macros;
         private readonly object _dataTransferLock;
+        private MacroRunStatusGetCommand _lastStatus;
 
         public AtemMacroStore(string address)
         {
@@ -31,6 +33,8 @@ namespace AtemMacroEditor
             _client.Connect();
         }
 
+        public MacroRunStatusGetCommand LastStatus => _lastStatus;
+
         private void OnCommand(object sender, IReadOnlyList<ICommand> commands)
         {
             foreach (ICommand cmd in commands)
@@ -39,8 +43,16 @@ namespace AtemMacroEditor
 
                 if (cmd is MacroPropertiesGetCommand)
                     UpdateMacroProps(cmd as MacroPropertiesGetCommand);
-                
+                if (cmd is MacroRunStatusGetCommand)
+                    TransmitStatus(cmd as MacroRunStatusGetCommand);
             }
+        }
+
+        private void TransmitStatus(MacroRunStatusGetCommand cmd)
+        {
+            _lastStatus = cmd;
+
+            WebsocketMiddleware.SendToAllAsync(JsonConvert.SerializeObject(cmd));
         }
 
         private void UpdateMacroProps(MacroPropertiesGetCommand cmd)
@@ -128,6 +140,32 @@ namespace AtemMacroEditor
                 
                 return result.GetValueOrDefault(false);
             }
+        }
+
+        public void SetLooping(bool looping)
+        {
+            _client.SendCommand(new MacroRunStatusSetCommand
+            {
+                Mask = MacroRunStatusSetCommand.MaskFlags.Looping,
+                Looping = looping,
+            });
+        }
+
+        public void RunMacro(uint id)
+        {
+            _client.SendCommand(new MacroActionCommand
+            {
+                Action = MacroActionCommand.MacroAction.Run,
+                Index = id,
+            });
+        }
+
+        public void StopMacro()
+        {
+            _client.SendCommand(new MacroActionCommand
+            {
+                Action = MacroActionCommand.MacroAction.Stop,
+            });
         }
     }
 }
