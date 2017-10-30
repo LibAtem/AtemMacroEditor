@@ -7,6 +7,7 @@
     "clean": "rimraf dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --colors --public --disable-host-check --host 0.0.0.0",
+    "dist": "NODE_ENV=production webpack -p --progress --colors",
     "build": "npm run clean && NODE_ENV=production webpack",
     "lint": "eslint src config",
     "lint:fix": "npm run lint -- --fix"

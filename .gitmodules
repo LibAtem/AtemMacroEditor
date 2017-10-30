@@ -1,0 +1,6 @@
+[submodule "LibAtem"]
+	path = LibAtem
+	url = https://git.julusian.co.uk/atem/LibAtem.git
+[submodule "LibAtem.XmlState"]
+	path = LibAtem.XmlState
+	url = https://git.julusian.co.uk/atem/LibAtem.XmlState.git

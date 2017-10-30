@@ -4,13 +4,17 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <UserSecretsId>aspnet-AtemMacroEditor-F45AB61A-3615-49DD-926E-9905488716D0</UserSecretsId>
   </PropertyGroup>
+  
+  <PropertyGroup>
+    <NoWarn>$(NoWarn);NU1605</NoWarn>
+  </PropertyGroup>
 
   <ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0-preview2-final" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,9 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\AtemEmulator\LibAtem.XmlState\LibAtem.XmlState.MacroSpec\LibAtem.XmlState.MacroSpec.csproj" />
-    <ProjectReference Include="..\..\AtemEmulator\LibAtem.XmlState\LibAtem.XmlState\LibAtem.XmlState.csproj" />
-    <ProjectReference Include="..\..\AtemEmulator\LibAtem\LibAtem\LibAtem.csproj" />
+    <ProjectReference Include="..\LibAtem.XmlState\LibAtem.XmlState.MacroSpec\LibAtem.XmlState.MacroSpec.csproj" />
+    <ProjectReference Include="..\LibAtem.XmlState\LibAtem.XmlState\LibAtem.XmlState.csproj" />
+    <ProjectReference Include="..\LibAtem\LibAtem\LibAtem.csproj" />
   </ItemGroup>
 
 </Project>

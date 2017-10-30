@@ -53,31 +53,22 @@ module.exports = {
       {
         test: /\.scss$/,
         exclude: /node_modules/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                minimize: true,
-                modules: true,
-                sourceMap: true
-              }
-            },
-            {
-              loader: 'postcss-loader',
-              options: {
-                plugins: () => [require('autoprefixer')({
-                  browsers: [
-                    'last 3 version',
-                    'ie >= 10' // supports IE from version 10 onwards
-                  ]
-                })]
-              }
-            },
-            'sass-loader'
-          ]
-        })
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: () => [require('autoprefixer')({
+                browsers: [
+                  'last 3 version',
+                  'ie >= 10' // supports IE from version 10 onwards
+                ]
+              })]
+            }
+          },
+          'sass-loader'
+        ]
       },
       {
         test: /\.hbs$/,
@@ -138,29 +129,29 @@ module.exports = {
       filename: 'index.html'
     }),
 
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false,
-        screw_ie8: true,
-        conditionals: true,
-        unused: true,
-        comparisons: true,
-        sequences: true,
-        dead_code: true,
-        evaluate: true,
-        if_return: true,
-        join_vars: true
-      },
-      output: {
-        comments: false
-      }
-    }),
+    // new webpack.optimize.UglifyJsPlugin({
+    //   compress: {
+    //     warnings: false,
+    //     screw_ie8: true,
+    //     conditionals: true,
+    //     unused: true,
+    //     comparisons: true,
+    //     sequences: true,
+    //     dead_code: true,
+    //     evaluate: true,
+    //     if_return: true,
+    //     join_vars: true
+    //   },
+    //   output: {
+    //     comments: false
+    //   }
+    // }),
 
     // Put all css code in this file
-    new ExtractTextPlugin({
-      filename: '[name].[contenthash:8].css',
-      allChunks: true
-    }),
+    // new ExtractTextPlugin({
+    //   filename: '[name].[contenthash:8].css',
+    //   allChunks: true
+    // }),
 
     new CompressionPlugin({
       asset: '[path].gz[query]',
