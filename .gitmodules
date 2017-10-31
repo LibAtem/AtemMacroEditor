@@ -4,3 +4,6 @@
 [submodule "LibAtem.XmlState"]
 	path = LibAtem.XmlState
 	url = https://git.julusian.co.uk/atem/LibAtem.XmlState.git
+[submodule "LibAtem.DeviceProfile"]
+	path = LibAtem.DeviceProfile
+	url = https://git.julusian.co.uk/atem/LibAtem.DeviceProfile.git

@@ -6,9 +6,11 @@ using System.Reflection;
 using System.Xml.Serialization;
 using AtemMacroEditor.Results;
 using LibAtem.Commands;
+using LibAtem.Common;
 using LibAtem.MacroOperations;
 using LibAtem.Serialization;
 using LibAtem.XmlState.MacroSpec;
+using LibAtem.DeviceProfile;
 
 namespace AtemMacroEditor.Controllers
 {
@@ -39,7 +41,7 @@ namespace AtemMacroEditor.Controllers
             return null;
         }
 
-        public static MacroSpec CompileData()
+        public static MacroSpec CompileData(DeviceProfile profile)
         {
             var res = new MacroSpec();
 
@@ -87,7 +89,10 @@ namespace AtemMacroEditor.Controllers
                             if (xmlAttr != null)
                                 id = xmlAttr.Name;
 
-                            // TODO check value is available for device profile/usage location
+                            if (!AvailabilityChecker.IsAvailable(profile, val))
+                                continue;
+
+                            // TODO check value is available for usage location
                             xmlField.Values.Add(new MacroFieldValueSpec()
                             {
                                 Id = id,
@@ -97,7 +102,7 @@ namespace AtemMacroEditor.Controllers
                     }
                     else
                     {
-                        SetNumericProps(xmlField, prop);
+                        SetNumericProps(profile, op.Key, xmlField, prop);
                     }
                 }
             }
@@ -105,7 +110,7 @@ namespace AtemMacroEditor.Controllers
             return res;
         }
 
-        private static void SetNumericProps(MacroFieldSpec field, PropertyInfo prop)
+        private static void SetNumericProps(DeviceProfile profile, MacroOperationType op, MacroFieldSpec field, PropertyInfo prop)
         {
             var uint16range = prop.GetCustomAttribute<UInt16RangeAttribute>();
             if (uint16range != null)
@@ -143,12 +148,21 @@ namespace AtemMacroEditor.Controllers
                 return;
             }
 
+            var uint32d = prop.GetCustomAttribute<UInt32DAttribute>();
+            if (uint32d != null)
+            {
+                field.Type = MacroFieldType.Double;
+                field.Min = (int)uint32d.ScaledMin;
+                field.Max = (int)uint32d.ScaledMax;
+                field.Scale = uint32d.Scale;
+                return;
+            }
             var uint16 = prop.GetCustomAttribute<UInt16Attribute>();
             if (uint16 != null)
             {
                 field.Type = MacroFieldType.Int;
                 field.Min = 0;
-                field.Max = (int)Math.Pow(2, 16) - 1;
+                field.Max = (int) (GetDefaultForField<uint?>(profile, op, field) ?? (uint) Math.Pow(2, 16) - 1);
                 return;
             }
             var uint8 = prop.GetCustomAttribute<UInt8Attribute>();
@@ -156,11 +170,16 @@ namespace AtemMacroEditor.Controllers
             {
                 field.Type = MacroFieldType.Int;
                 field.Min = 0;
-                field.Max = (int)Math.Pow(2, 8) - 1;
+                field.Max = (int) (GetDefaultForField<uint?>(profile, op, field) ?? (uint) Math.Pow(2, 8) - 1);
                 return;
             }
 
             throw new Exception(string.Format("Unknown field type: {0}.{1}", field.Name, prop.Name));
+        }
+
+        private static T GetDefaultForField<T>(DeviceProfile profile, MacroOperationType op, MacroFieldSpec field)
+        {
+            return (T) AvailabilityChecker.GetMaxForProperty(profile, string.Format("{0}.{1}", op.ToString(), field.Name));
         }
     }
 }
