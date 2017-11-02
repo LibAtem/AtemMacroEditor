@@ -7,7 +7,7 @@
     "clean": "rimraf dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --colors --public --disable-host-check --host 0.0.0.0",
-    "dist": "NODE_ENV=production webpack -p --progress --colors",
+    "dist": "cross-env NODE_ENV=production webpack -p --progress --colors",
     "build": "npm run clean && NODE_ENV=production webpack",
     "lint": "eslint src config",
     "lint:fix": "npm run lint -- --fix"
@@ -50,6 +50,7 @@
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "bootstrap-sass": "^3.3.7",
     "bootswatch": "^3.3.7",
+    "cross-env": "^5.1.1",
     "griddle-react": "^1.6.0",
     "normalize.css": "^7.0.0",
     "react": "^15.6.1",
