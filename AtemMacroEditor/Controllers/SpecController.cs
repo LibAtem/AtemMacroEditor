@@ -20,7 +20,7 @@ namespace AtemMacroEditor.Controllers
             VideoSource.Input1.ToMacroInput();
 
             // TODO - parse back from topology sent from the server
-            var profile = DeviceProfileRepository.GetSystemProfile(null);
+            var profile = DeviceProfileRepository.GetSystemProfile("atem-1me");
 
             // TODO - refactor CompileData into this package
             cachedSpec = new Lazy<MacroSpec>(() => SpecGenerator.CompileData(profile));

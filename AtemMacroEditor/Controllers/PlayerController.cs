@@ -15,45 +15,6 @@ namespace AtemMacroEditor.Controllers
             _store = store;
         }
 
-        //        // GET api/macros
-        //        [HttpGet]
-        //        public MacroPropertiesList Get() => _store.GetMacros();
-        //
-        //        // GET api/macros/5
-        //        [HttpGet("{id}")]
-        //        public IActionResult Get(uint id)
-        //        {
-        //            try
-        //            {
-        //                Macro macro = _store.GetMacro(id);
-        //                if (macro == null)
-        //                    return NotFound();
-        //
-        //                return Ok(macro);
-        //            }
-        //            catch (Exception)
-        //            {
-        //                return StatusCode(StatusCodes.Status500InternalServerError);
-        //            }
-        //        }
-        //
-        //        // POST api/macros/5
-        //        [HttpPost("{id}")]
-        //        public IActionResult Post(uint id, [FromBody]Macro macro)
-        //        {
-        //            try
-        //            {
-        //                if (_store.UpdateMacro(id, macro))
-        //                    return Ok();
-        //
-        //                return StatusCode(StatusCodes.Status500InternalServerError);
-        //            }
-        //            catch (Exception)
-        //            {
-        //                return StatusCode(StatusCodes.Status500InternalServerError);
-        //            }
-        //        }
-
         // POST api/player/run/{id}
         [HttpPost("run/{id}")]
         public IActionResult Run(uint id)

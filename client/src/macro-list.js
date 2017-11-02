@@ -35,25 +35,35 @@ export class MacroListPage extends React.Component {
     });
   }
 
-  render(){
+  renderInner(){
     if (this.state.loading)
       return <div>Loading...</div>;
 
-    // TODO this.state.macros.Macros.Macros can be undefined
+    if (!this.state.macros.Macros || !this.state.macros.Macros.Macros)
+      return <div>Loading...</div>;
+    
     const rows = this.state.macros.Macros.Macros[0].MacroProperties.filter(m => m.$.used == "true").map(m => <li key={m.$.id}><Link to={`/macro/${m.$.id}`}>{ m.$.name } ({ m.$.id })</Link></li>);
 
+    return (
+      <div>
+        <h3>Macros:</h3>
+        <ul>
+        { 
+          rows.length == 0
+          ? "No macros exist!"
+          : rows 
+        }
+        </ul>
+      </div>
+    );
+  }
+
+  render(){
     return (
       <div className="container mainElm">
         <div className="row">
           <div className="col-xs-12">
-            <h3>Macros:</h3>
-            <ul>
-            { 
-              rows.length == 0
-              ? "No macros exist!"
-              : rows 
-            }
-            </ul>
+            { this.renderInner() }
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ import XMLParser from 'xml2js';
 
 import { Link } from 'react-router-dom';
 import {
-  Button
+  Button, ButtonToolbar
 } from 'react-bootstrap';
 
 import update from 'react/lib/update';
@@ -178,6 +178,28 @@ export class MacroPage extends React.Component {
     }).catch(() => {});
   }
 
+  doDelete(){
+    if (!window.confirm("Are you sure you want to delete this macro?"))
+      return;
+
+    const id = this.props.match.params.id;
+    console.log("Deleting macro " + id);
+
+    fetch('/api/macros/' + id, {
+      method: "DELETE",
+      headers: {
+        'Content-Type': 'application/xml'
+      },
+    }).then(function(response) {
+      if(response.ok) {
+        return response.text();
+      }
+      throw new Error('Network response was not ok.');
+    }).then(xmlText => {      
+      this.props.history.push("/macros");
+    });
+  }
+
   saveMacro(){
     const id = this.props.match.params.id;
     console.log("Saving macro " + id);
@@ -202,7 +224,7 @@ export class MacroPage extends React.Component {
     });
   }
 
-  render(){
+  renderInner() {
     if (this.state.loading)
       return <div>Loading...</div>;
 
@@ -211,25 +233,34 @@ export class MacroPage extends React.Component {
       showEdit={() => this.editOperation(i, m.$)} doDel={() => this.deleteOperation(i)} showInsert={() => this.addOperation(i)} />);
 
     return (
+      <div>
+        <MacroOpEditor ref={e => this.Editor = e} />
+        <SelectMacroType ref={e => this.Selector = e} />
+
+        <h3>
+          Edit Macro: 
+          { this.state.hasChanged ? <Button bsStyle="primary" onClick={() => this.saveMacro()}>Save</Button> : "" }          
+        </h3>
+        <table className="macro-op-table">
+          <tbody>
+            { rows }
+          </tbody>
+        </table>
+        <ButtonToolbar>
+          <Button bsStyle="success" onClick={() => this.addOperation()}>Add Op</Button>
+          { this.state.hasChanged ? <Button bsStyle="primary" onClick={() => this.saveMacro()}>Save</Button> : "" }  
+          <Button bsStyle="danger" onClick={() => this.doDelete()}>Delete Macro</Button>        
+        </ButtonToolbar>
+      </div>
+    );
+  }
+
+  render(){
+    return (
       <div className="container mainElm">
         <div className="row">
           <div className="col-xs-12">
-            <MacroOpEditor ref={e => this.Editor = e} />
-            <SelectMacroType ref={e => this.Selector = e} />
-
-            <h3>
-              Edit Macro: 
-              { this.state.hasChanged ? <Button bsStyle="primary" onClick={() => this.saveMacro()}>Save</Button> : "" }          
-            </h3>
-            <table className="macro-op-table">
-              <tbody>
-                { rows }
-              </tbody>
-            </table>
-            <p>
-              <Button bsStyle="success" onClick={() => this.addOperation()}>Add</Button>
-              { this.state.hasChanged ? <Button bsStyle="primary" onClick={() => this.saveMacro()}>Save</Button> : "" }          
-            </p>
+            { this.renderInner() }
           </div>
         </div>
       </div>

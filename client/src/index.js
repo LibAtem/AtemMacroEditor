@@ -40,7 +40,7 @@ class Layout extends React.Component {
           <Navbar.Collapse>
             <Nav pullRight>
             <Nav>
-              <LinkContainer eventKey={1} to="/editor">
+              <LinkContainer eventKey={1} to="/macros">
                 <NavItem>Editor</NavItem>
               </LinkContainer>
               <LinkContainer eventKey={2} to="/player-pi">
@@ -51,12 +51,12 @@ class Layout extends React.Component {
           </Navbar.Collapse>
         </Navbar>
 
-        <Route exact path="/editor" component={MacroListPage}/>
+        <Route exact path="/macros" component={MacroListPage}/>
         <Route path="/macro/:id" component={MacroPage}/>
         <Route path="/player-pi" component={PiPlayerPage}/>
         
       </div>
-    );// <Redirect from='/' to='/editor' exact />
+    );// <Redirect from='/' to='/macros' exact />
   }
 }
 

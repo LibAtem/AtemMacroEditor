@@ -7,6 +7,7 @@
 @import "../node_modules/react-rangeslider/lib/index.css";
 
 @import "./styles/switch";
+@import "./styles/piplayer";
 
 body {
   background-color: #282828;
@@ -18,9 +19,11 @@ body {
 
 
 .macro-op-table {
+  margin-top: 10px;
+  margin-bottom: 10px;
 
   tr {
-    // border: 1px solid #999;
+    border: 1px solid #999;
     margin: 2px;
 
     td.borderLeft {
@@ -35,78 +38,4 @@ body {
   td {
     padding: 10px;
   }
-}
-
-#numpad {
-  width: 100%;
-
-  td {
-    // width: 30%;
-    width: 33.33%;
-    text-align: center;
-    // padding: 40px;
-    // border: 1px solid #999;
-    font-size: 4em;
-
-    button {
-      // margin: 10px;
-      font-size: 0.75em;
-    }
-
-  }
-
-  td:nth-child(4) {
-    width: 10%;
-  }
-
-  td.key {
-    padding: 10px;
-
-    button {
-      height: 180px;
-      position: relative;
-
-      &.height-double{
-        height: 300px;
-      }
-
-      .char {
-        position: absolute;
-        top: 0;
-        right: 3px;
-
-        // font-size: 2.5em;
-        font-size: 1.6em;
-      }
-      .name {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-
-        overflow: hidden;
-        text-overflow: ellipsis;
-        font-size: 1.6em;
-      }
-    }
-  }
-
-  td.status {
-    // height: 170px;
-
-    span {
-      // height: 170px;
-      height: 200px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      display: -webkit-box;
-    }
-  }
-}
-
-// TODO - restrict to high res only
-tr {
-  height: 200px;
 }

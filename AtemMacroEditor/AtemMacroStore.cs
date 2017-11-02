@@ -124,9 +124,8 @@ namespace AtemMacroEditor
                 bool? result = null;
                 var evt = new AutoResetEvent(false);
 
-                List<MacroOpBase> ops = macro.Operations.Select(o => o.ToMacroOp()).OfType<MacroOpBase>().ToList();
-
-                var job = new UploadMacroJob(id, ops, ok =>
+                IEnumerable<MacroOpBase> ops = macro.Operations.Select(o => o.ToMacroOp());
+                var job = new UploadMacroJob(id, macro.Name, macro.Description, ops, ok =>
                 {
                     result = ok;
                     evt.Set();
@@ -140,6 +139,15 @@ namespace AtemMacroEditor
                 
                 return result.GetValueOrDefault(false);
             }
+        }
+
+        public void DeleteMacro(uint id)
+        {
+            _client.SendCommand(new MacroActionCommand
+            {
+                Action = MacroActionCommand.MacroAction.Delete,
+                Index = id,
+            });
         }
 
         public void SetLooping(bool looping)
