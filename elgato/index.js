@@ -18,21 +18,7 @@ const buttonPagePrev = 6;
 const buttonAuto = 10;
 const buttonRun = 11;
 
-let blackFont = null;
-let whiteFont = null;
-function getBlackFont(){
-  if (blackFont != null)
-    return Promise.resolve(blackFont);
-
-  return Jimp.loadFont(Jimp.FONT_SANS_16_BLACK).then(f => blackFont = f);
-}
-function getWhiteFont(){
-  if (whiteFont != null)
-    return Promise.resolve(whiteFont);
-
-  return Jimp.loadFont(Jimp.FONT_SANS_16_WHITE).then(f => whiteFont = f);
-}
-
+// Current state
 let pageNumber = 0;
 let pageCount = 0;
 let macroData = [];
@@ -151,9 +137,9 @@ function updateButtons(){
     writeMacroButton(macroData[getCurrentIndex(i)], buttonMapping[i]);
 }
 
-function writeTextButton(key, col, txt, white){
-  new Jimp(72, 72, col, function (err, image) {
-    (white ? getWhiteFont() : getBlackFont()).then(f => {
+function writeTextButton(key, bgColor, txt, txtColor){
+  new Jimp(72, 72, bgColor, function (err, image) {
+    Jimp.loadFont(txtColor == 'white' ? Jimp.FONT_SANS_16_WHITE : Jimp.FONT_SANS_16_BLACK).then(f => {
       image.print(f, 5, 5, txt, 10, (err, image) => {
           image.getBuffer(Jimp.MIME_BMP, (_, img) => {
             const byteData = bmp.decode(img).data;
@@ -174,11 +160,11 @@ function writeMacroButton(macro, key){
   if (macro === undefined || macro.used == "false"){
     streamDeck.fillColor(key, 0, 0, 0);
   } else if (atemState.IsRunning && macro.id == atemState.Index) {
-    writeTextButton(key, 0xff0000ff, macro.name, true);
+    writeTextButton(key, 0xff0000ff, macro.name, 'white');
   } else if (!isAuto && macro.id == selectedMacro) {
-    writeTextButton(key, 0x00ff00ff, macro.name, false);
+    writeTextButton(key, 0x00ff00ff, macro.name, 'black');
   } else {
-    writeTextButton(key, 0xffec19ff, macro.name, false);
+    writeTextButton(key, 0xffec19ff, macro.name, 'black');
   }
 }
 
