@@ -11,11 +11,10 @@ const serverAddress = "localhost:5000"
 
 // Button map
 const buttonMapping = [ 4, 3, 2, 9, 8, 7, 14, 13, 12 ];
-const buttonReload = 0;
 const buttonLoop = 1;
 const buttonPageNext = 5;
 const buttonPagePrev = 6;
-const buttonAuto = 10;
+const buttonAuto = 0;
 const buttonRun = 11;
 
 // Current state
@@ -26,10 +25,18 @@ let selectedMacro = -1;
 let isAuto = true;
 let atemState = {};
 
+// Clearing buttons
+for (let i=0; i<15; i++)
+  streamDeck.fillColor(i, 0, 0, 0);
+
 const ws = new WebSocket("ws://" + serverAddress + '/ws');
 ws.on('message', function incoming(data) {
   atemState = JSON.parse(data);
   console.log("Got state", atemState);
+  
+  if (atemState.Change !== undefined)
+    return reloadList();
+
   updateButtons();
 });
 
@@ -175,8 +182,6 @@ function writeFileToButton(key, filename){
 streamDeck.on('down', keyIndex => {
     // console.log('key %d down', keyIndex);
     switch (keyIndex){
-    case buttonReload:
-      return reloadList();
     case buttonLoop:
       return toggleLoop();
     case buttonPageNext:
@@ -205,7 +210,6 @@ streamDeck.on('error', error => {
     console.error(error);
 });
 
-writeFileToButton(buttonReload, "images/reload.png");
 writeFileToButton(buttonPageNext, "images/next.png");
 writeFileToButton(buttonPagePrev, "images/prev.png");
 

@@ -62,7 +62,7 @@ namespace AtemMacroEditor
                 _macros[cmd.Index] = cmd;
             }
 
-            // TODO emit change
+            WebsocketMiddleware.SendToAllAsync(string.Format("{{\"Change\":{0}}}", cmd.Index));
         }
 
         public MacroPropertiesList GetMacros()
