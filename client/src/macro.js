@@ -1,9 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import XMLParser from 'xml2js';
 
-import { Link } from 'react-router-dom';
 import {
   Button, ButtonToolbar
 } from 'react-bootstrap';
@@ -42,13 +40,13 @@ export class MacroPage extends React.Component {
     }).then(xmlText => {
       // console.log(res)
       XMLParser.parseString(xmlText, (err, res) => {
-        console.log(res)
+        console.log(res);
 
         this.setState({
           macro: res,
           loading: false,
           hasChanged: false,
-        })
+        });
 
       });
     });
@@ -195,7 +193,7 @@ export class MacroPage extends React.Component {
         return response.text();
       }
       throw new Error('Network response was not ok.');
-    }).then(xmlText => {      
+    }).then(() => {      
       this.props.history.push("/macros");
     });
   }
@@ -204,7 +202,7 @@ export class MacroPage extends React.Component {
     const id = this.props.match.params.id;
     console.log("Saving macro " + id);
 
-    var builder = new XMLParser.Builder();
+    let builder = new XMLParser.Builder();
     const data = builder.buildObject(this.state.macro);
 
     fetch('/api/macros/' + id, {
@@ -219,7 +217,7 @@ export class MacroPage extends React.Component {
       }
       throw new Error('Network response was not ok.');
     }).then(xmlText => {
-      console.log(res)
+      console.log(xmlText);
       
     });
   }

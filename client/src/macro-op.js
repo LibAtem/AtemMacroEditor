@@ -3,11 +3,7 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import { DragSource, DropTarget } from 'react-dnd';
 
-import {
-  Link
-} from 'react-router-dom'
-
-import { Lang, IdFields } from './lang';
+import { IdFields } from './lang';
 
 const cardSource = {
   beginDrag(props) {
@@ -102,7 +98,7 @@ export class MacroOp extends React.Component {
   showEdit(e){
     e.preventDefault();
 
-    return this.props.showEdit()
+    return this.props.showEdit();
   }
 
   showInsert(e){

@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import XMLParser from 'xml2js';
 import keydown from 'react-keydown';
@@ -41,18 +40,18 @@ export class PiPlayerPage extends React.Component {
     }).then(xmlText => {
       // console.log(res)
       XMLParser.parseString(xmlText, (err, res) => {
-        console.log(res)
+        console.log(res);
         this.setState({
           macros: res,
           loading: false,
-        })
+        });
       });
     });
   }
 
   socketData(d) {
     d = JSON.parse(d);
-    console.log("Atem:", d)
+    console.log("Atem:", d);
     this.setState({ atem: d });
   }
 
@@ -63,7 +62,7 @@ export class PiPlayerPage extends React.Component {
   }
 
   maxPage(){
-    return Math.ceil(this.getMacros().length / perPage)
+    return Math.ceil(this.getMacros().length / perPage);
   }
 
   cyclePage(delta){
@@ -121,48 +120,48 @@ export class PiPlayerPage extends React.Component {
 
   @keydown( 103 ) // numpad7
   btnNum7(){
-    this.runMacro(1)
+    this.runMacro(1);
   }
   @keydown( 104 ) // numpad8
   btnNum8(){
-    this.runMacro(2)
+    this.runMacro(2);
   }
   @keydown( 105 ) // numpad9
   btnNum9(){
-    this.runMacro(3)
+    this.runMacro(3);
   }
   @keydown( 100 ) // numpad4
   btnNum4(){
-    this.runMacro(4)
+    this.runMacro(4);
   }
   @keydown( 101 ) // numpad5
   btnNum5(){
-    this.runMacro(5)
+    this.runMacro(5);
   }
   @keydown( 102 ) // numpad6
   btnNum6(){
-    this.runMacro(6)
+    this.runMacro(6);
   }
   @keydown( 97 ) // numpad1
   btnNum1(){
-    this.runMacro(7)
+    this.runMacro(7);
   }
   @keydown( 98 ) // numpad2
   btnNum2(){
-    this.runMacro(8)
+    this.runMacro(8);
   }
   @keydown( 99 ) // numpad3
   btnNum3(){
-    this.runMacro(9)
+    this.runMacro(9);
   }
 
   @keydown( 109 ) // numpad-
   btnPrevPage(){
-    this.cyclePage(-1)
+    this.cyclePage(-1);
   }
   @keydown( 107 ) // numpad+
   btnNextPage(){
-    this.cyclePage(1)
+    this.cyclePage(1);
   }
   @keydown( 110 ) // numpad.
   btnAuto(){
@@ -187,7 +186,7 @@ export class PiPlayerPage extends React.Component {
     return props;
   }
   renderMacroButton(i, char){
-    const index = this.getCellIndex(i);789
+    const index = this.getCellIndex(i);789;
     const props = this.getMacroProps(index);
 
     let style = "default";
@@ -217,7 +216,7 @@ export class PiPlayerPage extends React.Component {
           'Content-Type': 'application/xml'
         },
       });
-    }
+    };
 
     return <Button bsSize="large" bsStyle={bsStyle} className="larger btn-block" onClick={click}>
         <span className="char">(*)</span>
@@ -246,8 +245,6 @@ export class PiPlayerPage extends React.Component {
   }
 
   renderPad(){
-    const macros = this.getMacros();
-
     return (
       <table id="numpad">
         <tbody>
@@ -316,7 +313,7 @@ export class PiPlayerPage extends React.Component {
         <div className="row">
           <div className="col-xs-12">
             
-            <Websocket url={socketUrl} onMessage={this.socketData.bind(this)}/>
+            <Websocket url={socketUrl} onMessage={d => this.socketData(d)}/>
           
             { inner }
           </div>

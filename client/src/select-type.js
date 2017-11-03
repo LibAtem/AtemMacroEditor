@@ -1,18 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom'
-import update from 'react/lib/update';
 import {
   Modal,
   Col, 
   Form, FormGroup, ControlLabel, FormControl,
   Button,
-} from 'react-bootstrap'
-import Slider from 'react-rangeslider';
-import Switch from 'react-bootstrap-switch';
+} from 'react-bootstrap';
 
-import { Lang } from './lang';
 import { GetAllTypes } from './spec';
 
 export class SelectMacroType extends React.Component {

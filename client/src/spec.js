@@ -16,7 +16,7 @@ fetch('/api/spec').then(function(response) {
 });
 
 export function FindFieldSpec(id, key){
-  const op = FindOpSpec(id)
+  const op = FindOpSpec(id);
 
   for (let field of op.Field){
     if (field.$.id == key)

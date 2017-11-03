@@ -1,11 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import XMLParser from 'xml2js';
 
 import {
   Link
-} from 'react-router-dom'
+} from 'react-router-dom';
 
 export class MacroListPage extends React.Component {
   constructor(props){
@@ -30,7 +29,7 @@ export class MacroListPage extends React.Component {
         this.setState({
           macros: res,
           loading: false,
-        })
+        });
       });
     });
   }

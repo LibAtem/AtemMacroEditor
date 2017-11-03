@@ -1,18 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom'
 import update from 'react/lib/update';
 import {
   Modal,
   Col, 
   Form, FormGroup, ControlLabel, FormControl,
   Button,
-} from 'react-bootstrap'
+} from 'react-bootstrap';
 import Slider from 'react-rangeslider';
 import Switch from 'react-bootstrap-switch';
 
-import { Lang } from './lang';
 import { FindOpSpec } from './spec';
 
 export class MacroOpEditor extends React.Component {
@@ -53,7 +49,7 @@ export class MacroOpEditor extends React.Component {
 
   renderControl(spec) {
     if (spec === null)
-      return <FormControl.Static>Failed to find spec!</FormControl.Static>
+      return <FormControl.Static>Failed to find spec!</FormControl.Static>;
 
     switch (spec.$.type){
       case "Enum":
@@ -94,7 +90,7 @@ export class MacroOpEditor extends React.Component {
       this.setState(update(this.state, updDat));
     };
 
-    return <Switch value={this.state.data[spec.$.id]=="true"} onChange={change} />
+    return <Switch value={this.state.data[spec.$.id]=="true"} onChange={change} />;
   }
 
   renderFlagsControl(spec){
@@ -130,8 +126,6 @@ export class MacroOpEditor extends React.Component {
         </p>
       );
     });
-
-    return <Switch value={this.state.data[spec.$.id]=="true"} onChange={change} id={spec.$.id} />
   }
 
 

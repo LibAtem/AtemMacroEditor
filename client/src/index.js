@@ -4,16 +4,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import {
-  BrowserRouter as Router,
-  Route, Redirect,
-  Link,
-  withRouter
-} from 'react-router-dom'
+  BrowserRouter,
+  Route, 
+} from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
 
 import {
-  Nav, Navbar, NavItem, NavDropdown, 
-  MenuItem, 
+  Nav, Navbar, NavItem,  
 } from 'react-bootstrap';
 
 import { MacroListPage } from './macro-list';
@@ -60,17 +57,17 @@ class Layout extends React.Component {
   }
 }
 
-class MyRouter extends React.Component {
+class Router extends React.Component {
   render(){
     return (
-      <Router>
+      <BrowserRouter>
         <Route path='/' component={Layout} />
-      </Router>
+      </BrowserRouter>
     );
   }
 }
 
 ReactDOM.render(
-  <MyRouter />,
+  <Router />,
   document.getElementById('root')
 );

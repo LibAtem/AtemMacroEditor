@@ -1,7 +1,5 @@
 import LocalizedStrings from 'react-localization';
 
-import { FindFieldSpec } from './spec';
-
 export const Lang = new LocalizedStrings({
   en: {
     ids: {
