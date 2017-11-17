@@ -45,7 +45,14 @@ namespace AtemMacroEditor
                     UpdateMacroProps(cmd as MacroPropertiesGetCommand);
                 if (cmd is MacroRunStatusGetCommand)
                     TransmitStatus(cmd as MacroRunStatusGetCommand);
+                if (cmd is LastStateChangeTimeCodeCommand)
+                    LogTime(cmd as LastStateChangeTimeCodeCommand);
             }
+        }
+
+        private static void LogTime(LastStateChangeTimeCodeCommand cmd)
+        {
+            Log.InfoFormat("Time: {0:00}:{1:00}:{2:00}:{3:00}", cmd.Hour, cmd.Minute, cmd.Second, cmd.Frame);
         }
 
         private void TransmitStatus(MacroRunStatusGetCommand cmd)
