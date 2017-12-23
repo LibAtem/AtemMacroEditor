@@ -4,7 +4,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 using AtemMacroEditor.Results;
-using LibAtem.DeviceProfile;
 using LibAtem.XmlState;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

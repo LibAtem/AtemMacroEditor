@@ -6,6 +6,7 @@ using AtemMacroEditor.Results;
 using log4net;
 using LibAtem.Commands;
 using LibAtem.Commands.Macro;
+using LibAtem.DeviceProfile;
 using LibAtem.MacroOperations;
 using LibAtem.Net;
 using LibAtem.Net.DataTransfer;
@@ -19,6 +20,7 @@ namespace AtemMacroEditor
         private static readonly ILog Log = LogManager.GetLogger(typeof(AtemClient));
 
         private readonly AtemClient _client;
+        private readonly DeviceProfileHandler _profile;
         private readonly Dictionary<uint, MacroPropertiesGetCommand> _macros;
         private readonly object _dataTransferLock;
         private MacroRunStatusGetCommand _lastStatus;
@@ -27,13 +29,18 @@ namespace AtemMacroEditor
         {
             _macros = new Dictionary<uint, MacroPropertiesGetCommand>();
             _client = new AtemClient(address, false);
+            _profile = new DeviceProfileHandler();
             _dataTransferLock = new object();
 
+            _client.OnReceive += _profile.HandleCommands;
             _client.OnReceive += OnCommand;
+            
             _client.Connect();
         }
 
         public MacroRunStatusGetCommand LastStatus => _lastStatus;
+
+        public DeviceProfile Profile => _profile.Profile;
 
         private void OnCommand(object sender, IReadOnlyList<ICommand> commands)
         {

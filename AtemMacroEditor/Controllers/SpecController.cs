@@ -1,7 +1,6 @@
 ﻿using System;
 using AtemMacroEditor.Results;
 using LibAtem.Common;
-using LibAtem.DeviceProfile;
 using LibAtem.XmlState;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,23 +10,20 @@ namespace AtemMacroEditor.Controllers
     [Produces("application/xml")]
     public class SpecController : Controller
     {
-        private static readonly Lazy<MacroSpec> cachedSpec;
+        private readonly Lazy<MacroSpec> _cachedSpec;
 
-        static SpecController()
+        public SpecController(AtemMacroStore store)
         {
             // Force the assembly to be loaded
             MacroInput.Camera1.ToVideoSource();
             VideoSource.Input1.ToMacroInput();
 
-            // TODO - parse back from topology sent from the server
-            var profile = DeviceProfileRepository.GetSystemProfile("atem-1me");
-
             // TODO - refactor CompileData into this package
-            cachedSpec = new Lazy<MacroSpec>(() => SpecGenerator.CompileData(profile));
+            _cachedSpec = new Lazy<MacroSpec>(() => SpecGenerator.CompileData(store.Profile));
         }
-
+        
         // GET api/values
         [HttpGet]
-        public MacroSpec Get() => cachedSpec.Value;
+        public MacroSpec Get() => _cachedSpec.Value;
     }
 }
