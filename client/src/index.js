@@ -14,8 +14,8 @@ import {
 } from 'react-bootstrap';
 
 import { MacroListPage } from './macro-list';
-import { MacroPage } from './macro';
-import { PiPlayerPage } from './player/pi';
+import { MacroPage } from './macro-page';
+import { MacroCreate } from './macro-create';
 
 // gonna be removed in production
 if (__DEV__) {
@@ -27,30 +27,32 @@ class Layout extends React.Component {
   render(){
     return (
       <div>
-        <Navbar inverse collapseOnSelect fixedTop>
+        <Navbar collapseOnSelect fixedTop>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="#">Atem Macro Editor</a>
+              <LinkContainer to="/">
+                <a>Atem Macro Editor</a>
+              </LinkContainer>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav pullRight>
             <Nav>
-              <LinkContainer eventKey={1} to="/macros">
-                <NavItem>Editor</NavItem>
+              <LinkContainer exact eventKey={1} to="/">
+                <NavItem>Home</NavItem>
               </LinkContainer>
-              <LinkContainer eventKey={2} to="/player-pi">
-                <NavItem>Pi Player</NavItem>
+              <LinkContainer eventKey={1} to="/create">
+                <NavItem>New Macro</NavItem>
               </LinkContainer>
             </Nav>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
 
-        <Route exact path="/macros" component={MacroListPage}/>
+        <Route exact path="/" component={MacroListPage}/>
+        <Route path="/create" component={MacroCreate}/>
         <Route path="/macro/:id" component={MacroPage}/>
-        <Route path="/player-pi" component={PiPlayerPage}/>
         
       </div>
     );// <Redirect from='/' to='/macros' exact />

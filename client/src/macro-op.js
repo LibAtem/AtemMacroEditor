@@ -128,3 +128,28 @@ export class MacroOp extends React.Component {
     ));
   }
 }
+
+
+export class MacroOpFooter extends React.Component {
+  showInsert(e){
+    e.preventDefault();
+
+    this.props.showInsert();
+  }
+
+  render(){
+    const nameParts = [];
+    for (let i = 1; i < this.props.cols; i++)
+      nameParts.push(<td key={i}>&nbsp;</td>);
+
+    return (
+      <tr>
+        <td>Total { this.props.count } Operations</td>
+        { nameParts }
+        <td className="borderLeft invisible-text compact">Edit</td>
+        <td className="compact"><a href="#" onClick={e => this.showInsert(e)}>Insert</a></td>
+        <td className="invisible-text compact">Del</td>
+      </tr>
+    );
+  }
+}

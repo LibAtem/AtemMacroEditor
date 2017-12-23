@@ -27,6 +27,9 @@ export function FindFieldSpec(id, key){
 }
 
 export function FindOpSpec(id){
+  if (!Spec || !Spec.MacroOperations)
+    return null;
+  
   const ops = Spec.MacroOperations.Operations[0].Op;
 
   for (let op of ops){
@@ -38,6 +41,9 @@ export function FindOpSpec(id){
 }
 
 export function GetAllTypes(){
+  if (!Spec || !Spec.MacroOperations)
+    return [];
+  
   const ops = Spec.MacroOperations.Operations[0].Op;
 
   const res = [];

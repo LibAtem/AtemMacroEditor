@@ -7,7 +7,6 @@
 @import "../node_modules/react-rangeslider/lib/index.css";
 
 @import "./styles/switch";
-@import "./styles/piplayer";
 
 body {
   background-color: #282828;
@@ -19,8 +18,9 @@ body {
 
 
 .macro-op-table {
-  margin-top: 10px;
+  // margin-top: 10px;
   margin-bottom: 10px;
+  width: 100%;
 
   tr {
     border: 1px solid #999;
@@ -37,5 +37,42 @@ body {
 
   td {
     padding: 10px;
+
+    &.invisible-text {
+      color: transparent;
+    }
+
+    &.compact {
+      width: 1%;
+    }
+  }
+}
+
+.macroListWrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.macroListEntry {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+
+  .inner {
+    background: #333;
+    border-radius: 15px;
+    height: 100%;
+    padding: 5px;
+
+
+  }
+
+
+  .idNumber {
+    float: right;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    opacity: 0.6;
   }
 }

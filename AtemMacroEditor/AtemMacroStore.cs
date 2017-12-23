@@ -126,6 +126,10 @@ namespace AtemMacroEditor
         {
             macro.Index = id;
 
+            // If there are no operations, then the ATEM rejects it
+            if (macro.Operations.Count == 0)
+                return false;
+
             lock (_dataTransferLock)
             {
                 bool? result = null;
