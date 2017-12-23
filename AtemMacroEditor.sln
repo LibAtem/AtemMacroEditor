@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2005
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{BCB43984-CA51-4A3B-B402-199147F5E929}"
 EndProject
@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibAtem.Test", "LibAtem\Lib
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibAtem.XmlState", "LibAtem.XmlState\LibAtem.XmlState\LibAtem.XmlState.csproj", "{91BA315E-3465-40F1-BAD0-52AFE34604C1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibAtem.XmlState.MacroSpec", "LibAtem.XmlState\LibAtem.XmlState.MacroSpec\LibAtem.XmlState.MacroSpec.csproj", "{B33A51A8-59CB-4E72-8144-EE1EBBD72454}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibAtem.XmlState.GenerateMacroOperation", "LibAtem.XmlState\LibAtem.XmlState.MacroSpec\LibAtem.XmlState.GenerateMacroOperation.csproj", "{B33A51A8-59CB-4E72-8144-EE1EBBD72454}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibAtem.XmlState.Test", "LibAtem.XmlState\LibAtem.XmlState.Test\LibAtem.XmlState.Test.csproj", "{46418827-6667-4507-B62C-7B5D08BE3673}"
 EndProject
