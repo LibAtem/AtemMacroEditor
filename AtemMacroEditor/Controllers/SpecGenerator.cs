@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Xml.Serialization;
@@ -9,25 +8,13 @@ using LibAtem.Commands;
 using LibAtem.Common;
 using LibAtem.MacroOperations;
 using LibAtem.Serialization;
-using LibAtem.XmlState.MacroSpec;
 using LibAtem.DeviceProfile;
+using LibAtem.XmlState.GenerateMacroOperation;
 
 namespace AtemMacroEditor.Controllers
 {
     public class SpecGenerator
     {
-        public static void SaveState(string path, MacroSpec profile)
-        {
-            var ns = new XmlSerializerNamespaces();
-            ns.Add("", "");
-
-            XmlSerializer serializer = new XmlSerializer(typeof(MacroSpec));
-            FileStream fs = new FileStream(path, FileMode.Create);
-            serializer.Serialize(fs, profile, ns);
-            fs.Flush();
-            fs.Dispose();
-        }
-
         public static Type GetType(string typeName)
         {
             var type = Type.GetType(typeName);
