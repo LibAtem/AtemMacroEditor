@@ -4,7 +4,7 @@ import XMLParser from 'xml2js';
 import { LinkContainer } from 'react-router-bootstrap';
 import {
   Col, Row, 
-  Button, Alert,
+  Button, ButtonGroup, Alert,
 } from 'react-bootstrap';
 
 export class MacroListPage extends React.Component {
@@ -97,10 +97,12 @@ export class MacroListPage extends React.Component {
             <p>{ m.$.name }</p>
             <p className="idNumber">#{ parseInt(m.$.id)+1 }</p>
             <p>
-              <LinkContainer to={`/macro/${m.$.id}`}>
-                <Button bsStyle="info">Edit</Button>
-              </LinkContainer>
-              <Button bsStyle="success">Run</Button>
+              <ButtonGroup>
+                <LinkContainer to={`/macro/${m.$.id}`}>
+                  <Button bsStyle="info">Edit</Button>
+                </LinkContainer>
+                <Button bsStyle="success">Run</Button>
+              </ButtonGroup>
             </p>
           </div>
         </Col>
