@@ -45,6 +45,9 @@ export class MacroCreate extends React.Component {
   saveMacro(){
     console.log("Prompt for slot");
 
+    if (this.state.macro.Macro.Op.length == 0)
+      return alert("Can't create macro with no ops");
+
     this.Selector.open().then(id => {
       console.log("Saving to " + id);
 
