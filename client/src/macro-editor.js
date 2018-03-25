@@ -39,7 +39,6 @@ export class MacroEditor extends React.Component {
     console.log("Edit Op #" + i + " (" + op.id + ")");
 
     this.Editor.open(op).then(res => {
-      console.log(res, this.state.macro.Macro.Op[i]);
 
       this.props.updateState({
         Macro: {

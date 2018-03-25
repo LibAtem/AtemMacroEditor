@@ -60,6 +60,19 @@ export class MacroListPage extends React.Component {
     });
   }
 
+  runMacro(id){
+    console.log("Run macro:", id)
+
+    fetch('/api/player/run/' + id, {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/xml'
+      },
+    }).catch(err => {
+      alert("Run failed: " + err);
+    });
+  }
+
   renderInner(){
     if (this.state.error) {
       return (
@@ -101,7 +114,7 @@ export class MacroListPage extends React.Component {
                 <LinkContainer to={`/macro/${m.$.id}`}>
                   <Button bsStyle="info">Edit</Button>
                 </LinkContainer>
-                <Button bsStyle="success">Run</Button>
+                <Button bsStyle="success" onClick={() => this.runMacro(m.$.id)}>Run</Button>
               </ButtonGroup>
             </p>
           </div>

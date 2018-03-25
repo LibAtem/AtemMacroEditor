@@ -49,6 +49,7 @@ export class MacroCreate extends React.Component {
       console.log("Saving to " + id);
 
       const builder = new XMLParser.Builder();
+      this.state.macro.Macro.$.index = id;
       const data = builder.buildObject(this.state.macro);
 
       fetch('/api/macros/' + id, {
