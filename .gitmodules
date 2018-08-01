@@ -1,9 +1,9 @@
 [submodule "LibAtem"]
 	path = LibAtem
-	url = ../LibAtem.git
+	url = https://github.com/LibAtem/LibAtem.git
 [submodule "LibAtem.XmlState"]
 	path = LibAtem.XmlState
-	url = ../LibAtem.XmlState.git
+	url = https://github.com/LibAtem/LibAtem.XmlState.git
 [submodule "LibAtem.DeviceProfile"]
 	path = LibAtem.DeviceProfile
-	url = ../LibAtem.DeviceProfile.git
+	url = https://github.com/LibAtem/LibAtem.DeviceProfile.git
