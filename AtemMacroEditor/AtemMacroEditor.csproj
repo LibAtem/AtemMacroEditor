@@ -23,7 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LibAtem.DeviceProfile\LibAtem.DeviceProfile\LibAtem.DeviceProfile.csproj" />
-    <ProjectReference Include="..\LibAtem.XmlState\LibAtem.XmlState.MacroSpec\LibAtem.XmlState.GenerateMacroOperation.csproj" />
+    <ProjectReference Include="..\LibAtem.XmlState\LibAtem.XmlState.GenerateMacroOperation\LibAtem.XmlState.GenerateMacroOperation.csproj" />
     <ProjectReference Include="..\LibAtem.XmlState\LibAtem.XmlState\LibAtem.XmlState.csproj" />
     <ProjectReference Include="..\LibAtem\LibAtem\LibAtem.csproj" />
   </ItemGroup>
