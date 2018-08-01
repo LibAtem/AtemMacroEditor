@@ -37,8 +37,9 @@ namespace AtemMacroEditor.Controllers
 
                 return Ok(macro);
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Console.WriteLine(e);
                 return StatusCode(StatusCodes.Status500InternalServerError);
             }
         }
@@ -52,7 +53,7 @@ namespace AtemMacroEditor.Controllers
             {
                 using (StreamReader reader = new StreamReader(Request.Body, Encoding.UTF8))
                 {
-                string str = await reader.ReadToEndAsync();
+                    string str = await reader.ReadToEndAsync();
                     Macro macro;
                     XmlSerializer serializer = new XmlSerializer(typeof(Macro));
                     using (var tx = new StringReader(str))
@@ -64,8 +65,9 @@ namespace AtemMacroEditor.Controllers
                     return StatusCode(StatusCodes.Status500InternalServerError);
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Console.WriteLine(e);
                 return StatusCode(StatusCodes.Status500InternalServerError);
             }
         }

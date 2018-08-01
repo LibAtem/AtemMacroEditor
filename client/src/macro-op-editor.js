@@ -86,11 +86,11 @@ export class MacroOpEditor extends React.Component {
   renderBoolControl(spec){
     const change = (e, v) => {
       const updDat = { data: {} };
-      updDat.data[spec.$.id] = { $set: v ? "true" : "false" };
+      updDat.data[spec.$.id] = { $set: v ? "True" : "False" };
       this.setState(update(this.state, updDat));
     };
 
-    return <Switch value={this.state.data[spec.$.id]=="true"} onChange={change} />;
+    return <Switch value={this.state.data[spec.$.id]=="True"} onChange={change} />;
   }
 
   renderFlagsControl(spec){

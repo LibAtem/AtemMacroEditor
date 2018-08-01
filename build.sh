@@ -7,7 +7,6 @@ yarn run dist
 
 cd ../AtemMacroEditor
 rm -Rf dist
-dotnet restore
 #dotnet build -o dist -f netcoreapp2.0 -c Release -r debian.8-x64
 dotnet publish -o dist -c Release -r win10-x64
 
