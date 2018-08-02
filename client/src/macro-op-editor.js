@@ -132,14 +132,13 @@ export class MacroOpEditor extends React.Component {
   renderSliderControl(spec){
     let min = parseInt(spec.$.min);
     let max = parseInt(spec.$.max);
-    let value = parseInt(this.state.data[spec.$.id]);
-    const scale = parseInt(spec.$.scale);
+    let value = parseFloat(this.state.data[spec.$.id]);
+    const scale = parseFloat(spec.$.scale);
     let step = 1;
 
     if (!isNaN(scale)){
       min /= scale;
       max /= scale;
-      value /= scale;
       step /= scale;
     }
 
@@ -153,9 +152,6 @@ export class MacroOpEditor extends React.Component {
         val = min;
       if (val > max)
         val = max;
-
-      if (!isNaN(scale))
-        val *= scale;
 
       const updDat = { data: {} };
       updDat.data[spec.$.id] = { $set: val };
