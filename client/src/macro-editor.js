@@ -90,7 +90,7 @@ export class MacroEditor extends React.Component {
 
         switch (field.$.type){
           case "Bool":
-            op[field.$.id] = "false";
+            op[field.$.id] = "False";
             break;
           case "Enum":
             op[field.$.id] = field.Value[0].$.id;
